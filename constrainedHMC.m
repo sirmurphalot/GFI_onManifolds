@@ -76,7 +76,7 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
         end
         
         p0 = cholM0*randn(size(q0));
-        if (~isempty(conFunc))&&(sum(dc0~=0)==2)
+        if ~isempty(conFunc)
             D = dc0*Minv0;
             p0 = p0 - D.'*((D*D.')\(D*p0));
         end
