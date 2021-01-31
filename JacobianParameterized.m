@@ -14,9 +14,9 @@ function J_par = JacobianParameterized(theta,phi,dataX,dataY,dataZ)
     mat2(:,4)=dataY-(sin(theta)*sin(phi)).*ones(length(dataX),1);
     mat3 = zeros(length(dataZ), 5);
     mat3(:,1)=(-sin(phi)).*ones(length(dataX),1);
-    mat3(:,5)=dataZ-cos(phi)*ones(length(dataX),1) - 1;
+    mat3(:,5)=dataZ-cos(phi)*ones(length(dataX),1)-ones(length(dataX),1);
     full_mat=[mat1;mat2;mat3];
     
     % Return the Jacobian value
-    J_par=-log(sqrt(det((full_mat.')*full_mat)));
+    J_par=-0.5*log(det((full_mat.')*full_mat));
 end
