@@ -4,7 +4,7 @@ functions {
     //The derivatives with respect to mu do not contribute
     for(k in 1:n){
       JacobianMatrix[k,1]=cos(theta)*cos(phi);
-      JacobianMatrix[k,2]=-sin(theta)*cos(phi);
+      JacobianMatrix[k,2]=-sin(theta)*sin(phi);
       JacobianMatrix[k,3]=dataX[k]-(cos(theta)*sin(phi));
     }
     for(k in 1:n){
@@ -48,9 +48,9 @@ transformed parameters{
 }
 
 model {
-  phi ~ uniform(0,pi());
-  theta ~ normal(0,2*pi());
+  // phi ~ uniform(0,pi());
+  // theta ~ uniform(0,2*pi());
   y ~ multi_normal(mu, sig);
-  target+=log(sin(phi));
+  // target+=log(sin(phi));
   target+=logJac; //adjusting for the rest of the Jacobian
 }

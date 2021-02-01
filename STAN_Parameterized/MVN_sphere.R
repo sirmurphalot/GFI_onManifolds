@@ -1,5 +1,6 @@
 library(rstan)
 library(mvtnorm)
+setwd(getSrcDirectory()[1])
 
 set.seed(13)
 Iters = 50000
