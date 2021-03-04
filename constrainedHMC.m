@@ -75,6 +75,8 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
             qs(:,j-1) = q0;
         end
         
+        % This is how he projects momentum when selecting a proposal.
+        % I'll need to immitate this.
         p0 = cholM0*randn(size(q0));
         if ~isempty(conFunc)
             D = dc0*Minv0;
@@ -272,19 +274,28 @@ function [q,p,c,dc,U,dU,stats] = constantMInt_Leapfrog(nllFunc,conFunc,L,h,q,p,M
         if ~isempty(conFunc)
             A = -(h/2)*(Minv*dc.');
             %A = -((h*h)/2)*(Minv*dc.');
+            % The C^T(q)lambda term drops out because we assumed that 
+            % it is on the manifold.
             p12hat = p - (h/2)*dU;
+            
+            % for some reason?? the q terms are all gone...
             q12hat = q + h*(Minv*p12hat);
             
             %%%%%% START simple_fsolve %%%%%%
 %             curr_q = q12hat + A*lambda;
+
+            % Making the lambda be all zeros for the time being.
             lambda = zeros([length(c),1]);
+            
+            % current guess for q?
             curr_q = q12hat;
+            % constraint function for this guess
             [curr_c,curr_dc] = conFunc(curr_q);
             stats.conFuncCalls = stats.conFuncCalls + 1;
             it = 0;
             while max(abs(curr_c)) > fThresh
                 it = it + 1;
-
+                % A = -(h/2)*(Minv*dc.')
                 dlambda = (curr_dc*A)\curr_c;
                 lambda = lambda - dlambda;
 

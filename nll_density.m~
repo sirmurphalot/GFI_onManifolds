@@ -48,26 +48,11 @@ function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ)
     
     % I am omitting the derivative of the Gram matrix.  Due to the method
     % of integration, here, I do not think that it is necessary.
-    P_mat = [mu2^2 + mu3^2, -mu1*mu2, -mu1*mu3;...
-        -mu1*mu2, mu1^2+mu3^2, -mu2*mu3;...
-        -mu1*mu3, -mu2*mu3, mu1^2+mu2^2];
 
-    dm1P = [0, -mu2, -mu3;-mu2, 2*mu1, 0;-mu3, 0, 2*mu1];
-    dm2P = [2*mu2, -mu1, 0;-mu1, 0, -mu3;0, -mu3, 2*mu2];
-    dm3P = [2*mu3, 0, -mu1;0, 2*mu3, -mu2;-mu1, -mu2, 0];
+    dm1P = {{0, -mu2, -mu3},{-mu2, 2*mu1, 0},{-mu3, 0, 2*mu1}};
+    dm2P = {{2*mu2, -mu1, 0},{-mu1, 0, -mu3},{0, -mu3, 2*mu2}};
+    dm2P = {{2*mu2, -mu1, 0},{-mu1, 0, -mu3},{0, -mu3, 2*mu2}};
     
-    mat1 = zeros(length(dataX), 3);
-    mat1(:,1)=ones(length(dataX),1);
-    mat2 = zeros(length(dataY), 3);
-    mat2(:,2)=ones(length(dataY),1);
-    mat3 = zeros(length(dataZ), 3);
-    mat3(:,3)=ones(length(dataZ),1);
-    Jac_mat=[mat1;mat2;mat3];
-    penrose_inverse = pinv(Jac_mat*P_mat*(Jac_mat'));
-   
-    dnll(1)=dnll(1)-trace(penrose_inverse*Jac_mat*dm1P*(Jac_mat'));
-    dnll(2)=dnll(2)-trace(penrose_inverse*Jac_mat*dm2P*(Jac_mat'));
-    dnll(3)=dnll(3)-trace(penrose_inverse*Jac_mat*dm3P*(Jac_mat'));
     % The above was the dirty way.  I've solved things out to get
 %     dnll(1)=dnll(1)-2*mu1/(mu1^2+mu2^2+mu3^2);
 %     dnll(2)=dnll(2)-2*mu2/(mu1^2+mu2^2+mu3^2);
