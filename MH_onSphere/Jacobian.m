@@ -1,4 +1,4 @@
-function J = Jacobian(mu1,mu2,mu3,dataX,dataY,dataZ)
+function J = Jacobian(mu1,mu2,mu3,dataX,dataY,dataZ, z_shift)
     % This function calculates the Jacobian value assuming that the
     % constraint is NOT included in the DGA.  
     
@@ -16,7 +16,7 @@ function J = Jacobian(mu1,mu2,mu3,dataX,dataY,dataZ)
     
     % Next, use the constraint that mu1^2+mu2^2+mu3^2=1 to calculate the
     % projection matrix onto the the nullspace of nabla g
-    P_mat= eye(6) - ([mu1,mu2,mu3-1,0,0,0].')*[mu1,mu2,mu3-1,0,0,0];
+    P_mat= eye(6) - ([mu1,mu2,mu3-z_shift,0,0,0].')*[mu1,mu2,mu3-z_shift,0,0,0];
     % Perform a singular value decomposition on P_mat
     [U,~,~]=svds(P_mat,5); 
     % Use these columns of U to calculate our projected Jacobian matrix

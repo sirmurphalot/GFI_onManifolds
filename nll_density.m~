@@ -23,12 +23,12 @@ function [nll,dnll] = nll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
 
     % The derivative of this density is a little tricky, so I'm doing it in
     % a helper function (below).
-    dnll=get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift);
+    dnll=get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ);
 end
 
 
 
-function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
+function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ)
     mu1=q(1);
     mu2=q(2);
     mu3=q(3);
@@ -52,9 +52,9 @@ function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
         -mu1*mu2, mu1^2+(mu3-z_shift), -mu2*(mu3-z_shift);...
         -mu1*(mu3-z_shift), -mu2*(mu3-z_shift), mu1^2+mu2^2];
 
-    dm1P = [0, -mu2, -(mu3-z_shift);-mu2, 2*mu1, 0;-(mu3-z_shift), 0, 2*mu1];
-    dm2P = [2*mu2, -mu1, 0;-mu1, 0, -(mu3-z_shift);0, -(mu3-z_shift), 2*mu2];
-    dm3P = [2*(mu3-z_shift), 0, -mu1;0, 2*(mu3-z_shift), -mu2;-mu1, -mu2, 0];
+    dm1P = [0, -mu2, -mu3;-mu2, 2*mu1, 0;-mu3, 0, 2*mu1];
+    dm2P = [2*mu2, -mu1, 0;-mu1, 0, -mu3;0, -mu3, 2*mu2];
+    dm3P = [2*mu3, 0, -mu1;0, 2*mu3, -mu2;-mu1, -mu2, 0];
     
     mat1 = zeros(length(dataX), 3);
     mat1(:,1)=ones(length(dataX),1);

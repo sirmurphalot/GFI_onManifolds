@@ -1,4 +1,4 @@
-function G = full_density_spherical(phi,theta,s1,s2,s3,dataX,dataY,dataZ)
+function G = full_density_spherical(phi,theta,s1,s2,s3,dataX,dataY,dataZ,z_shift)
     % Function to get the fiducial density for a (phi, theta) pair.
     % For this implementation, the constraint is NOT built into the DGA.
     % Part of this implementation is projecting the Jacobian onto the
@@ -14,12 +14,12 @@ function G = full_density_spherical(phi,theta,s1,s2,s3,dataX,dataY,dataZ)
             % just independent between groups).
             dens = nl_NormalDensity(sin(phi(row,col))*cos(theta(row,col)),...
                 sin(phi(row,col))*sin(theta(row,col)),...
-            cos(phi(row,col))+1,s1,s2,s3,dataX,dataY,dataZ);
+            cos(phi(row,col))+z_shift,s1,s2,s3,dataX,dataY,dataZ);
             % The Jacobian calculation that projects onto the manifold
             jac = Jacobian(sin(phi(row,col))*cos(theta(row,col)),...
                 sin(phi(row,col))*sin(theta(row,col)),...
-                cos(phi(row,col))+1,...
-                dataX,dataY,dataZ);
+                cos(phi(row,col))+z_shift,...
+                dataX,dataY,dataZ,z_shift);
             % Note that I multiply by sin(phi).  This the the Gram matrix
             % multiplication that allows us to integrate on a submanifold.
             G(row,col) = exp( -( dens+jac ) )*sin(phi(row,col));
