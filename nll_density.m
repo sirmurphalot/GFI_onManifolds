@@ -1,4 +1,4 @@
-function [nll,dnll] = nll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
+function [nll,dnll] = nll_density(q,s1,s2,s3,dataX,dataY,dataZ,shift_vector)
     % Function to get the fiducial density for a (x,y) pair.
     % For this implementation, the constraint is NOT built into the DGA.
     % Part of this implementation is projecting the Jacobian onto the
@@ -13,7 +13,7 @@ function [nll,dnll] = nll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
     % just independent between groups).
     dens = NormalDensity(mu1,mu2,mu3,s1,s2,s3,dataX,dataY,dataZ);
     % The Jacobian calculation that projects onto the manifold
-    jac = Jacobian(mu1,mu2,mu3,dataX,dataY,dataZ,z_shift);
+    jac = Jacobian(mu1,mu2,mu3,dataX,dataY,dataZ,shift_vector);
     % Note that I am omitting the Gram matrix here.  This density does not
     % assume the constraint at the level of the input.  I am not,
     % therefore, integrating over a function F that induces the manifold. I
@@ -23,12 +23,12 @@ function [nll,dnll] = nll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
 
     % The derivative of this density is a little tricky, so I'm doing it in
     % a helper function (below).
-    dnll=get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift);
+    dnll=get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,shift_vector);
 end
 
 
 
-function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
+function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,shift_vector)
     mu1=q(1);
     mu2=q(2);
     mu3=q(3);
@@ -48,13 +48,16 @@ function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
     
     % I am omitting the derivative of the Gram matrix.  Due to the method
     % of integration, here, I do not think that it is necessary.
-    P_mat = [mu2^2 + (mu3-z_shift)^2, -mu1*mu2, -mu1*(mu3-z_shift);...
-        -mu1*mu2, mu1^2+(mu3-z_shift), -mu2*(mu3-z_shift);...
-        -mu1*(mu3-z_shift), -mu2*(mu3-z_shift), mu1^2+mu2^2];
+    mu1 = mu1 - shift_vector(1);
+    mu2 = mu2 - shift_vector(2);
+    mu3 = mu3 - shift_vector(3);
+    P_mat = [mu2^2 + mu3^2, -mu1*mu2, -mu1*mu3;...
+        -mu1*mu2, mu1^2+mu3^2, -mu2*mu3;...
+        -mu1*mu3, -mu2*mu3, mu1^2+mu2^2];
 
-    dm1P = [0, -mu2, -(mu3-z_shift);-mu2, 2*mu1, 0;-(mu3-z_shift), 0, 2*mu1];
-    dm2P = [2*mu2, -mu1, 0;-mu1, 0, -(mu3-z_shift);0, -(mu3-z_shift), 2*mu2];
-    dm3P = [2*(mu3-z_shift), 0, -mu1;0, 2*(mu3-z_shift), -mu2;-mu1, -mu2, 0];
+    dm1P = [0, -mu2, -mu3;-mu2, 2*mu1, 0;-mu3, 0, 2*mu1];
+    dm2P = [2*mu2, -mu1, 0;-mu1, 0, -mu3;0, -mu3, 2*mu2];
+    dm3P = [2*mu3, 0, -mu1;0, 2*mu3, -mu2;-mu1, -mu2, 0];
     
     mat1 = zeros(length(dataX), 3);
     mat1(:,1)=ones(length(dataX),1);
