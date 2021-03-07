@@ -19,7 +19,7 @@ function ll = ll_density(q,s1,s2,s3,dataX,dataY,dataZ,z_shift)
     % therefore, integrating over a function F that induces the manifold. I
     % am still, however, projecting the jacobian, since that derivative
     % should "know" that a constraint exists.
-    ll = dens+jac - log(mu3);
+    ll = dens+jac;
 end
 
 
