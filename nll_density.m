@@ -19,7 +19,7 @@ function [nll,dnll] = nll_density(q,s1,s2,s3,dataX,dataY,dataZ,shift_vector)
     % therefore, integrating over a function F that induces the manifold. I
     % am still, however, projecting the jacobian, since that derivative
     % should "know" that a constraint exists.
-    nll = dens+jac;
+    nll = dens+jac; %+log(mu3-shift_vector(3))
 
     % The derivative of this density is a little tricky, so I'm doing it in
     % a helper function (below).
