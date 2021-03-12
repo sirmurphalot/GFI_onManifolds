@@ -19,21 +19,17 @@ function J = Jacobian(knots,coef_matrix,thetas,data)
             knot_interval_number = spline_indices(1,...
                 find((data(i) > knots)==1,1,'last'));
             
-            if ((num_of_bsplines+j)<knot_interval_number)||(j>knot_interval_number)
+            if (j>knot_interval_number)
                 continue
-            elseif data(i) < knots(j)
-                spline_indices = 1:length(knots);
-                spline_number = spline_indices(1,...
-                    find((x_value > knots)==1,1,'last'));
+            elseif (num_of_bsplines+j)<knot_interval_number
                 jac_mat(i,j) = -expectation_values(j)/density_values(i);
             else
                 spline_indices = 1:length(knots);
                 spline_number = spline_indices(1,...
                     find((x_value > knots)==1,1,'last'));
-                fun = @(x) (sum(arrayfun(@(i)(x^i),powers).*...
-                    coef_matrix(spline_number,:))*...
+                fun = @(x) (get_bspline_value(x,knots,coef_matrix,spline_number)*...
                     logspline_density(x, knots,coef_matrix,thetas));
-                jac_mat(i,j)=integral(fun,knots(j),knots(j+1))/density_values(i);
+                jac_mat(i,j)=integral(fun,knots(1),x_value)/density_values(i);
             end   
         end
     end

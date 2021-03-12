@@ -3,7 +3,7 @@ function val = get_bspline_value(x_value,knots,coef_matrix,bspline_number)
     indices = bspline_number:(bspline_dim+bspline_number);
     spline_intervals = knots(indices);
     
-    bsplines_coefs=coef_matrix(((bspline_number-...
+    bsplines_coefs=coef_matrix( ((bspline_number-...
         1)*bspline_dim+1):(bspline_number)*bspline_dim,:);
     
     powers = 0:(bspline_dim-1);
