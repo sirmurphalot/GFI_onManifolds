@@ -17,8 +17,8 @@ function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
     expectation_norm = sum(expectation_values.^2);
     % To cut down on excess computations, we'll precalculate the 2nd degree
     % expectations:
-    expectations2nd_values = zeros(d,d);
-    for i=1:d
+    expectations2nd_values = zeros(n,d);
+    for i=1:n
         for j=1:d
            if abs(i-j) < bspline_dim
                expectations2nd_values(i,j)=bspline_2nd_expectation(knots,...
@@ -84,8 +84,7 @@ function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
     end
     
     % Now, calculate the regular projection matrix:
-    full_mat = jac_mat;
-    P_mat= eye(d) - (expectation_values'*expectation_values)./(expectation_norm);
+    P_mat= eye(d) - expectation_values*(expectation_values')./(expectation_norm);
     % Perform a singular value decomposition on P_mat
     [U,~,~]=svds(P_mat,d-1); 
     % Use these columns of U to calculate our projected Jacobian matrix
@@ -96,12 +95,10 @@ function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
     
     dJ=zeros(1,d);
     for q=1:d
-        d_P_mat=-(dC_mat(1,:,q)')*(expectation_values)-...
-            (expectation_values')*dC_mat(1,:,q);
+        d_P_mat=-dC_mat(1,:,q)*expectation_values'-...
+            expectation_values*dC_mat(1,:,q)';
         d_J_mat = d_jac_mat(:,:,q);
-        penrose_inv = pinv(full_mat*P_mat*full_mat');
-        dJ(q)=0.5*trace(penrose_inv*(d_J_mat*P_mat*full_mat'+...
-            full_mat*d_P_mat*full_mat'+full_mat*P_mat*d_J_mat'));
+        penrose_inv = pinv(full_mat)
     end
     
 end

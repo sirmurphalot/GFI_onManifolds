@@ -69,6 +69,7 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
     pStepSum = 0;
     reject_counter=0;
     for j = 1:N
+        disp("STARTING NEXT ITERATION");
         prevq = q0;
         prevU = U0;
         if nargout > 1 && j > 1
