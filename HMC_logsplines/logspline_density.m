@@ -8,7 +8,7 @@ function dens = logspline_density(x_value,knots,coef_matrix,thetas)
     indices = 1:num_of_bsplines;
     
     which_work = ((indices + bspline_dim)>=knot_interval_number)&...
-        ((indices + bspline_dim)<=total_num_of_knots);
+        ((indices)<=total_num_of_knots);
     fun = @(i) (get_bspline_value(x_value,knots,...
         coef_matrix,i)*thetas(i));
     dens = exp(sum(arrayfun(@(i)(fun(i)),which_work)));

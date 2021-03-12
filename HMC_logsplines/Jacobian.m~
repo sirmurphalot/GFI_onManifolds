@@ -6,20 +6,18 @@ function J = Jacobian(knots,coef_matrix,thetas,data)
     % First, calculate the unconstrained Jacobian matrix
     jac_mat = zeros(n,d);
     spline_indices = 1:length(knots);
-    num_of_bsplines = length(thetas);
     fun = @(i) (logspline_density(data(i),knots,coef_matrix,thetas));
     density_values = arrayfun(fun,1:n);
     
     fun = @(i) (bspline_expectation(knots,coef_matrix,thetas,i));
     expectation_values = arrayfun(fun,1:d);
     
-    
+    % TODO: Verify you aligned the knots correctly w this calculation.
     for i=1:n
         for j=1:d
             knot_interval_number = spline_indices(1,...
                 find((data(i) > knots)==1,1,'last'));
-            
-            if ((num_of_bsplines+j)<knot_interval_number)||(j>knot_interval_number)
+            if knot_interval_number
                 continue
             elseif data(i) < knots(j)
                 spline_indices = 1:length(knots);
