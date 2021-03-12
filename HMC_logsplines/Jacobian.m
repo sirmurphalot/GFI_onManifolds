@@ -12,7 +12,7 @@ function J = Jacobian(knots,coef_matrix,thetas,data)
     fun = @(i) (bspline_expectation(knots,coef_matrix,thetas,i));
     expectation_values = arrayfun(fun,1:d);
     
-    % TODO: Verify you aligned the knots correct w this calculation.
+    % TODO: Verify you aligned the knots correctly w this calculation.
     for i=1:n
         for j=1:d
             if data(i) > knots(j+1)
