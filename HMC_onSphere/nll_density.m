@@ -75,5 +75,6 @@ function dnll = get_dnll_density(q,s1,s2,s3,dataX,dataY,dataZ,shift_vector)
 %     dnll(1)=dnll(1)-2*mu1/(mu1^2+mu2^2+mu3^2);
 %     dnll(2)=dnll(2)-2*mu2/(mu1^2+mu2^2+mu3^2);
 %     dnll(3)=dnll(3)+2*(mu1^2+mu2^2)/(mu3*(mu1^2+mu2^2+mu3^2));
+    
 end
 
