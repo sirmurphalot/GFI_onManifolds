@@ -9,6 +9,11 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
     total_iters = num_iters + burn_in;
     
     for iter=1:total_iters
+        if mod( iter , 1000 ) == 0
+            formatSpec = 'Finished %d iterations.';
+            str = sprintf(formatSpec,iter);
+            disp(str);
+        end
         [proposal, prob_forward, Tx, flag]=findProposal(samples(:,iter),...
             proposal_scale, constraintFunc, dConstraintFunc);
         if flag == 0

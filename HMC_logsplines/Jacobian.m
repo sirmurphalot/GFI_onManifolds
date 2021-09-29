@@ -6,26 +6,8 @@ function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
     
     % First, calculate the unconstrained Jacobian matrix
     jac_mat = zeros(n,d);
-    spline_indices = 1:length(knots);
+    spline_indices = 1:(length(knots)-2);
     num_of_bsplines = length(thetas);
-    % To cut down on excess computations, we'll precalculate the densities:
-    fun = @(i) (logspline_density(data(i),knots,coef_matrix,thetas));
-    density_values = arrayfun(fun,1:n);
-    % To cut down on excess computations, we'll precalculate the expectations:
-    fun = @(i) (bspline_expectation(knots,coef_matrix,thetas,i));
-    expectation_values = arrayfun(fun,1:d);
-    expectation_norm = sum(expectation_values.^2);
-    % To cut down on excess computations, we'll precalculate the 2nd degree
-    % expectations:
-    expectations2nd_values = zeros(d,d);
-    for i=1:d
-        for j=1:d
-           if abs(i-j) < bspline_dim
-               expectations2nd_values(i,j)=bspline_2nd_expectation(knots,...
-                   coef_matrix,thetas,i,j);
-           end
-        end
-    end
     
     % Two third-order arrays we'll need to fill in for the derivative
     % values:
