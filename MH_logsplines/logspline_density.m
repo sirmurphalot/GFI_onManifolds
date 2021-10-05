@@ -6,7 +6,7 @@ function logdens = logspline_density(y_vals,knots,thetas)
     
     for i=1:n
         for j=1:d
-            logdens = logdens + get_bspline_value(y_vals(i),knots,j);
+            logdens = logdens + thetas(j)*get_bspline_value(y_vals(i),knots,j);
         end
     end
 end
