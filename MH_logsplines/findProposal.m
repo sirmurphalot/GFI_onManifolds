@@ -1,4 +1,5 @@
 function [y, prob, Tx, flag] = findProposal(curr_location, proposalScale, consFunc, dConsFunc)
+% Author: Alexander Murph
     Qx = dConsFunc(curr_location);
     [Q,R] = qr(Qx);
     x = (R==0)';

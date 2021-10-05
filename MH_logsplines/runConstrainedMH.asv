@@ -31,15 +31,10 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
             samples(:,iter+1)=samples(:,iter);
             continue
         end
-        if iter > burn_in
-%              disp("hey");
-        end
+
         MH_ratio = ll_function(proposal) + log(prob_reverse) - ...
             ll_function(samples(:,iter)) - log(prob_forward);
         unif_value = log(rand);
-        if isinf(MH_ratio)
-            disp("hey");
-        end
         
         if unif_value > MH_ratio
             samples(:,iter+1)=samples(:,iter);

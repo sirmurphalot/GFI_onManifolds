@@ -28,7 +28,7 @@ function ll = ll_density(thetas,knots, data_vals)
     % Use these columns of U to calculate our projected Jacobian matrix
     J_mat = jac_matrix*U;
     
-    JacValue = -0.5*log(det((J_mat.')*J_mat));
+    JacValue = 0.5*log(det((J_mat.')*J_mat));
     ll = logspline_density(data_vals,knots,thetas) + JacValue;
 end
 

@@ -1,13 +1,29 @@
-function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
+function [J,dJ] = Jacobian(knots,thetas,data)
  
     n = length(data);
     d = length(thetas);
-    [~,bspline_dim] = size(coef_matrix);
     
     % First, calculate the unconstrained Jacobian matrix
     jac_mat = zeros(n,d);
-    spline_indices = 1:(length(knots)-2);
-    num_of_bsplines = length(thetas);
+    
+    % To cut down on excess computations, we'll precalculate the densities:
+    fun = @(i) (exp(logspline_density(data(i),knots,coef_matrix,thetas)));
+    density_values = arrayfun(fun,1:n);
+    % To cut down on excess computations, we'll precalculate the expectations:
+    fun = @(i) (bspline_expectation(knots,thetas,i));
+    expectation_values = arrayfun(fun,1:d);
+    expectation_norm = sum(expectation_values.^2);
+    % To cut down on excess computations, we'll precalculate the 2nd degree
+    % expectations:
+    expectations2nd_values = zeros(d,d);
+    for i=1:d
+        for j=1:d
+           if abs(i-j) < bspline_dim
+               expectations2nd_values(i,j)=bspline_2nd_expectation(knots,...
+                   thetas,i,j);
+           end
+        end
+    end
     
     % Two third-order arrays we'll need to fill in for the derivative
     % values:
@@ -18,50 +34,21 @@ function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
     % Fill in the jacobian matrix and derivative of jacobian matrix
     for i=1:n
         for j=1:d
-            knot_interval_number = spline_indices(1,...
-                find((data(i) > knots)==1,1,'last'));
-            
-            if (j>knot_interval_number)
-                continue
-            elseif (num_of_bsplines+j)<knot_interval_number
-                jac_mat(i,j) = -expectation_values(j)/density_values(i);
-                for q=1:d
-                    if (q>knot_interval_number)
-                        continue
-                    elseif (num_of_bsplines+q)<knot_interval_number
-                        d_jac_mat(i,j,q) = ...
-                            -(expectations2nd_values(j,q))/density_values(i)-...
-                            jac_mat(i,j)*...
-                            get_bspline_value(data(i),knots,coef_matrix,q);
-                    end
-                end
-            else
-                fun = @(x) (get_bspline_value(x,knots,coef_matrix,j)*...
-                    logspline_density(x, knots,coef_matrix,thetas));
-                jac_mat(i,j)=integral(fun,knots(1),data(i))/density_values(i);
-                for q=1:d
-                    if (q>knot_interval_number)
-                        continue
-                    else
-                        fun = @(x) (get_bspline_value(x,knots,coef_matrix,j).*...
-                            logspline_density(x,knots,coef_matrix,thetas).*...
-                            get_bspline_value(x,knots,coef_matrix,q));
-                        val_2ndegree=integral(fun,knots(1),data(i))/density_values(i);
-                        d_jac_mat(i,j,q)=-val_2ndegree + ...
-                            jac_mat(i,j)*...
-                            get_bspline_value(data(i),knots,coef_matrix,q);
-                    end
-                end
-                
-            end   
+
+            jac_mat(i,j) = -bspline_partial_expectation(knots,thetas,j,data(i))/density_values(i);
+            for q=1:d
+                d_jac_mat(i,j,q) = (bspline_2nd_partial_expectation(knots,thetas,...
+                    j,q,data(i)) - get_bspline_value(data(i),knots,q)*...
+                    bspline_partial_expectation(knots,thetas,j,data(i)))/density_values(i);
+            end  
         end
     end
 
     for i=1:d
         for j=1:d
-            dC_mat(1,j,i)=(expectation_norm*expectations2nd_values(i,j)-...
-                expectation_values(i)*(sum(expectations2nd_values(i,:))))/...
-                (expectation_norm^(3/2));
+            dC_mat(1,j,i)=(expectation_norm)^(-3/2) * (-expectation_values(i)*...
+                (expectation_values * expectations2nd_values(:,j)') + ...
+                expectation_norm * expectations2nd_values(i,j));
         end
     end
     
@@ -77,6 +64,7 @@ function [J,dJ] = Jacobian(knots,coef_matrix,thetas,data)
     J = JacValue;
     
     dJ=zeros(1,d);
+    expectation_values = expectation_values./sqrt((expectation_norm));
     for q=1:d
         d_P_mat=-(dC_mat(1,:,q)')*(expectation_values)-...
             (expectation_values')*dC_mat(1,:,q);

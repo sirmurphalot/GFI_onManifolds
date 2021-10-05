@@ -1,4 +1,5 @@
 function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScale, Tx, consFunc, dConsFunc)
+% Author: Alexander Murph
     tol=1e-6;
     options = optimoptions('fsolve','Display','none','TolFun', 1e-10);
     
@@ -16,12 +17,22 @@ function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScal
     
     v_vector = Ty*v_temp;
     solve_this = @(a) (consFunc(proposal + v_vector + Qy*a));
-    a = fsolve(solve_this, 0, options);
+    try
+        a = fsolve(solve_this, 0, options);
+    catch
+        disp("hey");
+    end
+    
     z_shift = proposal + v_vector + Qy*a;
     
     flag=1;
     if norm(z_shift - curr_loc) > tol
         flag = 0;
+    end
+    
+    
+    if prob == 0
+%         disp("hey");
     end
     
     % Also check inequality constraint:
