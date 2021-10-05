@@ -5,8 +5,9 @@ function ll = ll_density(thetas,knots, data_vals)
     % constrained space.
     
     % Grab parameters.
-    [d,~] = size(thetas);
-    [~,n] = size(data_vals);
+    [d1,d2] = size(thetas);
+    d = max(d1,d2);
+    n = length(data_vals);
     
     expectation_values = zeros(1,d);
     for i=1:d

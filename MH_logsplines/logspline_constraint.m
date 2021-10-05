@@ -1,5 +1,5 @@
 function c = logspline_constraint(knots, thetas)
-    [~, knot_length] = size(knots);
+    knot_length = length(knots);
     c = 0;
     c = c + (exp(thetas(1)) - 1)*((knots(2) - knots(1))/(thetas(1)));
     for i=2:(knot_length-2)

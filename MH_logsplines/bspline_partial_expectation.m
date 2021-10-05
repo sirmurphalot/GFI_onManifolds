@@ -1,6 +1,7 @@
 function val = bspline_partial_expectation(knots,thetas,spline_number,y_val)
     i = spline_number;
-    [d,~]=size(thetas);
+    [d1,d2] = size(thetas);
+    d = max(d1,d2);
     if y_val < knots(i)
         val = 0;
     elseif y_val >= knots(i+2)

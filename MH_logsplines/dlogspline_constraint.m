@@ -1,5 +1,6 @@
 function dc = dlogspline_constraint(knots, thetas)
-    [d,~] = size(thetas);
+    [d1,d2] = size(thetas);
+    d = max(d1,d2);
     
     % Assuming c=0, we can cut back a bit on computations.
     dc = zeros(d,1);

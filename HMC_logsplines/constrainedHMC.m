@@ -69,6 +69,7 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
     pStepSum = 0;
     reject_counter=0;
     for j = 1:N
+        
         disp("STARTING NEXT ITERATION");
         prevq = q0;
         prevU = U0;
@@ -355,6 +356,9 @@ function [q,p,c,dc,U,dU,stats] = constantMInt_Leapfrog(nllFunc,conFunc,L,h,q,p,M
         end
 
         if isempty(nllGradFunc)
+            if sum(isnan(q))>0
+               disp("hey"); 
+            end
             [U,dU] = nllFunc(q);
             stats.nllFuncCalls = stats.nllFuncCalls + 1;
             stats.nllGradFuncCalls = stats.nllGradFuncCalls + 1;

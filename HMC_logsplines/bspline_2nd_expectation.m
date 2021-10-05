@@ -4,7 +4,8 @@ function val = bspline_2nd_expectation(knots,thetas,spline_number1,...
     splinenumber1 = min(spline_number1, spline_number2);
     splinenumber2 = max(spline_number1, spline_number2); 
     i = splinenumber1;
-    [d,~] = size(thetas);
+    [d1,d2] = size(thetas);
+    d = max(d1,d2);
     
     if (abs(splinenumber1 - splinenumber2) > 1)
         val = 0;

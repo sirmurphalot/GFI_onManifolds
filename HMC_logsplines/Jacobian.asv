@@ -55,10 +55,7 @@ function [J,dJ] = Jacobian(knots,thetas,data)
     P_mat= eye(d) - (expectation_values'*expectation_values)./(expectation_norm);
     % Perform a singular value decomposition on P_mat
     try
-        [U,~,~]=svds(P_mat,d-1); 
-    catch
-        disp("hey");
-    end
+    [U,~,~]=svds(P_mat,d-1); 
     % Use these columns of U to calculate our projected Jacobian matrix
     J_mat = full_mat*U;
     % Use this to calculate the Jacobian.
