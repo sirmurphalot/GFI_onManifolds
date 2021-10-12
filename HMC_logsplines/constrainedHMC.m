@@ -68,9 +68,20 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
     
     pStepSum = 0;
     reject_counter=0;
+    formatSpec = 'Performing a total of %d iterations.';
+    str = sprintf(formatSpec,N);
+    disp(str);
+            
     for j = 1:N
         
-        disp("STARTING NEXT ITERATION");
+        if mod( j , 1000 ) == 0
+            formatSpec = 'Finished %d iterations.';
+            str = sprintf(formatSpec,j);
+            disp(str);
+%             formatSpec = 'Current value: %d %d %d %d %d.';
+%             str = sprintf(formatSpec,samples(:,iter));
+%             disp(str);
+        end
         prevq = q0;
         prevU = U0;
         if nargout > 1 && j > 1

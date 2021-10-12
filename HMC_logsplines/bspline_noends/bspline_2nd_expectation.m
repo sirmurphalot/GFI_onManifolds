@@ -1,0 +1,39 @@
+function val = bspline_2nd_expectation(knots,thetas,spline_number1,...
+    spline_number2)
+
+    splinenumber1 = min(spline_number1, spline_number2);
+    splinenumber2 = max(spline_number1, spline_number2); 
+    i = splinenumber1;
+    [d1,d2] = size(thetas);
+    d = max(d1,d2);
+    
+    if (abs(splinenumber1 - splinenumber2) > 1)
+        val = 0;
+    elseif (abs(splinenumber1 - splinenumber2) == 1)
+        val = (knots(i+1)-knots(i+2))*((exp(thetas(i+1))) * ...
+            (-2-thetas(i) + thetas(i+1)) + (exp(thetas(i))) * ...
+            (2-thetas(i) + thetas(i+1)))/ (thetas(i) - thetas(i+1))^3;
+    else
+        if splinenumber1 == 1
+            val = (knots(i+1)-knots(i))*(-2 + exp(thetas(i))*(2-2*thetas(i)+thetas(i)^2))/ thetas(i)^3;
+            val = val + (knots(i+2)-knots(i+1))*(-2*exp(thetas(i+1)) + ...
+                exp(thetas(i))*(2+thetas(i)^2+2*thetas(i+1)+thetas(i+1)^2-...
+                2*thetas(i)*(1 + thetas(i+1))))/(thetas(i) - thetas(i+1))^3;
+        elseif splinenumber2 == d
+            val = (knots(i+1)-knots(i+2))*(-2*exp(thetas(i-1)) + ...
+                exp(thetas(i))*(2+thetas(i)^2+2*thetas(i-1)+thetas(i-1)^2-...
+                2*thetas(i)*(1 + thetas(i-1))))/(thetas(i) - thetas(i-1))^3;
+            val = val + (knots(i+2)-knots(i+1))*(-2+exp(thetas(i))*...
+                (2-2*thetas(i) + thetas(i)^2))/(thetas(i)^3);
+        else
+            val = (knots(i+1)-knots(i+2))*(-2*exp(thetas(i-1)) + ...
+                exp(thetas(i))*(2+thetas(i)^2+2*thetas(i-1)+thetas(i-1)^2-...
+                2*thetas(i)*(1 + thetas(i-1))))/(thetas(i) - thetas(i-1))^3;
+            val = val + (knots(i+2)-knots(i+1))*(-2*exp(thetas(i+1)) + ...
+                exp(thetas(i))*(2+thetas(i)^2+2*thetas(i+1)+thetas(i+1)^2-...
+                2*thetas(i)*(1 + thetas(i+1))))/(thetas(i) - thetas(i+1))^3;
+        end
+        
+              
+    end
+end
