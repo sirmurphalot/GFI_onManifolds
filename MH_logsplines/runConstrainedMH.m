@@ -14,7 +14,7 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
             formatSpec = 'Finished %d iterations.';
             str = sprintf(formatSpec,iter);
             disp(str);
-            formatSpec = 'Current value: %d %d %d %d %d.';
+            formatSpec = 'Current value: %d %d %d %d % %d %d %d %d %d.';
             str = sprintf(formatSpec,samples(:,iter));
             disp(str);
         end
@@ -49,6 +49,6 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
         samples(:,iter+1)=proposal;
         accepts(:,iter)=1;
     end
-    samples = samples(:,(burn_in+1):(num_iters+1));
-    accepts = accepts(:,(burn_in):num_iters);
+%     samples = samples(:,(burn_in+1):(num_iters+1));
+%     accepts = accepts(:,(burn_in):num_iters);
 end
