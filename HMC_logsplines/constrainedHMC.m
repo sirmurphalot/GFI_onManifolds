@@ -73,7 +73,7 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
     disp(str);
             
     for j = 1:N
-        
+        disp(int2str(j))
         if mod( j , 1000 ) == 0
             formatSpec = 'Finished %d iterations.';
             str = sprintf(formatSpec,j);
