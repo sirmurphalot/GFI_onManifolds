@@ -24,7 +24,7 @@ function ll = ll_density(thetas,knots, data_vals)
     
     
     C_vector = expectation_values./sqrt(sum(expectation_values.^2));
-    P_mat = diag(d) - C_vector * C_vector';
+    P_mat = diag(d) - C_vector' * C_vector;
     [U,~,~]=svds(P_mat,d-1); 
     % Use these columns of U to calculate our projected Jacobian matrix
     J_mat = jac_matrix*U;
