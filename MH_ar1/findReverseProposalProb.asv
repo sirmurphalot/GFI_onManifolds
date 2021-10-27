@@ -1,4 +1,8 @@
-function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScale, consFunc, dConsFunc)    
+function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScale, consFunc, dConsFunc)
+    tol=1e-3;
+    options = optimoptions('fsolve','Display','iter','TolFun', ...
+        1e-6, 'MaxFunctionEvaluations', 1e6, 'MaxIterations', 1e6);
+    
     dc = dConsFunc(proposal);
     [~,d] = size(dc);
     P = eye(d) - ((dc')/(dc*(dc')))*dc;
@@ -22,18 +26,20 @@ function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScal
     % Zero out the vector components that move OFF OF the tangent plane.
     v_temp = (Qy')*x_minus_y;
     prob = mvnpdf(v_temp', center', proposalScale*scale);
+    
     v_vector = Qy*v_temp;
     
     % Make sure that the return move is possible, considering the curvature
     % of the manifold (it might not be, in which case we reject).
-    [a, flag] = projectOntoConstraint(proposal + v_vector, Ty, consFunc);
-    z_shift = proposal + v_vector + Ty*a;
+    [~, flag] = projectOntoConstraint(proposal + v_vector, Ty, consFunc);
     
-    % I need to know that the return projection got back to the original
-    % value.
-    tol=1e-1;
-    if norm(z_shift-curr_loc) > tol
-        flag = 0;
-    end
+%     solve_this = @(a) (consFunc(proposal + v_vector + Ty*a));
+%     a = fsolve(solve_this, 0, options);
+%     z_shift = proposal + v_vector + Ty*a;
+%     
+%     flag=1;
+%     if norm(z_shift-curr_loc) > tol
+%         flag = 0;
+%     end
     
 end

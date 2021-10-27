@@ -1,32 +1,15 @@
-function [a, flag] = projectOntoConstraint(z, Qx, consFunc, dConsFunc)
-%     options = optimoptions('fsolve','Display','iter-detailed','PlotFcn',@optimplotfirstorderopt,'TolFun', 1e-10);
-    options = optimoptions('fsolve','Display','none','TolFun', 1e-10);
-%     nmax=10000;
-    tol=1e-6;
-%     [~,d]=size(Qx);
-%     a=zeros(d,1);
-%     i=0;
+function [a, flag] = projectOntoConstraint(z, Tx, consFunc)
+    options = optimoptions('fsolve','Display','none','TolFun', ...
+        1e-9, 'MaxFunctionEvaluations', 1e5, 'MaxIterations', 1e5);
     flag=1;
-    solve_this = @(a) (consFunc(z + Qx*a));
-    a = fsolve(solve_this, 0, options);
-    z_shift = z + Qx*a;
+    solve_this = @(a) (consFunc(z + Tx*a));
+    [~,d] = size(Tx);
+    initial = zeros(d,1);
+    a = fsolve(solve_this, initial, options);
+    z_shift = z + Tx*a;
+    
+    tol=1e-1;
     if norm(consFunc(z_shift)) > tol
         flag = 0;
     end
-%     while norm(consFunc(z_shift)) > tol
-% %         newton = @(deltaA) ((dConsFunc(z_shift)')*Qx*deltaA+...
-% %             consFunc(z_shift)));
-%         a = a - consFunc(z_shift)/((dConsFunc(z_shift)')*Qx);
-% %         delta_a = fsolve(newton, delta_a_guess, options);
-% %         a = a + delta_a;
-% %         delta_a_guess = delta_a;
-%         disp(norm(consFunc(z_shift)));
-%         z_shift = z + Qx*a;
-%         i = i+1;
-%         if i > nmax
-%             disp('got here');
-%             flag = 0;
-%             break
-%         end
-%     end
 end
