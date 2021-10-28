@@ -21,8 +21,12 @@ function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScal
     
     % Zero out the vector components that move OFF OF the tangent plane.
     v_temp = (Qy')*x_minus_y;
-    prob = mvnpdf(v_temp', center', proposalScale*scale);
+    prob = mvnpdf(v_temp, center, proposalScale*scale);
     v_vector = Qy*v_temp;
+    
+    if prob == 0
+        disp("hey");
+    end
     
     % Make sure that the return move is possible, considering the curvature
     % of the manifold (it might not be, in which case we reject).
@@ -32,8 +36,9 @@ function [prob, flag] = findReverseProposalProb(curr_loc, proposal, proposalScal
     % I need to know that the return projection got back to the original
     % value.
     tol=1e-1;
-    if norm(z_shift-curr_loc) > tol
-        flag = 0;
-    end
+%     if norm(z_shift-curr_loc) > tol
+%         disp("return probability failed!");
+%         flag = 0;
+%     end
     
 end

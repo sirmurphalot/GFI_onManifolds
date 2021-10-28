@@ -1,0 +1,3400 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.538062) 64-bit (glnxa64)
+                             February 23, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+     0
+
+
+ans =
+
+     0
+
+[Warning: Trust-region-dogleg algorithm of FSOLVE cannot handle non-square
+systems; using Levenberg-Marquardt algorithm instead.] 
+[> In fsolve (line 298)
+  In CMH_logsplines (line 38)] 
+
+initial_guess =
+
+  Columns 1 through 7
+
+   -2.4992    0.4746    0.8394    0.8821    0.4746   -0.3543   -0.5090
+
+  Columns 8 through 9
+
+   -0.6914   -2.4994
+
+
+chosen_theta =
+
+  Columns 1 through 7
+
+   -2.4992    0.4746    0.8394    0.8821    0.4746   -0.3543   -0.5090
+
+  Columns 8 through 9
+
+   -0.6914   -2.4994
+
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+
+proposal_scale =
+
+    0.0100
+
+The current MH ratio is: 3.045174e-01
+The current MH ratio is: -2.884366e+00
+Finished 250 iterations.
+Calculated 111 accepts.
+Current value: -1.980856e+00 8.800904e-01 5.789334e-01 7.502872e-01 
+The current MH ratio is: -1.984979e-01
+The current MH ratio is: -2.101899e+00
+Finished 500 iterations.
+Calculated 227 accepts.
+Current value: -1.607726e+00 4.531045e-01 6.825147e-01 7.165961e-01 
+The current MH ratio is: -2.880968e+00
+The current MH ratio is: -5.194099e-01
+The current MH ratio is: -8.036016e-01
+Finished 750 iterations.
+Calculated 316 accepts.
+Current value: -1.587846e+00 8.481894e-01 3.183203e-01 9.592799e-01 
+The current MH ratio is: -1.425349e+00
+The current MH ratio is: -6.886583e-01
+Finished 1000 iterations.
+Calculated 425 accepts.
+Current value: -1.986216e+00 7.714504e-01 4.810398e-01 8.573740e-01 
+The current MH ratio is: -1.476121e+00
+The current MH ratio is: -2.977588e+00
+The current MH ratio is: -1.051370e+00
+Finished 1250 iterations.
+Calculated 524 accepts.
+Current value: -1.988866e+00 1.020404e+00 4.942395e-01 8.307726e-01 
+The current MH ratio is: -2.903226e+00
+The current MH ratio is: -1.740866e+00
+Finished 1500 iterations.
+Calculated 622 accepts.
+Current value: -1.899656e+00 1.000005e+00 6.994899e-01 6.182591e-01 
+The current MH ratio is: -6.248064e-01
+The current MH ratio is: 3.045736e+00
+The current MH ratio is: -2.731639e+00
+Finished 1750 iterations.
+Calculated 713 accepts.
+Current value: -1.786355e+00 7.023698e-01 7.082958e-01 7.261054e-01 
+The current MH ratio is: -5.944972e+00
+The current MH ratio is: -8.257743e-01
+Finished 2000 iterations.
+Calculated 810 accepts.
+Current value: -1.751980e+00 8.647566e-01 5.104312e-01 6.698011e-01 
+The current MH ratio is: -1.611570e+00
+The current MH ratio is: -3.147803e+00
+The current MH ratio is: 1.429304e-02
+Finished 2250 iterations.
+Calculated 919 accepts.
+Current value: -1.685162e+00 8.704571e-01 5.198105e-01 9.573285e-01 
+The current MH ratio is: -4.292119e-01
+The current MH ratio is: -8.252502e-02
+Finished 2500 iterations.
+Calculated 1033 accepts.
+Current value: -2.052919e+00 9.189087e-01 6.427724e-01 8.257803e-01 
+The current MH ratio is: -4.644295e+00
+The current MH ratio is: 4.592058e-01
+The current MH ratio is: -5.521420e+00
+Finished 2750 iterations.
+Calculated 1133 accepts.
+Current value: -1.969427e+00 7.998552e-01 6.076157e-01 8.150817e-01 
+The current MH ratio is: -1.167711e+00
+The current MH ratio is: -1.721931e+00
+Finished 3000 iterations.
+Calculated 1244 accepts.
+Current value: -1.616383e+00 8.502969e-01 5.314831e-01 5.806281e-01 
+The current MH ratio is: -1.159317e-02
+The current MH ratio is: 4.140721e-02
+The current MH ratio is: -3.393019e+00
+Finished 3250 iterations.
+Calculated 1356 accepts.
+Current value: -2.221213e+00 8.810929e-01 4.155607e-01 8.416624e-01 
+The current MH ratio is: 3.404110e-01
+The current MH ratio is: 8.884598e-01
+Finished 3500 iterations.
+Calculated 1473 accepts.
+Current value: -2.180949e+00 1.008956e+00 6.628197e-01 6.581436e-01 
+The current MH ratio is: -1.259147e+00
+The current MH ratio is: -1.824222e+00
+The current MH ratio is: -5.448234e-01
+Finished 3750 iterations.
+Calculated 1570 accepts.
+Current value: -2.290192e+00 9.938975e-01 5.094834e-01 8.246388e-01 
+The current MH ratio is: 7.501190e-01
+The current MH ratio is: -4.193054e+00
+Finished 4000 iterations.
+Calculated 1677 accepts.
+Current value: -1.460581e+00 3.464334e-01 8.299090e-01 7.594110e-01 
+The current MH ratio is: -2.599626e+00
+The current MH ratio is: -3.089592e+00
+The current MH ratio is: -1.387228e+00
+Finished 4250 iterations.
+Calculated 1770 accepts.
+Current value: -1.709984e+00 9.514522e-01 5.894299e-01 7.004265e-01 
+The current MH ratio is: -1.065908e+00
+The current MH ratio is: -4.481018e+00
+Finished 4500 iterations.
+Calculated 1886 accepts.
+Current value: -1.521799e+00 7.466721e-01 8.162883e-01 6.781483e-01 
+The current MH ratio is: 4.836711e-01
+The current MH ratio is: -2.136338e+00
+The current MH ratio is: 2.496492e+00
+Finished 4750 iterations.
+Calculated 2000 accepts.
+Current value: -1.890676e+00 8.519522e-01 5.035253e-01 7.514325e-01 
+The current MH ratio is: -1.000381e+00
+The current MH ratio is: -3.643380e+00
+Finished 5000 iterations.
+Calculated 2103 accepts.
+Current value: -1.744960e+00 7.590197e-01 7.121655e-01 7.295183e-01 
+The current MH ratio is: -2.702796e+00
+The current MH ratio is: 3.419430e-01
+The current MH ratio is: -8.298698e-01
+Finished 5250 iterations.
+Calculated 2196 accepts.
+Current value: -1.046718e+00 7.202347e-01 5.536563e-01 9.145988e-01 
+The current MH ratio is: -2.527852e+00
+The current MH ratio is: 1.813435e+00
+Finished 5500 iterations.
+Calculated 2309 accepts.
+Current value: -1.739017e+00 7.806937e-01 6.477455e-01 9.024328e-01 
+The current MH ratio is: -7.121375e-01
+The current MH ratio is: -2.629291e+00
+The current MH ratio is: -2.367170e+00
+Finished 5750 iterations.
+Calculated 2421 accepts.
+Current value: -1.829197e+00 7.500114e-01 6.214007e-01 9.005524e-01 
+The current MH ratio is: -2.057287e+00
+The current MH ratio is: -1.685165e+00
+Finished 6000 iterations.
+Calculated 2513 accepts.
+Current value: -1.837863e+00 9.457282e-01 4.290273e-01 7.076358e-01 
+The current MH ratio is: 1.745469e-01
+The current MH ratio is: -1.409886e+00
+The current MH ratio is: 6.645517e-01
+Finished 6250 iterations.
+Calculated 2628 accepts.
+Current value: -1.464004e+00 8.131862e-01 7.534264e-01 5.663964e-01 
+The current MH ratio is: 4.363677e-01
+The current MH ratio is: -2.283679e+00
+Finished 6500 iterations.
+Calculated 2726 accepts.
+Current value: -1.519512e+00 7.098574e-01 5.042415e-01 7.337982e-01 
+The current MH ratio is: -4.197950e+00
+The current MH ratio is: -3.924089e+00
+The current MH ratio is: 1.063156e-01
+Finished 6750 iterations.
+Calculated 2825 accepts.
+Current value: -1.443898e+00 6.542728e-01 4.799052e-01 7.429877e-01 
+The current MH ratio is: -4.083308e+00
+The current MH ratio is: -5.041046e+00
+Finished 7000 iterations.
+Calculated 2932 accepts.
+Current value: -1.973748e+00 8.698831e-01 6.388236e-01 9.290698e-01 
+The current MH ratio is: -3.497262e+00
+The current MH ratio is: -3.956559e-01
+The current MH ratio is: -1.146386e+00
+Finished 7250 iterations.
+Calculated 3034 accepts.
+Current value: -1.630785e+00 8.081710e-01 4.957853e-01 8.115700e-01 
+The current MH ratio is: -1.476787e+00
+The current MH ratio is: -6.086298e-01
+Finished 7500 iterations.
+Calculated 3139 accepts.
+Current value: -1.719523e+00 7.802461e-01 6.155248e-01 7.634189e-01 
+The current MH ratio is: -1.668824e+00
+The current MH ratio is: -2.327680e-01
+The current MH ratio is: -1.920180e-01
+Finished 7750 iterations.
+Calculated 3250 accepts.
+Current value: -2.553915e+00 9.120222e-01 7.102423e-01 5.806579e-01 
+The current MH ratio is: -1.852260e+00
+The current MH ratio is: 3.228641e-01
+Finished 8000 iterations.
+Calculated 3344 accepts.
+Current value: -1.341321e+00 7.719564e-01 6.516900e-01 3.624426e-01 
+The current MH ratio is: -2.493901e+00
+The current MH ratio is: -1.684597e+00
+The current MH ratio is: -2.507241e+00
+Finished 8250 iterations.
+Calculated 3451 accepts.
+Current value: -1.300156e+00 6.772860e-01 5.747897e-01 7.188096e-01 
+The current MH ratio is: 3.182391e-01
+The current MH ratio is: 1.619905e+00
+Finished 8500 iterations.
+Calculated 3552 accepts.
+Current value: -1.209344e+00 6.454860e-01 5.948436e-01 1.051019e+00 
+The current MH ratio is: -1.634130e+00
+The current MH ratio is: 1.518798e+00
+The current MH ratio is: -3.490211e+00
+Finished 8750 iterations.
+Calculated 3651 accepts.
+Current value: -1.844873e+00 7.455826e-01 4.761552e-01 9.523143e-01 
+The current MH ratio is: -2.495821e+00
+The current MH ratio is: -7.221558e-01
+Finished 9000 iterations.
+Calculated 3750 accepts.
+Current value: -1.811051e+00 7.504956e-01 6.011428e-01 7.731343e-01 
+The current MH ratio is: -3.435457e-01
+The current MH ratio is: -3.146514e+00
+The current MH ratio is: -2.539753e-01
+Finished 9250 iterations.
+Calculated 3838 accepts.
+Current value: -1.241147e+00 5.567425e-01 7.629222e-01 6.679593e-01 
+The current MH ratio is: -1.296248e+00
+The current MH ratio is: -1.306855e+00
+Finished 9500 iterations.
+Calculated 3937 accepts.
+Current value: -1.721664e+00 6.641824e-01 4.913040e-01 9.487971e-01 
+The current MH ratio is: 4.588524e-01
+The current MH ratio is: -4.288432e-01
+The current MH ratio is: -9.117170e-01
+Finished 9750 iterations.
+Calculated 4045 accepts.
+Current value: -1.599777e+00 8.157240e-01 5.840754e-01 4.891694e-01 
+The current MH ratio is: -1.427628e+00
+The current MH ratio is: -2.883254e-01
+Finished 10000 iterations.
+Calculated 4147 accepts.
+Current value: -1.253923e+00 7.805381e-01 5.645175e-01 7.456085e-01 
+The current MH ratio is: -2.029708e+00
+The current MH ratio is: -2.828184e+00
+The current MH ratio is: 1.081783e-01
+Finished 10250 iterations.
+Calculated 4251 accepts.
+Current value: -1.766410e+00 6.389243e-01 6.944278e-01 7.662168e-01 
+The current MH ratio is: -2.012054e+00
+The current MH ratio is: -2.199588e+00
+Finished 10500 iterations.
+Calculated 4356 accepts.
+Current value: -2.022930e+00 8.171846e-01 5.949784e-01 7.147369e-01 
+The current MH ratio is: -2.924629e+00
+The current MH ratio is: -2.145902e+00
+The current MH ratio is: -3.220966e+00
+Finished 10750 iterations.
+Calculated 4464 accepts.
+Current value: -1.630890e+00 7.573225e-01 4.634796e-01 8.973378e-01 
+The current MH ratio is: 4.584476e-01
+The current MH ratio is: -2.003975e+00
+Finished 11000 iterations.
+Calculated 4566 accepts.
+Current value: -1.253130e+00 5.507404e-01 8.059516e-01 7.706632e-01 
+The current MH ratio is: -4.087735e-01
+The current MH ratio is: -3.224852e+00
+The current MH ratio is: -2.606233e+00
+Finished 11250 iterations.
+Calculated 4671 accepts.
+Current value: -1.161482e+00 5.708877e-01 8.150451e-01 6.289291e-01 
+The current MH ratio is: 6.939556e-01
+The current MH ratio is: -1.405334e+00
+Finished 11500 iterations.
+Calculated 4761 accepts.
+Current value: -2.239426e+00 8.995447e-01 6.134974e-01 8.027007e-01 
+The current MH ratio is: -7.911821e-01
+The current MH ratio is: -7.614743e-01
+The current MH ratio is: -1.837019e+00
+Finished 11750 iterations.
+Calculated 4868 accepts.
+Current value: -1.256534e+00 7.059706e-01 5.918625e-01 7.449289e-01 
+The current MH ratio is: 7.718222e-01
+The current MH ratio is: -5.673684e-01
+Finished 12000 iterations.
+Calculated 4978 accepts.
+Current value: -1.422073e+00 6.011024e-01 7.921387e-01 7.039097e-01 
+The current MH ratio is: -2.080883e+00
+The current MH ratio is: -2.627746e+00
+The current MH ratio is: -2.311656e+00
+Finished 12250 iterations.
+Calculated 5080 accepts.
+Current value: -2.400657e+00 8.977243e-01 5.684590e-01 7.205912e-01 
+The current MH ratio is: -2.834566e+00
+The current MH ratio is: -4.219453e+00
+Finished 12500 iterations.
+Calculated 5190 accepts.
+Current value: -1.968715e+00 7.524916e-01 5.942794e-01 8.632124e-01 
+The current MH ratio is: -7.082399e-01
+The current MH ratio is: -2.304183e+00
+The current MH ratio is: -1.508384e-02
+Finished 12750 iterations.
+Calculated 5281 accepts.
+Current value: -1.474658e+00 6.003994e-01 7.077554e-01 6.584479e-01 
+The current MH ratio is: -5.492923e-01
+The current MH ratio is: -8.774966e-01
+Finished 13000 iterations.
+Calculated 5385 accepts.
+Current value: -1.766273e+00 7.019872e-01 3.938316e-01 8.841356e-01 
+The current MH ratio is: -1.459846e+00
+The current MH ratio is: -1.504357e-01
+The current MH ratio is: -6.987805e-01
+Finished 13250 iterations.
+Calculated 5488 accepts.
+Current value: -1.428547e+00 4.667487e-01 7.244397e-01 4.865178e-01 
+The current MH ratio is: -6.531158e-01
+The current MH ratio is: -1.010239e+00
+Finished 13500 iterations.
+Calculated 5584 accepts.
+Current value: -1.556976e+00 7.630703e-01 5.443025e-01 7.233159e-01 
+The current MH ratio is: -1.837001e+00
+The current MH ratio is: -2.346038e+00
+The current MH ratio is: -5.324077e-01
+Finished 13750 iterations.
+Calculated 5690 accepts.
+Current value: -1.570247e+00 6.248614e-01 7.515433e-01 5.055634e-01 
+The current MH ratio is: -1.187644e+00
+The current MH ratio is: -1.932106e-01
+Finished 14000 iterations.
+Calculated 5811 accepts.
+Current value: -1.786056e+00 8.350577e-01 5.843738e-01 8.105051e-01 
+The current MH ratio is: -2.042835e+00
+The current MH ratio is: -5.066025e+00
+The current MH ratio is: -3.677400e+00
+Finished 14250 iterations.
+Calculated 5922 accepts.
+Current value: -1.372315e+00 7.647865e-01 5.572016e-01 8.338901e-01 
+The current MH ratio is: 1.483059e+00
+The current MH ratio is: -1.053059e+00
+Finished 14500 iterations.
+Calculated 6037 accepts.
+Current value: -1.831008e+00 1.018053e+00 6.360095e-01 6.991725e-01 
+The current MH ratio is: -1.261400e+00
+The current MH ratio is: -1.781003e-01
+The current MH ratio is: 2.138545e-01
+Finished 14750 iterations.
+Calculated 6146 accepts.
+Current value: -1.718473e+00 6.605234e-01 7.380452e-01 6.770562e-01 
+The current MH ratio is: 5.165515e-02
+The current MH ratio is: -1.813439e+00
+Finished 15000 iterations.
+Calculated 6255 accepts.
+Current value: -1.810155e+00 7.094902e-01 3.762372e-01 9.557787e-01 
+The current MH ratio is: -1.021309e+00
+The current MH ratio is: 8.966764e-01
+The current MH ratio is: -2.511421e+00
+Finished 15250 iterations.
+Calculated 6380 accepts.
+Current value: -1.732708e+00 6.714510e-01 7.939652e-01 7.513517e-01 
+The current MH ratio is: -4.057096e+00
+The current MH ratio is: 6.977092e-01
+Finished 15500 iterations.
+Calculated 6497 accepts.
+Current value: -1.987691e+00 7.424033e-01 6.716981e-01 6.951317e-01 
+The current MH ratio is: -1.941264e+00
+The current MH ratio is: -5.430035e-01
+The current MH ratio is: -5.528330e-01
+Finished 15750 iterations.
+Calculated 6593 accepts.
+Current value: -1.799457e+00 8.054952e-01 5.529205e-01 7.061290e-01 
+The current MH ratio is: -1.553958e+00
+The current MH ratio is: -2.211872e+00
+Finished 16000 iterations.
+Calculated 6688 accepts.
+Current value: -2.145522e+00 7.914832e-01 6.344238e-01 9.837391e-01 
+The current MH ratio is: -2.692154e+00
+The current MH ratio is: -1.516045e+00
+The current MH ratio is: -3.048547e+00
+Finished 16250 iterations.
+Calculated 6795 accepts.
+Current value: -1.790900e+00 8.845736e-01 5.648608e-01 6.367433e-01 
+The current MH ratio is: -4.721217e+00
+The current MH ratio is: -6.345268e+00
+Finished 16500 iterations.
+Calculated 6902 accepts.
+Current value: -2.236635e+00 8.588335e-01 5.459790e-01 9.041885e-01 
+The current MH ratio is: -3.380514e+00
+The current MH ratio is: -1.166863e+00
+The current MH ratio is: -4.106231e-01
+Finished 16750 iterations.
+Calculated 7020 accepts.
+Current value: -1.705373e+00 9.302379e-01 6.720112e-01 7.456435e-01 
+The current MH ratio is: -3.123229e+00
+The current MH ratio is: -5.521981e-01
+Finished 17000 iterations.
+Calculated 7133 accepts.
+Current value: -2.109074e+00 8.888929e-01 4.229673e-01 7.949307e-01 
+The current MH ratio is: -8.952573e-01
+The current MH ratio is: 1.396736e-01
+The current MH ratio is: -2.542277e+00
+Finished 17250 iterations.
+Calculated 7246 accepts.
+Current value: -1.630250e+00 9.175507e-01 5.161329e-01 7.661085e-01 
+The current MH ratio is: 2.921611e-02
+The current MH ratio is: -6.539186e-01
+Finished 17500 iterations.
+Calculated 7328 accepts.
+Current value: -1.512182e+00 7.732489e-01 5.970505e-01 7.226986e-01 
+The current MH ratio is: 5.116312e-01
+The current MH ratio is: 2.119754e+00
+The current MH ratio is: -1.822880e+00
+Finished 17750 iterations.
+Calculated 7422 accepts.
+Current value: -2.498353e+00 1.012712e+00 6.378556e-01 7.035346e-01 
+The current MH ratio is: -4.837785e+00
+The current MH ratio is: -1.794432e+00
+Finished 18000 iterations.
+Calculated 7531 accepts.
+Current value: -1.767380e+00 6.077866e-01 6.386010e-01 7.439763e-01 
+The current MH ratio is: 1.156874e-01
+The current MH ratio is: -1.638710e+00
+The current MH ratio is: -2.987790e-01
+Finished 18250 iterations.
+Calculated 7643 accepts.
+Current value: -1.869839e+00 8.621437e-01 5.032209e-01 7.756662e-01 
+The current MH ratio is: 6.113992e-01
+The current MH ratio is: -3.293707e+00
+Finished 18500 iterations.
+Calculated 7746 accepts.
+Current value: -1.417382e+00 6.611118e-01 7.614004e-01 7.298917e-01 
+The current MH ratio is: 7.056629e-01
+The current MH ratio is: -1.326389e+00
+The current MH ratio is: -1.599960e+00
+Finished 18750 iterations.
+Calculated 7849 accepts.
+Current value: -1.829023e+00 8.632222e-01 5.282935e-01 8.772307e-01 
+The current MH ratio is: -1.234719e+00
+The current MH ratio is: 1.903304e-02
+Finished 19000 iterations.
+Calculated 7945 accepts.
+Current value: -1.478092e+00 6.814084e-01 4.670315e-01 7.964852e-01 
+The current MH ratio is: -2.559092e+00
+The current MH ratio is: -2.510282e+00
+The current MH ratio is: -3.199359e+00
+Finished 19250 iterations.
+Calculated 8047 accepts.
+Current value: -1.607750e+00 9.350210e-01 4.653048e-01 9.145218e-01 
+The current MH ratio is: -3.005337e-01
+The current MH ratio is: -1.305992e+00
+Finished 19500 iterations.
+Calculated 8155 accepts.
+Current value: -1.865342e+00 6.914105e-01 3.487039e-01 9.155513e-01 
+The current MH ratio is: -3.181720e+00
+The current MH ratio is: -6.783895e-01
+The current MH ratio is: 9.425174e-01
+Finished 19750 iterations.
+Calculated 8267 accepts.
+Current value: -2.356766e+00 8.251705e-01 6.331178e-01 8.088162e-01 
+The current MH ratio is: -2.001615e+00
+The current MH ratio is: 8.690321e-01
+Finished 20000 iterations.
+Calculated 8385 accepts.
+Current value: -1.577489e+00 7.441721e-01 6.744171e-01 6.652946e-01 
+The current MH ratio is: -5.012983e+00
+The current MH ratio is: -7.200759e-01
+The current MH ratio is: -5.105582e-01
+Finished 20250 iterations.
+Calculated 8475 accepts.
+Current value: -1.658898e+00 6.837822e-01 5.914205e-01 7.503902e-01 
+The current MH ratio is: -3.089372e+00
+The current MH ratio is: 7.614966e-01
+Finished 20500 iterations.
+Calculated 8582 accepts.
+Current value: -2.250523e+00 8.273804e-01 5.591121e-01 8.535772e-01 
+The current MH ratio is: -3.970342e+00
+The current MH ratio is: 9.245059e-02
+The current MH ratio is: 9.956929e-01
+Finished 20750 iterations.
+Calculated 8682 accepts.
+Current value: -1.989492e+00 7.897112e-01 6.208397e-01 5.968296e-01 
+The current MH ratio is: -2.148340e+00
+The current MH ratio is: -2.286498e+00
+Finished 21000 iterations.
+Calculated 8781 accepts.
+Current value: -1.910883e+00 6.948323e-01 6.973489e-01 7.458500e-01 
+The current MH ratio is: -5.487107e+00
+The current MH ratio is: -1.396313e+00
+The current MH ratio is: -3.712625e-01
+Finished 21250 iterations.
+Calculated 8903 accepts.
+Current value: -1.768066e+00 6.868211e-01 5.852153e-01 7.410037e-01 
+The current MH ratio is: 1.007788e-02
+The current MH ratio is: -5.868625e-01
+Finished 21500 iterations.
+Calculated 9013 accepts.
+Current value: -1.824544e+00 8.720308e-01 7.416084e-01 8.085660e-01 
+The current MH ratio is: -2.046085e+00
+The current MH ratio is: -3.583896e+00
+The current MH ratio is: -5.203896e-01
+Finished 21750 iterations.
+Calculated 9107 accepts.
+Current value: -1.526149e+00 6.205617e-01 6.889828e-01 8.231687e-01 
+The current MH ratio is: -3.261729e+00
+The current MH ratio is: 2.209897e-02
+Finished 22000 iterations.
+Calculated 9209 accepts.
+Current value: -1.352204e+00 6.360891e-01 7.002315e-01 6.768999e-01 
+The current MH ratio is: -2.445905e+00
+The current MH ratio is: 1.938829e-01
+The current MH ratio is: -5.067834e-01
+Finished 22250 iterations.
+Calculated 9325 accepts.
+Current value: -1.809770e+00 1.008744e+00 4.160025e-01 8.814763e-01 
+The current MH ratio is: 1.905376e+00
+The current MH ratio is: -3.149011e+00
+Finished 22500 iterations.
+Calculated 9429 accepts.
+Current value: -1.439730e+00 6.670383e-01 6.823582e-01 5.904502e-01 
+The current MH ratio is: -1.048572e+00
+The current MH ratio is: -3.961811e+00
+The current MH ratio is: -1.300366e+00
+Finished 22750 iterations.
+Calculated 9532 accepts.
+Current value: -1.341823e+00 5.959324e-01 6.463098e-01 7.990289e-01 
+The current MH ratio is: -1.480182e+00
+The current MH ratio is: -1.228937e+00
+Finished 23000 iterations.
+Calculated 9652 accepts.
+Current value: -1.776559e+00 8.779733e-01 5.468653e-01 8.993907e-01 
+The current MH ratio is: 4.378170e-01
+The current MH ratio is: -2.982283e+00
+The current MH ratio is: -2.274103e+00
+Finished 23250 iterations.
+Calculated 9743 accepts.
+Current value: -1.634998e+00 8.779764e-01 5.654599e-01 5.199264e-01 
+The current MH ratio is: 2.237877e-01
+The current MH ratio is: -9.010770e+00
+Finished 23500 iterations.
+Calculated 9856 accepts.
+Current value: -1.769996e+00 8.459046e-01 5.055408e-01 7.127306e-01 
+The current MH ratio is: -9.228657e-01
+The current MH ratio is: -1.932614e+00
+The current MH ratio is: -4.457018e+00
+Finished 23750 iterations.
+Calculated 9959 accepts.
+Current value: -1.790669e+00 7.775563e-01 7.161424e-01 7.345187e-01 
+The current MH ratio is: -3.015185e+00
+The current MH ratio is: -9.997555e-01
+Finished 24000 iterations.
+Calculated 10067 accepts.
+Current value: -2.047404e+00 7.868963e-01 7.450911e-01 6.206680e-01 
+The current MH ratio is: -1.306499e+00
+The current MH ratio is: -1.429968e+00
+The current MH ratio is: -4.811267e-01
+Finished 24250 iterations.
+Calculated 10185 accepts.
+Current value: -1.715798e+00 5.961949e-01 5.845116e-01 8.553822e-01 
+The current MH ratio is: -4.051636e+00
+The current MH ratio is: -1.459048e+00
+Finished 24500 iterations.
+Calculated 10288 accepts.
+Current value: -1.974331e+00 8.160638e-01 8.235057e-01 6.331539e-01 
+The current MH ratio is: -5.182676e+00
+The current MH ratio is: -4.115196e-01
+The current MH ratio is: -2.053532e+00
+Finished 24750 iterations.
+Calculated 10386 accepts.
+Current value: -1.603912e+00 7.642332e-01 4.589540e-01 8.016743e-01 
+The current MH ratio is: 6.122963e-02
+The current MH ratio is: 1.659923e+00
+Finished 25000 iterations.
+Calculated 10503 accepts.
+Current value: -1.693889e+00 7.961745e-01 7.569491e-01 7.514452e-01 
+The current MH ratio is: -5.251794e+00
+The current MH ratio is: 1.084121e-01
+The current MH ratio is: -4.189024e+00
+Finished 25250 iterations.
+Calculated 10606 accepts.
+Current value: -1.702301e+00 9.213267e-01 2.501226e-01 9.528144e-01 
+The current MH ratio is: -1.167733e+00
+The current MH ratio is: -1.724484e+00
+Finished 25500 iterations.
+Calculated 10714 accepts.
+Current value: -1.463076e+00 5.892816e-01 7.195074e-01 7.500964e-01 
+The current MH ratio is: -1.112520e-01
+The current MH ratio is: -1.730382e+00
+The current MH ratio is: -5.929234e-01
+Finished 25750 iterations.
+Calculated 10812 accepts.
+Current value: -1.993748e+00 8.381208e-01 3.386412e-01 9.808625e-01 
+The current MH ratio is: -5.408570e-01
+The current MH ratio is: -1.024905e+00
+Finished 26000 iterations.
+Calculated 10923 accepts.
+Current value: -1.874284e+00 8.279297e-01 4.988422e-01 8.658745e-01 
+The current MH ratio is: -2.477157e+00
+The current MH ratio is: -4.055271e+00
+The current MH ratio is: 1.602046e+00
+Finished 26250 iterations.
+Calculated 11043 accepts.
+Current value: -1.733674e+00 8.640446e-01 5.130229e-01 8.384385e-01 
+The current MH ratio is: -1.726740e+00
+The current MH ratio is: 8.962060e-02
+Finished 26500 iterations.
+Calculated 11142 accepts.
+Current value: -1.214209e+00 5.037250e-01 6.718139e-01 6.845050e-01 
+The current MH ratio is: -4.220429e+00
+The current MH ratio is: -2.068155e-01
+The current MH ratio is: -1.564335e+00
+Finished 26750 iterations.
+Calculated 11239 accepts.
+Current value: -1.408360e+00 7.414839e-01 6.409004e-01 5.939799e-01 
+The current MH ratio is: -1.786785e+00
+The current MH ratio is: -3.493164e+00
+Finished 27000 iterations.
+Calculated 11352 accepts.
+Current value: -1.791078e+00 9.656872e-01 5.118530e-01 6.465991e-01 
+The current MH ratio is: -1.969789e-01
+The current MH ratio is: 1.111796e+00
+The current MH ratio is: -2.547460e+00
+Finished 27250 iterations.
+Calculated 11454 accepts.
+Current value: -1.845395e+00 7.155994e-01 7.019786e-01 6.837673e-01 
+The current MH ratio is: -1.639668e+00
+The current MH ratio is: 2.856909e-01
+Finished 27500 iterations.
+Calculated 11545 accepts.
+Current value: -1.657335e+00 8.771156e-01 5.913616e-01 4.991139e-01 
+The current MH ratio is: -1.281099e+00
+The current MH ratio is: -3.544273e+00
+The current MH ratio is: -2.575905e+00
+Finished 27750 iterations.
+Calculated 11650 accepts.
+Current value: -1.665295e+00 5.884506e-01 7.251957e-01 6.492228e-01 
+The current MH ratio is: 6.301337e-01
+The current MH ratio is: 1.273205e+00
+Finished 28000 iterations.
+Calculated 11764 accepts.
+Current value: -1.845842e+00 8.351015e-01 5.918481e-01 6.683781e-01 
+The current MH ratio is: -3.061097e-01
+The current MH ratio is: -2.794798e+00
+The current MH ratio is: 4.826320e+00
+Finished 28250 iterations.
+Calculated 11885 accepts.
+Current value: -1.636410e+00 7.747169e-01 4.696407e-01 8.862910e-01 
+The current MH ratio is: 2.206151e+00
+The current MH ratio is: -1.826622e+00
+Finished 28500 iterations.
+Calculated 11986 accepts.
+Current value: -1.577676e+00 8.619821e-01 4.951764e-01 7.480785e-01 
+The current MH ratio is: -1.380773e+00
+The current MH ratio is: -5.190298e+00
+The current MH ratio is: -3.058485e+00
+Finished 28750 iterations.
+Calculated 12089 accepts.
+Current value: -2.312136e+00 7.957903e-01 5.990844e-01 8.969331e-01 
+The current MH ratio is: -1.058124e+00
+The current MH ratio is: -1.012143e+00
+Finished 29000 iterations.
+Calculated 12195 accepts.
+Current value: -1.912634e+00 8.737108e-01 5.277304e-01 6.318973e-01 
+The current MH ratio is: -1.218446e+00
+The current MH ratio is: -1.897060e+00
+The current MH ratio is: -2.373625e+00
+Finished 29250 iterations.
+Calculated 12293 accepts.
+Current value: -1.537896e+00 7.915962e-01 7.367777e-01 5.384123e-01 
+The current MH ratio is: -2.277866e+00
+The current MH ratio is: -1.948075e+00
+Finished 29500 iterations.
+Calculated 12412 accepts.
+Current value: -1.185532e+00 7.558840e-01 5.893925e-01 6.303336e-01 
+The current MH ratio is: 6.643050e-01
+The current MH ratio is: -6.317194e+00
+The current MH ratio is: 4.211559e+00
+Finished 29750 iterations.
+Calculated 12513 accepts.
+Current value: -1.576592e+00 7.571911e-01 5.137719e-01 8.059892e-01 
+The current MH ratio is: -3.685496e+00
+The current MH ratio is: -1.284179e+00
+Finished 30000 iterations.
+Calculated 12618 accepts.
+Current value: -1.220195e+00 5.783020e-01 6.999649e-01 6.504766e-01 
+The current MH ratio is: -1.381135e+00
+The current MH ratio is: 4.477444e-01
+The current MH ratio is: -1.825769e+00
+Finished 30250 iterations.
+Calculated 12723 accepts.
+Current value: -2.028686e+00 8.701256e-01 6.829091e-01 7.113486e-01 
+The current MH ratio is: -1.752503e+00
+The current MH ratio is: -6.666538e+00
+Finished 30500 iterations.
+Calculated 12818 accepts.
+Current value: -1.584913e+00 7.903193e-01 5.685593e-01 8.975178e-01 
+The current MH ratio is: -1.570641e-01
+The current MH ratio is: -2.064121e+00
+The current MH ratio is: -6.374293e-01
+Finished 30750 iterations.
+Calculated 12912 accepts.
+Current value: -1.222323e+00 5.648461e-01 4.332132e-01 8.376432e-01 
+The current MH ratio is: -1.218960e-01
+The current MH ratio is: -2.918422e+00
+Finished 31000 iterations.
+Calculated 13016 accepts.
+Current value: -1.777749e+00 5.894079e-01 6.623918e-01 8.991643e-01 
+The current MH ratio is: -8.843680e-01
+The current MH ratio is: -4.659874e-01
+The current MH ratio is: 1.229906e+00
+Finished 31250 iterations.
+Calculated 13117 accepts.
+Current value: -1.572242e+00 7.184280e-01 8.468488e-01 6.933147e-01 
+The current MH ratio is: -1.117165e+00
+The current MH ratio is: -4.112192e+00
+Finished 31500 iterations.
+Calculated 13224 accepts.
+Current value: -2.250477e+00 7.828993e-01 7.235917e-01 9.125935e-01 
+The current MH ratio is: -5.054366e+00
+The current MH ratio is: -1.657181e+00
+The current MH ratio is: 1.200726e+00
+Finished 31750 iterations.
+Calculated 13323 accepts.
+Current value: -1.498141e+00 7.537799e-01 5.814318e-01 9.049460e-01 
+The current MH ratio is: -2.345660e+00
+The current MH ratio is: -1.312078e+00
+Finished 32000 iterations.
+Calculated 13423 accepts.
+Current value: -2.404370e+00 8.963601e-01 4.555276e-01 8.920271e-01 
+The current MH ratio is: -2.345534e+00
+The current MH ratio is: -3.508665e+00
+The current MH ratio is: -1.392439e+00
+Finished 32250 iterations.
+Calculated 13520 accepts.
+Current value: -2.196043e+00 7.475716e-01 5.011421e-01 8.116750e-01 
+The current MH ratio is: -1.808829e+00
+The current MH ratio is: 7.836937e-01
+Finished 32500 iterations.
+Calculated 13618 accepts.
+Current value: -1.450954e+00 7.736952e-01 6.329762e-01 7.304150e-01 
+The current MH ratio is: -1.105284e+00
+The current MH ratio is: -2.345325e+00
+The current MH ratio is: 1.112912e+00
+Finished 32750 iterations.
+Calculated 13713 accepts.
+Current value: -1.383721e+00 7.580528e-01 5.121672e-01 8.517421e-01 
+The current MH ratio is: -1.626322e+00
+The current MH ratio is: -6.638003e+00
+Finished 33000 iterations.
+Calculated 13818 accepts.
+Current value: -1.739914e+00 7.377199e-01 4.355223e-01 1.063404e+00 
+The current MH ratio is: -1.213472e+00
+The current MH ratio is: 1.950815e+00
+The current MH ratio is: -2.151975e+00
+Finished 33250 iterations.
+Calculated 13929 accepts.
+Current value: -2.281812e+00 9.497270e-01 4.026321e-01 8.954579e-01 
+The current MH ratio is: -1.326363e+00
+The current MH ratio is: 1.191002e+00
+Finished 33500 iterations.
+Calculated 14033 accepts.
+Current value: -1.399320e+00 7.958356e-01 6.532442e-01 8.388531e-01 
+The current MH ratio is: 4.964508e-01
+The current MH ratio is: -2.676888e+00
+The current MH ratio is: -4.636239e+00
+Finished 33750 iterations.
+Calculated 14122 accepts.
+Current value: -1.556428e+00 5.689431e-01 8.093392e-01 6.443377e-01 
+The current MH ratio is: 2.102931e-01
+The current MH ratio is: -2.876784e+00
+Finished 34000 iterations.
+Calculated 14225 accepts.
+Current value: -1.700039e+00 7.326300e-01 5.220880e-01 7.514480e-01 
+The current MH ratio is: -1.133086e+00
+The current MH ratio is: -4.946985e-01
+The current MH ratio is: -3.380246e+00
+Finished 34250 iterations.
+Calculated 14337 accepts.
+Current value: -1.657746e+00 8.289393e-01 7.556153e-01 5.534580e-01 
+The current MH ratio is: -3.711867e+00
+The current MH ratio is: 7.983713e-01
+Finished 34500 iterations.
+Calculated 14460 accepts.
+Current value: -1.599060e+00 9.683255e-01 3.996802e-01 7.257790e-01 
+The current MH ratio is: -3.044888e+00
+The current MH ratio is: 3.083971e+00
+The current MH ratio is: -7.583426e-01
+Finished 34750 iterations.
+Calculated 14567 accepts.
+Current value: -1.746714e+00 7.324055e-01 6.066198e-01 6.839053e-01 
+The current MH ratio is: -1.909667e+00
+The current MH ratio is: -4.016059e+00
+Finished 35000 iterations.
+Calculated 14665 accepts.
+Current value: -1.849596e+00 6.569585e-01 6.532459e-01 7.331313e-01 
+The current MH ratio is: -5.348309e+00
+The current MH ratio is: -2.318588e+00
+The current MH ratio is: -2.723613e+00
+Finished 35250 iterations.
+Calculated 14770 accepts.
+Current value: -2.360498e+00 6.632879e-01 6.960441e-01 1.005323e+00 
+The current MH ratio is: -4.248198e+00
+The current MH ratio is: -7.170292e+00
+Finished 35500 iterations.
+Calculated 14866 accepts.
+Current value: -1.987728e+00 5.828657e-01 8.222393e-01 9.356391e-01 
+The current MH ratio is: -4.495997e+00
+The current MH ratio is: -5.610151e-01
+The current MH ratio is: -1.957553e+00
+Finished 35750 iterations.
+Calculated 14970 accepts.
+Current value: -1.870611e+00 8.167983e-01 4.364430e-01 8.562437e-01 
+The current MH ratio is: -2.218905e+00
+The current MH ratio is: -1.426951e+00
+Finished 36000 iterations.
+Calculated 15073 accepts.
+Current value: -1.502547e+00 6.468068e-01 6.589660e-01 8.625163e-01 
+The current MH ratio is: 3.675527e-01
+The current MH ratio is: -2.094477e+00
+The current MH ratio is: -3.626118e+00
+Finished 36250 iterations.
+Calculated 15182 accepts.
+Current value: -1.687090e+00 7.505118e-01 6.114294e-01 8.523686e-01 
+The current MH ratio is: 4.401272e-02
+The current MH ratio is: -1.196620e+00
+Finished 36500 iterations.
+Calculated 15292 accepts.
+Current value: -1.799641e+00 7.800564e-01 7.236916e-01 7.454603e-01 
+The current MH ratio is: 7.653374e-01
+The current MH ratio is: -3.386840e+00
+The current MH ratio is: -1.402200e-01
+Finished 36750 iterations.
+Calculated 15387 accepts.
+Current value: -2.095169e+00 7.714178e-01 6.733684e-01 8.912379e-01 
+The current MH ratio is: -2.621884e+00
+The current MH ratio is: -1.000030e+00
+Finished 37000 iterations.
+Calculated 15490 accepts.
+Current value: -1.040120e+00 5.450462e-01 5.677680e-01 9.031796e-01 
+The current MH ratio is: -2.674042e-01
+The current MH ratio is: -5.935246e-03
+The current MH ratio is: 2.442319e+00
+Finished 37250 iterations.
+Calculated 15602 accepts.
+Current value: -1.865429e+00 7.652281e-01 4.896490e-01 8.346967e-01 
+The current MH ratio is: 5.154504e-01
+The current MH ratio is: -1.583208e+00
+Finished 37500 iterations.
+Calculated 15720 accepts.
+Current value: -2.278033e+00 8.757470e-01 4.591870e-01 8.226040e-01 
+The current MH ratio is: 3.091930e-01
+The current MH ratio is: -1.335085e+00
+The current MH ratio is: -2.175253e+00
+Finished 37750 iterations.
+Calculated 15830 accepts.
+Current value: -1.942677e+00 8.133820e-01 4.857478e-01 9.937543e-01 
+The current MH ratio is: -5.265784e-01
+The current MH ratio is: -2.487353e+00
+Finished 38000 iterations.
+Calculated 15941 accepts.
+Current value: -1.512245e+00 7.769229e-01 4.487496e-01 7.399647e-01 
+The current MH ratio is: 3.293604e-01
+The current MH ratio is: -3.288850e+00
+The current MH ratio is: -6.875607e+00
+Finished 38250 iterations.
+Calculated 16039 accepts.
+Current value: -1.200348e+00 7.355014e-01 6.530608e-01 8.507025e-01 
+The current MH ratio is: 1.257122e+00
+The current MH ratio is: -1.903575e+00
+Finished 38500 iterations.
+Calculated 16155 accepts.
+Current value: -1.646768e+00 8.928785e-01 3.267482e-01 9.291377e-01 
+The current MH ratio is: -2.809889e+00
+The current MH ratio is: -1.665327e+00
+The current MH ratio is: -1.786447e+00
+Finished 38750 iterations.
+Calculated 16252 accepts.
+Current value: -1.889583e+00 6.470449e-01 8.515595e-01 5.623063e-01 
+The current MH ratio is: -2.949715e+00
+The current MH ratio is: -3.506476e-01
+Finished 39000 iterations.
+Calculated 16364 accepts.
+Current value: -1.645856e+00 7.293655e-01 5.652622e-01 7.926641e-01 
+The current MH ratio is: -3.333629e+00
+The current MH ratio is: -1.164347e+00
+The current MH ratio is: 3.332272e-01
+Finished 39250 iterations.
+Calculated 16473 accepts.
+Current value: -1.640266e+00 7.262002e-01 5.852286e-01 8.630018e-01 
+The current MH ratio is: -1.616419e+00
+The current MH ratio is: -5.057607e+00
+Finished 39500 iterations.
+Calculated 16580 accepts.
+Current value: -1.423354e+00 7.139647e-01 6.107977e-01 5.939439e-01 
+The current MH ratio is: -2.636513e+00
+The current MH ratio is: -2.503642e+00
+The current MH ratio is: 4.609821e+00
+Finished 39750 iterations.
+Calculated 16702 accepts.
+Current value: -1.467906e+00 5.518721e-01 6.353199e-01 6.870902e-01 
+The current MH ratio is: -4.138809e+00
+The current MH ratio is: -3.109521e+00
+Finished 40000 iterations.
+Calculated 16796 accepts.
+Current value: -1.396545e+00 5.054601e-01 6.501408e-01 7.702472e-01 
+The current MH ratio is: -1.224706e+00
+The current MH ratio is: -3.030473e+00
+The current MH ratio is: -3.939964e+00
+Finished 40250 iterations.
+Calculated 16901 accepts.
+Current value: -2.577271e+00 9.387613e-01 4.879177e-01 7.604898e-01 
+The current MH ratio is: -2.990707e+00
+The current MH ratio is: 8.140794e-01
+Finished 40500 iterations.
+Calculated 17005 accepts.
+Current value: -2.151702e+00 7.862626e-01 5.744411e-01 7.067928e-01 
+The current MH ratio is: 9.667202e-01
+The current MH ratio is: -6.911071e-01
+The current MH ratio is: -2.150241e+00
+Finished 40750 iterations.
+Calculated 17116 accepts.
+Current value: -2.095186e+00 8.745749e-01 5.799602e-01 7.964201e-01 
+The current MH ratio is: -6.330958e-01
+The current MH ratio is: -1.517674e+00
+Finished 41000 iterations.
+Calculated 17213 accepts.
+Current value: -1.744642e+00 7.432869e-01 6.821713e-01 4.756214e-01 
+The current MH ratio is: -1.537762e+00
+The current MH ratio is: 1.880203e-01
+The current MH ratio is: -2.338654e+00
+Finished 41250 iterations.
+Calculated 17317 accepts.
+Current value: -1.380797e+00 6.797798e-01 7.015514e-01 6.061445e-01 
+The current MH ratio is: -2.489529e+00
+The current MH ratio is: -5.844485e-01
+Finished 41500 iterations.
+Calculated 17419 accepts.
+Current value: -1.144812e+00 6.834830e-01 4.956137e-01 5.996507e-01 
+The current MH ratio is: -3.013873e+00
+The current MH ratio is: 7.045224e-01
+The current MH ratio is: -8.473186e-01
+Finished 41750 iterations.
+Calculated 17523 accepts.
+Current value: -1.972821e+00 8.385221e-01 5.844704e-01 7.994251e-01 
+The current MH ratio is: -2.882303e+00
+The current MH ratio is: 1.094686e+00
+Finished 42000 iterations.
+Calculated 17637 accepts.
+Current value: -1.684891e+00 8.657283e-01 7.386737e-01 6.359890e-01 
+The current MH ratio is: 2.583471e+00
+The current MH ratio is: -2.419352e+00
+The current MH ratio is: 1.401078e+00
+Finished 42250 iterations.
+Calculated 17759 accepts.
+Current value: -2.051674e+00 6.766088e-01 8.150559e-01 7.286482e-01 
+The current MH ratio is: -1.478565e+00
+The current MH ratio is: -5.450026e+00
+Finished 42500 iterations.
+Calculated 17872 accepts.
+Current value: -1.510971e+00 5.930519e-01 7.524818e-01 5.781705e-01 
+The current MH ratio is: -1.567552e+00
+The current MH ratio is: -1.509177e+00
+The current MH ratio is: -2.942997e+00
+Finished 42750 iterations.
+Calculated 17984 accepts.
+Current value: -1.583240e+00 7.325517e-01 6.879311e-01 6.913637e-01 
+The current MH ratio is: -4.382314e-02
+The current MH ratio is: -8.158795e-01
+Finished 43000 iterations.
+Calculated 18091 accepts.
+Current value: -1.614834e+00 7.683893e-01 4.466207e-01 7.995467e-01 
+The current MH ratio is: -8.496363e-02
+The current MH ratio is: -2.894084e+00
+The current MH ratio is: -8.850011e-02
+Finished 43250 iterations.
+Calculated 18196 accepts.
+Current value: -1.261734e+00 6.612041e-01 7.439958e-01 9.323317e-01 
+The current MH ratio is: -4.272342e+00
+The current MH ratio is: 3.002247e-01
+Finished 43500 iterations.
+Calculated 18300 accepts.
+Current value: -2.397135e+00 7.383962e-01 7.176454e-01 8.201989e-01 
+The current MH ratio is: -6.980113e-01
+The current MH ratio is: -1.621165e+00
+The current MH ratio is: -1.170458e+00
+Finished 43750 iterations.
+Calculated 18416 accepts.
+Current value: -1.712651e+00 8.753658e-01 2.902990e-01 1.027423e+00 
+The current MH ratio is: 5.029184e-01
+The current MH ratio is: -2.974465e+00
+Finished 44000 iterations.
+Calculated 18521 accepts.
+Current value: -1.972515e+00 9.291221e-01 5.579412e-01 7.477467e-01 
+The current MH ratio is: -4.590544e+00
+The current MH ratio is: -8.047233e-01
+The current MH ratio is: -1.122716e+00
+Finished 44250 iterations.
+Calculated 18638 accepts.
+Current value: -1.312335e+00 7.113230e-01 7.173301e-01 6.381085e-01 
+The current MH ratio is: -4.412880e-01
+The current MH ratio is: 4.149725e-01
+Finished 44500 iterations.
+Calculated 18749 accepts.
+Current value: -1.560148e+00 8.292684e-01 4.669615e-01 8.457717e-01 
+The current MH ratio is: -7.315598e-01
+The current MH ratio is: 1.158288e+00
+The current MH ratio is: -1.121301e+00
+Finished 44750 iterations.
+Calculated 18851 accepts.
+Current value: -1.678743e+00 6.860770e-01 7.376651e-01 7.445996e-01 
+The current MH ratio is: -1.489392e-02
+The current MH ratio is: -8.387642e-01
+Finished 45000 iterations.
+Calculated 18971 accepts.
+Current value: -2.151966e+00 8.308067e-01 5.681890e-01 7.126813e-01 
+The current MH ratio is: -3.420530e-01
+The current MH ratio is: 1.219771e+00
+The current MH ratio is: -7.033253e-01
+Finished 45250 iterations.
+Calculated 19068 accepts.
+Current value: -1.047514e+00 6.061165e-01 3.852045e-01 8.682103e-01 
+The current MH ratio is: -1.044548e+00
+The current MH ratio is: -2.284079e+00
+Finished 45500 iterations.
+Calculated 19188 accepts.
+Current value: -1.892578e+00 8.688962e-01 4.481637e-01 8.133855e-01 
+The current MH ratio is: 3.372780e-01
+The current MH ratio is: -1.408630e+00
+The current MH ratio is: -1.504202e+00
+Finished 45750 iterations.
+Calculated 19309 accepts.
+Current value: -2.802543e+00 9.347866e-01 6.583841e-01 8.200806e-01 
+The current MH ratio is: -3.042148e+00
+The current MH ratio is: -3.120283e+00
+Finished 46000 iterations.
+Calculated 19414 accepts.
+Current value: -1.516722e+00 7.922747e-01 5.572348e-01 6.976308e-01 
+The current MH ratio is: -9.426117e-01
+The current MH ratio is: -4.562357e+00
+The current MH ratio is: -3.393992e+00
+Finished 46250 iterations.
+Calculated 19509 accepts.
+Current value: -1.449210e+00 6.247918e-01 7.292416e-01 6.915108e-01 
+The current MH ratio is: -2.102906e-01
+The current MH ratio is: 1.361960e+00
+Finished 46500 iterations.
+Calculated 19620 accepts.
+Current value: -1.457403e+00 7.256920e-01 7.650737e-01 6.526029e-01 
+The current MH ratio is: -3.251197e+00
+The current MH ratio is: -2.476006e+00
+The current MH ratio is: -1.573368e+00
+Finished 46750 iterations.
+Calculated 19708 accepts.
+Current value: -1.908588e+00 8.962224e-01 3.927544e-01 7.196226e-01 
+The current MH ratio is: 2.995330e+00
+The current MH ratio is: -4.674132e+00
+Finished 47000 iterations.
+Calculated 19809 accepts.
+Current value: -1.554771e+00 5.737107e-01 7.110779e-01 7.990048e-01 
+The current MH ratio is: -5.028628e+00
+The current MH ratio is: -2.046837e+00
+The current MH ratio is: -1.281188e-01
+Finished 47250 iterations.
+Calculated 19918 accepts.
+Current value: -1.705038e+00 7.514801e-01 3.757699e-01 8.436256e-01 
+The current MH ratio is: -5.961155e-01
+The current MH ratio is: -3.048710e+00
+Finished 47500 iterations.
+Calculated 20031 accepts.
+Current value: -1.256524e+00 6.136458e-01 7.400414e-01 6.604581e-01 
+The current MH ratio is: -4.376321e-01
+The current MH ratio is: -8.998082e-03
+The current MH ratio is: -3.070153e+00
+Finished 47750 iterations.
+Calculated 20133 accepts.
+Current value: -1.691606e+00 7.023870e-01 7.098974e-01 5.011080e-01 
+The current MH ratio is: -2.331746e+00
+The current MH ratio is: -2.218549e+00
+Finished 48000 iterations.
+Calculated 20228 accepts.
+Current value: -1.212499e+00 7.125198e-01 8.755014e-01 7.434547e-01 
+The current MH ratio is: -1.313115e+00
+The current MH ratio is: -1.440382e+00
+The current MH ratio is: -2.599941e+00
+Finished 48250 iterations.
+Calculated 20329 accepts.
+Current value: -1.087418e+00 5.779805e-01 6.661548e-01 7.543142e-01 
+The current MH ratio is: 2.787670e+00
+The current MH ratio is: 5.214363e-02
+Finished 48500 iterations.
+Calculated 20459 accepts.
+Current value: -2.246564e+00 6.200496e-01 6.028603e-01 1.146658e+00 
+The current MH ratio is: -1.029179e+01
+The current MH ratio is: -2.386925e+00
+The current MH ratio is: -1.890393e+00
+Finished 48750 iterations.
+Calculated 20561 accepts.
+Current value: -2.042208e+00 6.150890e-01 1.022496e+00 5.175133e-01 
+The current MH ratio is: -2.412858e-01
+The current MH ratio is: -2.882547e+00
+Finished 49000 iterations.
+Calculated 20668 accepts.
+Current value: -1.974777e+00 8.938017e-01 6.144560e-01 6.302643e-01 
+The current MH ratio is: -1.849546e+00
+The current MH ratio is: -6.355524e+00
+The current MH ratio is: -2.126023e+00
+Finished 49250 iterations.
+Calculated 20775 accepts.
+Current value: -1.400206e+00 6.836592e-01 5.968881e-01 8.962629e-01 
+The current MH ratio is: -1.298312e+00
+The current MH ratio is: -1.680636e+00
+Finished 49500 iterations.
+Calculated 20881 accepts.
+Current value: -1.961982e+00 8.985769e-01 4.034646e-01 8.380421e-01 
+The current MH ratio is: -4.418746e-01
+The current MH ratio is: -1.535233e+00
+The current MH ratio is: -3.932888e+00
+Finished 49750 iterations.
+Calculated 20985 accepts.
+Current value: -1.920476e+00 7.127944e-01 6.045069e-01 7.849866e-01 
+The current MH ratio is: -1.583917e+00
+The current MH ratio is: -1.817242e+00
+Finished 50000 iterations.
+Calculated 21087 accepts.
+Current value: -1.858889e+00 9.055043e-01 3.041188e-01 8.547499e-01 
+The current MH ratio is: -2.454224e+00
+The current MH ratio is: 2.585142e-02
+The current MH ratio is: -1.647896e+00
+Finished 50250 iterations.
+Calculated 21200 accepts.
+Current value: -2.000328e+00 7.410726e-01 6.282330e-01 9.267643e-01 
+The current MH ratio is: 3.571487e-01
+The current MH ratio is: -7.567602e-01
+Finished 50500 iterations.
+Calculated 21309 accepts.
+Current value: -1.471665e+00 7.384637e-01 5.730576e-01 7.053480e-01 
+The current MH ratio is: -3.102532e+00
+The current MH ratio is: -2.787926e+00
+The current MH ratio is: -1.898804e+00
+Finished 50750 iterations.
+Calculated 21420 accepts.
+Current value: -1.485087e+00 7.754215e-01 6.217045e-01 7.316342e-01 
+The current MH ratio is: -6.880960e+00
+The current MH ratio is: -2.383503e+00
+Finished 51000 iterations.
+Calculated 21525 accepts.
+Current value: -2.009018e+00 9.920720e-01 5.683551e-01 7.636278e-01 
+The current MH ratio is: -7.627668e-01
+The current MH ratio is: -1.386232e+00
+The current MH ratio is: -2.534002e+00
+Finished 51250 iterations.
+Calculated 21617 accepts.
+Current value: -1.412655e+00 6.313122e-01 6.991037e-01 6.560922e-01 
+The current MH ratio is: -1.171514e-01
+The current MH ratio is: -1.590981e+00
+Finished 51500 iterations.
+Calculated 21734 accepts.
+Current value: -1.794763e+00 9.249689e-01 4.449066e-01 7.629406e-01 
+The current MH ratio is: -3.475257e+00
+The current MH ratio is: -6.914561e-01
+The current MH ratio is: -9.959006e-01
+Finished 51750 iterations.
+Calculated 21833 accepts.
+Current value: -1.518565e+00 8.557021e-01 4.407894e-01 8.161764e-01 
+The current MH ratio is: -1.391854e+00
+The current MH ratio is: -1.635218e+00
+Finished 52000 iterations.
+Calculated 21922 accepts.
+Current value: -1.690349e+00 8.084882e-01 5.311784e-01 7.884236e-01 
+The current MH ratio is: -4.813432e+00
+The current MH ratio is: -6.530508e-01
+The current MH ratio is: -1.688538e+00
+Finished 52250 iterations.
+Calculated 22029 accepts.
+Current value: -1.738790e+00 8.220391e-01 5.409988e-01 8.934966e-01 
+The current MH ratio is: -1.646521e+00
+The current MH ratio is: -4.393565e+00
+Finished 52500 iterations.
+Calculated 22127 accepts.
+Current value: -1.686186e+00 9.249324e-01 5.680701e-01 6.122511e-01 
+The current MH ratio is: -2.488159e+00
+The current MH ratio is: 1.049177e+00
+The current MH ratio is: 1.505522e-01
+Finished 52750 iterations.
+Calculated 22226 accepts.
+Current value: -1.490463e+00 5.982153e-01 8.119714e-01 5.845670e-01 
+The current MH ratio is: -5.332286e+00
+The current MH ratio is: -5.172822e-01
+Finished 53000 iterations.
+Calculated 22321 accepts.
+Current value: -2.049547e+00 7.683862e-01 4.929002e-01 8.330224e-01 
+The current MH ratio is: -3.328630e+00
+The current MH ratio is: -2.256630e+00
+The current MH ratio is: -1.590268e+00
+Finished 53250 iterations.
+Calculated 22436 accepts.
+Current value: -1.847879e+00 8.864733e-01 4.193232e-01 7.678669e-01 
+The current MH ratio is: -6.008392e-01
+The current MH ratio is: -1.352072e+00
+Finished 53500 iterations.
+Calculated 22543 accepts.
+Current value: -1.147006e+00 6.121988e-01 7.642097e-01 5.861027e-01 
+The current MH ratio is: -2.789800e+00
+The current MH ratio is: -1.466860e+00
+The current MH ratio is: -7.760208e+00
+Finished 53750 iterations.
+Calculated 22650 accepts.
+Current value: -1.644795e+00 8.574223e-01 6.011256e-01 8.089341e-01 
+The current MH ratio is: -4.821920e+00
+The current MH ratio is: -5.993677e+00
+Finished 54000 iterations.
+Calculated 22766 accepts.
+Current value: -1.771525e+00 6.431083e-01 7.096445e-01 6.618707e-01 
+The current MH ratio is: -3.754960e-01
+The current MH ratio is: 4.363469e-01
+The current MH ratio is: -1.031986e+00
+Finished 54250 iterations.
+Calculated 22864 accepts.
+Current value: -1.445005e+00 6.016165e-01 4.879886e-01 8.239856e-01 
+The current MH ratio is: -2.593150e+00
+The current MH ratio is: 2.242874e-01
+Finished 54500 iterations.
+Calculated 22973 accepts.
+Current value: -1.678591e+00 7.496754e-01 3.860024e-01 6.742448e-01 
+The current MH ratio is: -4.573181e+00
+The current MH ratio is: -2.874861e+00
+The current MH ratio is: -5.595164e+00
+Finished 54750 iterations.
+Calculated 23072 accepts.
+Current value: -1.700521e+00 8.066291e-01 3.994163e-01 7.634697e-01 
+The current MH ratio is: 1.395155e+00
+The current MH ratio is: -5.104044e+00
+Finished 55000 iterations.
+Calculated 23168 accepts.
+Current value: -1.294260e+00 6.127259e-01 5.199794e-01 8.289663e-01 
+The current MH ratio is: -1.323891e+00
+The current MH ratio is: 2.942259e-01
+The current MH ratio is: -1.118295e+00
+Finished 55250 iterations.
+Calculated 23281 accepts.
+Current value: -1.435039e+00 8.170480e-01 4.297586e-01 7.829717e-01 
+The current MH ratio is: -1.704345e+00
+The current MH ratio is: -3.701094e+00
+Finished 55500 iterations.
+Calculated 23385 accepts.
+Current value: -1.752989e+00 8.313762e-01 5.094258e-01 8.611740e-01 
+The current MH ratio is: -5.955139e-01
+The current MH ratio is: -2.979694e+00
+The current MH ratio is: -1.320228e-01
+Finished 55750 iterations.
+Calculated 23488 accepts.
+Current value: -1.957138e+00 6.948606e-01 4.448871e-01 7.677884e-01 
+The current MH ratio is: -9.723036e-01
+The current MH ratio is: 3.352215e-01
+Finished 56000 iterations.
+Calculated 23603 accepts.
+Current value: -1.429292e+00 7.636730e-01 7.828154e-01 5.282935e-01 
+The current MH ratio is: -2.128372e+00
+The current MH ratio is: -2.182125e+00
+The current MH ratio is: -1.679364e+00
+Finished 56250 iterations.
+Calculated 23715 accepts.
+Current value: -2.022832e+00 9.218033e-01 6.400066e-01 8.942274e-01 
+The current MH ratio is: -5.214700e+00
+The current MH ratio is: 4.629475e-01
+Finished 56500 iterations.
+Calculated 23820 accepts.
+Current value: -1.900761e+00 8.765007e-01 4.895050e-01 8.438516e-01 
+The current MH ratio is: 6.137681e-01
+The current MH ratio is: -2.847799e+00
+The current MH ratio is: 7.379513e-02
+Finished 56750 iterations.
+Calculated 23919 accepts.
+Current value: -1.981334e+00 8.564265e-01 4.937012e-01 7.357957e-01 
+The current MH ratio is: -3.199024e+00
+The current MH ratio is: -2.192385e+00
+Finished 57000 iterations.
+Calculated 24018 accepts.
+Current value: -1.637618e+00 6.767756e-01 5.555294e-01 6.133382e-01 
+The current MH ratio is: -9.966080e-02
+The current MH ratio is: -6.869095e-01
+The current MH ratio is: -6.895316e+00
+Finished 57250 iterations.
+Calculated 24117 accepts.
+Current value: -1.610072e+00 8.804468e-01 5.154602e-01 8.130078e-01 
+The current MH ratio is: -2.195454e+00
+The current MH ratio is: -2.128776e+00
+Finished 57500 iterations.
+Calculated 24208 accepts.
+Current value: -1.471056e+00 7.133872e-01 5.831138e-01 6.955376e-01 
+The current MH ratio is: -8.728129e-01
+The current MH ratio is: -2.367726e+00
+The current MH ratio is: -6.684190e-01
+Finished 57750 iterations.
+Calculated 24308 accepts.
+Current value: -1.932328e+00 1.043052e+00 4.679128e-01 7.929957e-01 
+The current MH ratio is: -2.279053e+00
+The current MH ratio is: -2.698723e+00
+Finished 58000 iterations.
+Calculated 24408 accepts.
+Current value: -1.534405e+00 7.517750e-01 7.812438e-01 6.510446e-01 
+The current MH ratio is: -1.971403e+00
+The current MH ratio is: -2.093770e+00
+The current MH ratio is: -6.770741e-01
+Finished 58250 iterations.
+Calculated 24521 accepts.
+Current value: -1.556273e+00 7.143045e-01 5.630006e-01 5.807944e-01 
+The current MH ratio is: -3.880348e-01
+The current MH ratio is: -4.392975e-01
+Finished 58500 iterations.
+Calculated 24634 accepts.
+Current value: -1.709752e+00 6.794721e-01 6.121248e-01 8.121827e-01 
+The current MH ratio is: -3.935355e-01
+The current MH ratio is: -1.616350e+00
+The current MH ratio is: -3.264249e+00
+Finished 58750 iterations.
+Calculated 24760 accepts.
+Current value: -1.780494e+00 8.283167e-01 3.715423e-01 9.890416e-01 
+The current MH ratio is: -4.307116e-01
+The current MH ratio is: -3.681942e-01
+Finished 59000 iterations.
+Calculated 24860 accepts.
+Current value: -1.822904e+00 8.839960e-01 6.648117e-01 8.788441e-01 
+The current MH ratio is: -4.069652e+00
+The current MH ratio is: -4.304215e-01
+The current MH ratio is: -1.393894e+00
+Finished 59250 iterations.
+Calculated 24951 accepts.
+Current value: -1.376151e+00 6.489622e-01 6.746062e-01 6.417704e-01 
+The current MH ratio is: -3.727695e+00
+The current MH ratio is: -5.683696e-01
+Finished 59500 iterations.
+Calculated 25053 accepts.
+Current value: -2.330090e+00 1.059533e+00 4.530748e-01 7.968611e-01 
+The current MH ratio is: -1.019438e-01
+The current MH ratio is: -1.010042e+00
+The current MH ratio is: -1.439284e+00
+Finished 59750 iterations.
+Calculated 25144 accepts.
+Current value: -1.751306e+00 7.701209e-01 6.136120e-01 8.015166e-01 
+The current MH ratio is: -2.696150e+00
+The current MH ratio is: 9.017681e-02
+Finished 60000 iterations.
+Calculated 25244 accepts.
+Current value: -1.520865e+00 6.118975e-01 7.102320e-01 7.755835e-01 
+The current MH ratio is: -4.455250e+00
+The current MH ratio is: -1.185995e-01
+The current MH ratio is: -1.672389e+00
+Finished 60250 iterations.
+Calculated 25355 accepts.
+Current value: -1.878747e+00 8.413391e-01 5.785680e-01 8.829973e-01 
+The current MH ratio is: -9.751138e-02
+The current MH ratio is: -2.602240e+00
+Finished 60500 iterations.
+Calculated 25473 accepts.
+Current value: -1.463644e+00 7.865448e-01 6.079590e-01 8.016976e-01 
+The current MH ratio is: -3.003771e+00
+The current MH ratio is: -1.399651e+00
+The current MH ratio is: 1.989968e+00
+Finished 60750 iterations.
+Calculated 25577 accepts.
+Current value: -1.847731e+00 7.195965e-01 6.019111e-01 7.505686e-01 
+The current MH ratio is: 7.257873e-01
+The current MH ratio is: -1.572705e+00
+Finished 61000 iterations.
+Calculated 25676 accepts.
+Current value: -2.236316e+00 8.632793e-01 5.304871e-01 7.952240e-01 
+The current MH ratio is: -1.211155e+00
+The current MH ratio is: -7.151100e-01
+The current MH ratio is: -8.129580e-01
+Finished 61250 iterations.
+Calculated 25790 accepts.
+Current value: -2.084093e+00 8.556322e-01 6.454342e-01 7.717227e-01 
+The current MH ratio is: -9.964560e-01
+The current MH ratio is: -2.619165e+00
+Finished 61500 iterations.
+Calculated 25894 accepts.
+Current value: -1.706742e+00 7.256522e-01 6.785097e-01 5.296397e-01 
+The current MH ratio is: -1.324618e+00
+The current MH ratio is: -1.091948e-01
+The current MH ratio is: -6.130796e+00
+Finished 61750 iterations.
+Calculated 26004 accepts.
+Current value: -2.157838e+00 8.998692e-01 6.387227e-01 6.375756e-01 
+The current MH ratio is: 1.281381e+00
+The current MH ratio is: -7.302897e-01
+Finished 62000 iterations.
+Calculated 26096 accepts.
+Current value: -1.602608e+00 7.819333e-01 5.414295e-01 9.679347e-01 
+The current MH ratio is: -1.332861e+00
+The current MH ratio is: -2.556694e+00
+The current MH ratio is: -2.232470e-02
+Finished 62250 iterations.
+Calculated 26196 accepts.
+Current value: -1.873072e+00 7.560846e-01 5.942058e-01 6.189512e-01 
+The current MH ratio is: -6.857762e-01
+The current MH ratio is: -1.156877e+00
+Finished 62500 iterations.
+Calculated 26300 accepts.
+Current value: -2.018094e+00 6.347336e-01 5.807621e-01 7.553063e-01 
+The current MH ratio is: -2.648127e+00
+The current MH ratio is: -2.058357e-01
+The current MH ratio is: 2.112059e-01
+Finished 62750 iterations.
+Calculated 26398 accepts.
+Current value: -2.583809e+00 1.116616e+00 3.401916e-01 6.971072e-01 
+The current MH ratio is: -4.506067e+00
+The current MH ratio is: -2.055329e+00
+Finished 63000 iterations.
+Calculated 26503 accepts.
+Current value: -1.345396e+00 7.874334e-01 6.021604e-01 5.909140e-01 
+The current MH ratio is: 1.521511e+00
+The current MH ratio is: -2.588446e+00
+The current MH ratio is: -9.433689e-01
+Finished 63250 iterations.
+Calculated 26616 accepts.
+Current value: -2.677892e+00 1.029840e+00 5.821045e-01 8.941390e-01 
+The current MH ratio is: -9.493400e-01
+The current MH ratio is: -1.193042e+00
+Finished 63500 iterations.
+Calculated 26732 accepts.
+Current value: -1.277177e+00 6.525579e-01 3.407272e-01 8.171798e-01 
+The current MH ratio is: -4.728549e+00
+The current MH ratio is: -1.645223e+00
+The current MH ratio is: 1.242735e+00
+Finished 63750 iterations.
+Calculated 26835 accepts.
+Current value: -1.815309e+00 7.837584e-01 5.232137e-01 7.408837e-01 
+The current MH ratio is: 6.514455e-01
+The current MH ratio is: -2.669503e+00
+Finished 64000 iterations.
+Calculated 26924 accepts.
+Current value: -1.628353e+00 8.889513e-01 5.004558e-01 6.321516e-01 
+The current MH ratio is: -3.567993e+00
+The current MH ratio is: -7.218444e-01
+The current MH ratio is: -2.197426e+00
+Finished 64250 iterations.
+Calculated 27030 accepts.
+Current value: -1.114787e+00 5.940241e-01 8.601148e-01 6.439379e-01 
+The current MH ratio is: -6.058076e-01
+The current MH ratio is: -1.932609e-01
+Finished 64500 iterations.
+Calculated 27144 accepts.
+Current value: -1.821735e+00 9.407998e-01 6.678583e-01 6.719699e-01 
+The current MH ratio is: 8.159163e-01
+The current MH ratio is: -1.361729e+00
+The current MH ratio is: -8.366959e-01
+Finished 64750 iterations.
+Calculated 27250 accepts.
+Current value: -2.043719e+00 6.559202e-01 5.925698e-01 8.031542e-01 
+The current MH ratio is: -2.414245e+00
+The current MH ratio is: -7.410462e-02
+Finished 65000 iterations.
+Calculated 27356 accepts.
+Current value: -2.111720e+00 7.857628e-01 5.935814e-01 9.892723e-01 
+The current MH ratio is: -1.707840e+00
+The current MH ratio is: -1.018660e+00
+The current MH ratio is: -4.710426e-02
+Finished 65250 iterations.
+Calculated 27474 accepts.
+Current value: -1.517543e+00 7.383518e-01 6.292691e-01 6.913075e-01 
+The current MH ratio is: -2.416481e+00
+The current MH ratio is: -1.961747e+00
+Finished 65500 iterations.
+Calculated 27552 accepts.
+Current value: -1.271301e+00 4.698160e-01 6.703598e-01 7.305458e-01 
+The current MH ratio is: -1.171909e+00
+The current MH ratio is: -2.707249e+00
+The current MH ratio is: 8.393331e-01
+Finished 65750 iterations.
+Calculated 27657 accepts.
+Current value: -2.104735e+00 7.710906e-01 4.402445e-01 7.009215e-01 
+The current MH ratio is: -2.065966e+00
+The current MH ratio is: -2.081773e-01
+Finished 66000 iterations.
+Calculated 27764 accepts.
+Current value: -1.761978e+00 9.340052e-01 4.986482e-01 7.831552e-01 
+The current MH ratio is: -2.555801e+00
+The current MH ratio is: -3.587585e+00
+The current MH ratio is: 9.215918e-01
+Finished 66250 iterations.
+Calculated 27882 accepts.
+Current value: -1.460495e+00 7.231268e-01 7.426099e-01 6.785623e-01 
+The current MH ratio is: -5.948620e-01
+The current MH ratio is: -9.281549e-01
+Finished 66500 iterations.
+Calculated 27989 accepts.
+Current value: -2.112976e+00 6.923214e-01 6.362812e-01 7.945647e-01 
+The current MH ratio is: -3.206457e+00
+The current MH ratio is: -2.568430e+00
+The current MH ratio is: -1.121336e+00
+Finished 66750 iterations.
+Calculated 28091 accepts.
+Current value: -1.984730e+00 1.068752e+00 4.445429e-01 7.088547e-01 
+The current MH ratio is: -2.489007e-01
+The current MH ratio is: 1.773851e+00
+Finished 67000 iterations.
+Calculated 28205 accepts.
+Current value: -2.167014e+00 7.833706e-01 4.720208e-01 1.067148e+00 
+The current MH ratio is: -9.751918e-01
+The current MH ratio is: -2.300608e+00
+The current MH ratio is: -2.302048e+00
+Finished 67250 iterations.
+Calculated 28310 accepts.
+Current value: -1.613495e+00 8.154338e-01 5.243283e-01 8.546473e-01 
+The current MH ratio is: -1.825906e+00
+The current MH ratio is: -2.409747e-01
+Finished 67500 iterations.
+Calculated 28408 accepts.
+Current value: -1.967470e+00 8.061422e-01 6.648027e-01 6.629357e-01 
+The current MH ratio is: -6.914795e-01
+The current MH ratio is: -5.013672e-01
+The current MH ratio is: -5.636076e+00
+Finished 67750 iterations.
+Calculated 28522 accepts.
+Current value: -1.855139e+00 7.746401e-01 6.979584e-01 7.010190e-01 
+The current MH ratio is: -4.653265e+00
+The current MH ratio is: -2.797733e-01
+Finished 68000 iterations.
+Calculated 28626 accepts.
+Current value: -1.557893e+00 7.827141e-01 5.384247e-01 9.416829e-01 
+The current MH ratio is: 1.060241e+00
+The current MH ratio is: -2.024725e+00
+The current MH ratio is: -1.747534e+00
+Finished 68250 iterations.
+Calculated 28735 accepts.
+Current value: -1.448665e+00 6.232874e-01 6.940991e-01 9.361552e-01 
+The current MH ratio is: -7.972358e+00
+The current MH ratio is: 2.650571e-02
+Finished 68500 iterations.
+Calculated 28846 accepts.
+Current value: -2.106066e+00 1.006843e+00 4.929935e-01 7.896727e-01 
+The current MH ratio is: -1.852528e+00
+The current MH ratio is: -2.229827e+00
+The current MH ratio is: -5.804509e+00
+Finished 68750 iterations.
+Calculated 28936 accepts.
+Current value: -2.354016e+00 9.752749e-01 6.942366e-01 6.006133e-01 
+The current MH ratio is: -2.263852e+00
+The current MH ratio is: 2.995515e-01
+Finished 69000 iterations.
+Calculated 29047 accepts.
+Current value: -1.463114e+00 7.315554e-01 6.424672e-01 5.867237e-01 
+The current MH ratio is: 4.557572e-01
+The current MH ratio is: -1.377391e+00
+The current MH ratio is: -1.398672e+00
+Finished 69250 iterations.
+Calculated 29162 accepts.
+Current value: -1.508286e+00 6.198992e-01 6.188270e-01 9.103147e-01 
+The current MH ratio is: -2.258334e-01
+The current MH ratio is: -1.950493e+00
+Finished 69500 iterations.
+Calculated 29269 accepts.
+Current value: -1.708806e+00 7.757758e-01 5.061894e-01 7.665936e-01 
+The current MH ratio is: 4.618664e-01
+The current MH ratio is: -5.134511e-01
+The current MH ratio is: 4.146708e-01
+Finished 69750 iterations.
+Calculated 29373 accepts.
+Current value: -1.605473e+00 6.512545e-01 5.053351e-01 8.748795e-01 
+The current MH ratio is: 6.698745e-01
+The current MH ratio is: 3.858565e-01
+Finished 70000 iterations.
+Calculated 29500 accepts.
+Current value: -1.873697e+00 6.515000e-01 6.560302e-01 7.965503e-01 
+The current MH ratio is: 3.357816e-01
+The current MH ratio is: -3.023863e+00
+The current MH ratio is: 1.783714e+00
+Finished 70250 iterations.
+Calculated 29612 accepts.
+Current value: -1.576065e+00 6.885763e-01 5.297919e-01 9.088730e-01 
+The current MH ratio is: 4.540320e-01
+The current MH ratio is: -5.651907e-01
+Finished 70500 iterations.
+Calculated 29711 accepts.
+Current value: -2.352400e+00 1.042615e+00 5.481424e-01 5.897551e-01 
+The current MH ratio is: -9.580966e-01
+The current MH ratio is: -1.876955e+00
+The current MH ratio is: -1.603150e+00
+Finished 70750 iterations.
+Calculated 29825 accepts.
+Current value: -1.818666e+00 9.463941e-01 5.127120e-01 6.871462e-01 
+The current MH ratio is: 1.287873e+00
+The current MH ratio is: -4.749748e-01
+Finished 71000 iterations.
+Calculated 29922 accepts.
+Current value: -1.803097e+00 7.847450e-01 4.018291e-01 1.052983e+00 
+The current MH ratio is: 4.876245e+00
+The current MH ratio is: -3.470922e+00
+The current MH ratio is: -4.338140e-01
+Finished 71250 iterations.
+Calculated 30031 accepts.
+Current value: -1.230360e+00 5.963751e-01 6.310161e-01 8.976731e-01 
+The current MH ratio is: -1.464206e+00
+The current MH ratio is: -4.706041e+00
+Finished 71500 iterations.
+Calculated 30138 accepts.
+Current value: -1.852497e+00 9.133378e-01 5.390032e-01 6.395910e-01 
+The current MH ratio is: -2.985096e+00
+The current MH ratio is: -4.158968e-02
+The current MH ratio is: -3.822016e+00
+Finished 71750 iterations.
+Calculated 30248 accepts.
+Current value: -1.746221e+00 7.508713e-01 7.211621e-01 7.850863e-01 
+The current MH ratio is: -1.330100e+00
+The current MH ratio is: -3.609385e+00
+Finished 72000 iterations.
+Calculated 30345 accepts.
+Current value: -1.695674e+00 7.105881e-01 5.812774e-01 7.915676e-01 
+The current MH ratio is: -4.693675e-01
+The current MH ratio is: -1.529080e+00
+The current MH ratio is: -2.282720e+00
+Finished 72250 iterations.
+Calculated 30453 accepts.
+Current value: -1.925657e+00 8.909554e-01 5.681130e-01 7.285915e-01 
+The current MH ratio is: -9.001351e-01
+The current MH ratio is: 1.659756e+00
+Finished 72500 iterations.
+Calculated 30557 accepts.
+Current value: -1.869905e+00 7.874665e-01 6.243059e-01 7.123839e-01 
+The current MH ratio is: -1.955445e+00
+The current MH ratio is: 1.400741e+00
+The current MH ratio is: -3.201254e+00
+Finished 72750 iterations.
+Calculated 30660 accepts.
+Current value: -1.855422e+00 8.413272e-01 3.586563e-01 9.190220e-01 
+The current MH ratio is: 2.091869e-01
+The current MH ratio is: -1.977708e+00
+Finished 73000 iterations.
+Calculated 30759 accepts.
+Current value: -1.783525e+00 5.303843e-01 8.072062e-01 6.498019e-01 
+The current MH ratio is: 9.755268e-01
+The current MH ratio is: -4.238570e+00
+The current MH ratio is: 7.737480e-01
+Finished 73250 iterations.
+Calculated 30862 accepts.
+Current value: -1.632147e+00 7.164520e-01 5.611417e-01 6.989267e-01 
+The current MH ratio is: -3.122622e+00
+The current MH ratio is: -2.140994e+00
+Finished 73500 iterations.
+Calculated 30974 accepts.
+Current value: -1.781160e+00 8.450137e-01 5.580845e-01 8.050453e-01 
+The current MH ratio is: -9.093961e-01
+The current MH ratio is: -2.274841e+00
+The current MH ratio is: -3.581217e+00
+Finished 73750 iterations.
+Calculated 31078 accepts.
+Current value: -2.060293e+00 8.395946e-01 4.681419e-01 9.082774e-01 
+The current MH ratio is: -1.064651e+00
+The current MH ratio is: -2.586642e+00
+Finished 74000 iterations.
+Calculated 31175 accepts.
+Current value: -1.868592e+00 7.913929e-01 6.423765e-01 7.523509e-01 
+The current MH ratio is: -1.942383e+00
+The current MH ratio is: 4.054090e-01
+The current MH ratio is: -3.631617e-01
+Finished 74250 iterations.
+Calculated 31279 accepts.
+Current value: -2.127860e+00 8.386861e-01 5.355525e-01 6.518889e-01 
+The current MH ratio is: -4.443815e+00
+The current MH ratio is: -2.625511e-01
+Finished 74500 iterations.
+Calculated 31390 accepts.
+Current value: -1.750717e+00 8.813769e-01 5.424104e-01 6.135135e-01 
+The current MH ratio is: -1.864326e+00
+The current MH ratio is: -2.328452e+00
+The current MH ratio is: -2.066672e-02
+Finished 74750 iterations.
+Calculated 31496 accepts.
+Current value: -1.778378e+00 7.677888e-01 5.746227e-01 5.388594e-01 
+The current MH ratio is: -4.063399e-01
+The current MH ratio is: -1.033064e+00
+Finished 75000 iterations.
+Calculated 31593 accepts.
+Current value: -1.398114e+00 7.251498e-01 7.219912e-01 7.412662e-01 
+The current MH ratio is: 1.286154e+00
+The current MH ratio is: 3.384771e-02
+The current MH ratio is: -6.248483e-01
+Finished 75250 iterations.
+Calculated 31713 accepts.
+Current value: -1.795036e+00 6.849771e-01 4.246145e-01 7.449685e-01 
+The current MH ratio is: -3.712369e+00
+The current MH ratio is: -1.395570e-01
+Finished 75500 iterations.
+Calculated 31817 accepts.
+Current value: -1.253067e+00 7.136591e-01 3.980050e-01 9.639667e-01 
+The current MH ratio is: -2.479016e+00
+The current MH ratio is: -1.691630e+00
+The current MH ratio is: -2.564410e+00
+Finished 75750 iterations.
+Calculated 31922 accepts.
+Current value: -1.911685e+00 5.424152e-01 6.348999e-01 9.733965e-01 
+The current MH ratio is: -1.545533e+00
+The current MH ratio is: 3.857911e-01
+Finished 76000 iterations.
+Calculated 32043 accepts.
+Current value: -2.170595e+00 9.084905e-01 5.610705e-01 8.451804e-01 
+The current MH ratio is: 8.527533e-01
+The current MH ratio is: -6.919322e-01
+The current MH ratio is: -2.625889e+00
+Finished 76250 iterations.
+Calculated 32144 accepts.
+Current value: -1.623045e+00 6.913688e-01 5.102841e-01 8.257408e-01 
+The current MH ratio is: -3.204721e+00
+The current MH ratio is: -6.804631e-01
+Finished 76500 iterations.
+Calculated 32253 accepts.
+Current value: -1.981568e+00 8.616998e-01 5.474363e-01 8.478644e-01 
+The current MH ratio is: -7.243643e-01
+The current MH ratio is: -2.644649e+00
+The current MH ratio is: 1.694947e+00
+Finished 76750 iterations.
+Calculated 32370 accepts.
+Current value: -1.439183e+00 5.265613e-01 7.346570e-01 8.408412e-01 
+The current MH ratio is: -1.584516e+00
+The current MH ratio is: -2.351889e+00
+Finished 77000 iterations.
+Calculated 32477 accepts.
+Current value: -1.325309e+00 6.295289e-01 7.396140e-01 6.082977e-01 
+The current MH ratio is: -9.435157e-01
+The current MH ratio is: 2.700550e-01
+The current MH ratio is: -1.218434e+00
+Finished 77250 iterations.
+Calculated 32583 accepts.
+Current value: -1.704202e+00 7.399446e-01 7.399412e-01 6.971837e-01 
+The current MH ratio is: -2.379436e-02
+The current MH ratio is: -3.270247e-01
+Finished 77500 iterations.
+Calculated 32704 accepts.
+Current value: -1.233364e+00 7.239348e-01 5.780874e-01 7.499706e-01 
+The current MH ratio is: -1.592805e+00
+The current MH ratio is: -4.320294e+00
+The current MH ratio is: -1.433029e+00
+Finished 77750 iterations.
+Calculated 32806 accepts.
+Current value: -1.679744e+00 8.545748e-01 5.649084e-01 6.456373e-01 
+The current MH ratio is: -3.321639e+00
+The current MH ratio is: -4.290516e-01
+Finished 78000 iterations.
+Calculated 32912 accepts.
+Current value: -2.132514e+00 8.502691e-01 4.853789e-01 8.051652e-01 
+The current MH ratio is: 4.681785e-01
+The current MH ratio is: 3.797881e-01
+The current MH ratio is: -1.379138e+00
+Finished 78250 iterations.
+Calculated 33002 accepts.
+Current value: -1.789226e+00 8.255482e-01 7.721511e-01 6.042420e-01 
+The current MH ratio is: -1.024358e+00
+The current MH ratio is: -3.681979e+00
+Finished 78500 iterations.
+Calculated 33111 accepts.
+Current value: -1.048284e+00 5.667311e-01 5.048259e-01 1.084084e+00 
+The current MH ratio is: -2.325215e+00
+The current MH ratio is: -3.471016e-01
+The current MH ratio is: -8.603887e-01
+Finished 78750 iterations.
+Calculated 33221 accepts.
+Current value: -1.692318e+00 7.868599e-01 7.192350e-01 6.412417e-01 
+The current MH ratio is: -1.679973e+00
+The current MH ratio is: -1.177215e+00
+Finished 79000 iterations.
+Calculated 33318 accepts.
+Current value: -1.719480e+00 5.533339e-01 7.354527e-01 6.439258e-01 
+The current MH ratio is: 3.050653e-01
+The current MH ratio is: -6.443463e-01
+The current MH ratio is: -5.360749e+00
+Finished 79250 iterations.
+Calculated 33409 accepts.
+Current value: -1.577941e+00 6.710616e-01 5.526402e-01 8.975762e-01 
+The current MH ratio is: 1.536888e+00
+The current MH ratio is: -5.460928e+00
+Finished 79500 iterations.
+Calculated 33507 accepts.
+Current value: -1.534141e+00 7.566428e-01 4.558600e-01 8.807864e-01 
+The current MH ratio is: -1.666346e+00
+The current MH ratio is: -1.086807e+00
+The current MH ratio is: -2.606005e+00
+Finished 79750 iterations.
+Calculated 33602 accepts.
+Current value: -1.393214e+00 8.382417e-01 4.749457e-01 9.542608e-01 
+The current MH ratio is: 2.391080e+00
+The current MH ratio is: -1.128360e+00
+Finished 80000 iterations.
+Calculated 33702 accepts.
+Current value: -1.699050e+00 9.222076e-01 6.740213e-01 5.430507e-01 
+The current MH ratio is: -3.347076e+00
+The current MH ratio is: -8.625235e-01
+The current MH ratio is: -5.950384e+00
+Finished 80250 iterations.
+Calculated 33793 accepts.
+Current value: -1.652150e+00 7.929863e-01 5.416362e-01 7.186078e-01 
+The current MH ratio is: -1.091749e+00
+The current MH ratio is: -4.318757e+00
+Finished 80500 iterations.
+Calculated 33874 accepts.
+Current value: -1.244536e+00 5.168463e-01 7.314636e-01 6.409738e-01 
+The current MH ratio is: -2.012821e+00
+The current MH ratio is: -5.791765e+00
+The current MH ratio is: 3.566955e-01
+Finished 80750 iterations.
+Calculated 33979 accepts.
+Current value: -1.634284e+00 7.852324e-01 5.608539e-01 8.816598e-01 
+The current MH ratio is: -4.705348e-01
+The current MH ratio is: -1.653996e+00
+Finished 81000 iterations.
+Calculated 34075 accepts.
+Current value: -2.216738e+00 9.572379e-01 3.361044e-01 8.611958e-01 
+The current MH ratio is: -4.164854e+00
+The current MH ratio is: -2.773974e+00
+The current MH ratio is: -2.293008e+00
+Finished 81250 iterations.
+Calculated 34203 accepts.
+Current value: -1.733852e+00 6.836425e-01 7.810898e-01 7.491087e-01 
+The current MH ratio is: -3.320401e+00
+The current MH ratio is: 2.171156e-01
+Finished 81500 iterations.
+Calculated 34314 accepts.
+Current value: -1.760617e+00 7.668971e-01 5.785973e-01 7.260152e-01 
+The current MH ratio is: -3.331523e+00
+The current MH ratio is: -1.230052e+00
+The current MH ratio is: -1.204015e+00
+Finished 81750 iterations.
+Calculated 34423 accepts.
+Current value: -2.123090e+00 1.054654e+00 2.867915e-01 7.178892e-01 
+The current MH ratio is: -1.342530e+00
+The current MH ratio is: -1.278390e+00
+Finished 82000 iterations.
+Calculated 34529 accepts.
+Current value: -1.470644e+00 9.034244e-01 5.451240e-01 7.625552e-01 
+The current MH ratio is: -1.969550e+00
+The current MH ratio is: -5.440534e-01
+The current MH ratio is: -1.180929e+00
+Finished 82250 iterations.
+Calculated 34614 accepts.
+Current value: -1.843906e+00 8.139569e-01 4.969245e-01 9.714318e-01 
+The current MH ratio is: -3.321171e+00
+The current MH ratio is: -4.181016e+00
+Finished 82500 iterations.
+Calculated 34732 accepts.
+Current value: -1.572774e+00 6.919103e-01 4.040797e-01 7.832916e-01 
+The current MH ratio is: 2.673481e-01
+The current MH ratio is: -2.286849e+00
+The current MH ratio is: 1.153419e+00
+Finished 82750 iterations.
+Calculated 34832 accepts.
+Current value: -1.506867e+00 5.831675e-01 7.785436e-01 8.811720e-01 
+The current MH ratio is: -1.738479e+00
+The current MH ratio is: -2.829058e-02
+Finished 83000 iterations.
+Calculated 34948 accepts.
+Current value: -1.536980e+00 7.432406e-01 5.050462e-01 7.742883e-01 
+The current MH ratio is: 4.745462e-01
+The current MH ratio is: -1.804363e+00
+The current MH ratio is: -2.575250e+00
+Finished 83250 iterations.
+Calculated 35038 accepts.
+Current value: -1.633512e+00 8.289803e-01 4.825357e-01 9.945795e-01 
+The current MH ratio is: 2.432279e-01
+The current MH ratio is: -2.715687e+00
+Finished 83500 iterations.
+Calculated 35152 accepts.
+Current value: -1.981430e+00 9.082035e-01 5.817529e-01 6.749256e-01 
+The current MH ratio is: -1.463265e-01
+The current MH ratio is: -2.526678e+00
+The current MH ratio is: -3.140181e+00
+Finished 83750 iterations.
+Calculated 35261 accepts.
+Current value: -1.896456e+00 8.518684e-01 5.766762e-01 5.297161e-01 
+The current MH ratio is: -8.802583e-01
+The current MH ratio is: -2.584505e+00
+Finished 84000 iterations.
+Calculated 35368 accepts.
+Current value: -2.110741e+00 5.050504e-01 7.198752e-01 9.498693e-01 
+The current MH ratio is: -2.508107e+00
+The current MH ratio is: -3.350605e+00
+The current MH ratio is: 1.097640e+00
+Finished 84250 iterations.
+Calculated 35488 accepts.
+Current value: -1.529538e+00 9.878922e-01 4.468491e-01 7.487856e-01 
+The current MH ratio is: -1.505710e+00
+The current MH ratio is: -1.526780e+00
+Finished 84500 iterations.
+Calculated 35588 accepts.
+Current value: -1.571777e+00 9.632863e-01 4.895313e-01 7.988695e-01 
+The current MH ratio is: -1.824337e+00
+The current MH ratio is: -8.573861e-01
+The current MH ratio is: -4.834617e-01
+Finished 84750 iterations.
+Calculated 35693 accepts.
+Current value: -1.683148e+00 8.206840e-01 6.998317e-01 4.962323e-01 
+The current MH ratio is: -4.966417e+00
+The current MH ratio is: -7.521046e-01
+Finished 85000 iterations.
+Calculated 35788 accepts.
+Current value: -2.309015e+00 9.113648e-01 5.493098e-01 8.216574e-01 
+The current MH ratio is: 1.253210e+00
+The current MH ratio is: 8.421455e-01
+The current MH ratio is: -3.448091e+00
+Finished 85250 iterations.
+Calculated 35886 accepts.
+Current value: -1.592781e+00 7.804921e-01 7.102715e-01 5.166067e-01 
+The current MH ratio is: -1.731076e+00
+The current MH ratio is: 1.363317e+00
+Finished 85500 iterations.
+Calculated 35991 accepts.
+Current value: -1.840588e+00 8.403469e-01 4.413276e-01 9.323428e-01 
+The current MH ratio is: -1.660722e+00
+The current MH ratio is: -2.049973e+00
+The current MH ratio is: -6.128616e+00
+Finished 85750 iterations.
+Calculated 36098 accepts.
+Current value: -1.953626e+00 9.231872e-01 5.705394e-01 7.271206e-01 
+The current MH ratio is: 1.081832e+00
+The current MH ratio is: -7.194935e-01
+Finished 86000 iterations.
+Calculated 36196 accepts.
+Current value: -1.647498e+00 8.600029e-01 5.288138e-01 7.242266e-01 
+The current MH ratio is: 1.167495e-01
+The current MH ratio is: -4.516765e-01
+The current MH ratio is: -1.964872e+00
+Finished 86250 iterations.
+Calculated 36305 accepts.
+Current value: -2.125056e+00 8.276064e-01 3.641964e-01 1.008829e+00 
+The current MH ratio is: -3.183138e+00
+The current MH ratio is: -4.339268e-01
+Finished 86500 iterations.
+Calculated 36415 accepts.
+Current value: -1.888914e+00 7.378856e-01 7.958638e-01 7.005120e-01 
+The current MH ratio is: -2.770219e+00
+The current MH ratio is: -2.400259e+00
+The current MH ratio is: -2.719418e+00
+Finished 86750 iterations.
+Calculated 36514 accepts.
+Current value: -2.159732e+00 8.744198e-01 5.674259e-01 7.944101e-01 
+The current MH ratio is: -1.362661e+00
+The current MH ratio is: -1.367540e+00
+Finished 87000 iterations.
+Calculated 36617 accepts.
+Current value: -1.809894e+00 8.804393e-01 7.025667e-01 8.200474e-01 
+The current MH ratio is: -1.855381e+00
+The current MH ratio is: -1.108355e+00
+The current MH ratio is: -8.976909e-01
+Finished 87250 iterations.
+Calculated 36726 accepts.
+Current value: -1.641711e+00 6.310973e-01 6.898997e-01 7.033948e-01 
+The current MH ratio is: -1.248157e+00
+The current MH ratio is: -3.571637e-01
+Finished 87500 iterations.
+Calculated 36827 accepts.
+Current value: -2.187372e+00 6.749788e-01 7.370318e-01 6.521157e-01 
+The current MH ratio is: 1.825245e+00
+The current MH ratio is: -1.176677e+00
+The current MH ratio is: 2.818392e-01
+Finished 87750 iterations.
+Calculated 36937 accepts.
+Current value: -1.460546e+00 7.517830e-01 5.434007e-01 7.082588e-01 
+The current MH ratio is: -5.995575e-01
+The current MH ratio is: -4.330621e+00
+Finished 88000 iterations.
+Calculated 37046 accepts.
+Current value: -1.731304e+00 5.939272e-01 5.522827e-01 9.801900e-01 
+The current MH ratio is: 1.074745e-01
+The current MH ratio is: -1.878562e+00
+The current MH ratio is: -5.639353e+00
+Finished 88250 iterations.
+Calculated 37153 accepts.
+Current value: -2.037007e+00 8.060072e-01 5.992676e-01 5.856770e-01 
+The current MH ratio is: 8.321602e-02
+The current MH ratio is: -4.176787e+00
+Finished 88500 iterations.
+Calculated 37266 accepts.
+Current value: -2.108391e+00 6.611994e-01 5.697274e-01 8.190412e-01 
+The current MH ratio is: -9.472372e-01
+The current MH ratio is: -2.196964e+00
+The current MH ratio is: 8.132578e-01
+Finished 88750 iterations.
+Calculated 37371 accepts.
+Current value: -1.560958e+00 7.056645e-01 5.693059e-01 7.497328e-01 
+The current MH ratio is: -1.141176e+00
+The current MH ratio is: -3.977656e+00
+Finished 89000 iterations.
+Calculated 37479 accepts.
+Current value: -1.803285e+00 9.464782e-01 3.731003e-01 1.051642e+00 
+The current MH ratio is: -4.793331e+00
+The current MH ratio is: -1.002137e+00
+The current MH ratio is: -1.283492e+00
+Finished 89250 iterations.
+Calculated 37586 accepts.
+Current value: -1.173917e+00 4.757801e-01 6.303460e-01 8.008069e-01 
+The current MH ratio is: -5.921257e-02
+The current MH ratio is: -1.669993e+00
+Finished 89500 iterations.
+Calculated 37698 accepts.
+Current value: -2.071692e+00 9.418254e-01 5.121140e-01 8.062340e-01 
+The current MH ratio is: -9.544007e-01
+The current MH ratio is: -5.226453e-01
+The current MH ratio is: -2.969952e+00
+Finished 89750 iterations.
+Calculated 37815 accepts.
+Current value: -1.941241e+00 7.204079e-01 7.976589e-01 6.445170e-01 
+The current MH ratio is: -7.639853e-02
+The current MH ratio is: -7.076803e-01
+Finished 90000 iterations.
+Calculated 37906 accepts.
+Current value: -1.639652e+00 5.846608e-01 9.403501e-01 6.015695e-01 
+The current MH ratio is: -2.981199e+00
+The current MH ratio is: -5.039632e+00
+The current MH ratio is: -1.765593e+00
+Finished 90250 iterations.
+Calculated 38005 accepts.
+Current value: -1.688882e+00 8.437520e-01 5.596273e-01 8.328497e-01 
+The current MH ratio is: -2.792304e+00
+The current MH ratio is: -2.750725e+00
+Finished 90500 iterations.
+Calculated 38117 accepts.
+Current value: -1.981104e+00 1.005349e+00 4.544795e-01 8.148724e-01 
+The current MH ratio is: 2.749404e-01
+The current MH ratio is: -1.854846e+00
+The current MH ratio is: 1.894993e+00
+Finished 90750 iterations.
+Calculated 38220 accepts.
+Current value: -1.477827e+00 8.376352e-01 7.416283e-01 7.722107e-01 
+The current MH ratio is: -3.560291e+00
+The current MH ratio is: 1.876527e+00
+Finished 91000 iterations.
+Calculated 38317 accepts.
+Current value: -1.687016e+00 8.926351e-01 6.306817e-01 7.182588e-01 
+The current MH ratio is: -3.573029e+00
+The current MH ratio is: -6.333341e-01
+The current MH ratio is: -5.702511e-01
+Finished 91250 iterations.
+Calculated 38422 accepts.
+Current value: -1.667136e+00 5.341046e-01 7.404046e-01 6.723182e-01 
+The current MH ratio is: -6.758370e-01
+The current MH ratio is: -1.984633e+00
+Finished 91500 iterations.
+Calculated 38539 accepts.
+Current value: -1.652697e+00 6.422245e-01 5.989413e-01 8.779562e-01 
+The current MH ratio is: 7.408424e-01
+The current MH ratio is: 2.508792e-01
+The current MH ratio is: -2.242148e+00
+Finished 91750 iterations.
+Calculated 38654 accepts.
+Current value: -1.657274e+00 7.289129e-01 6.443045e-01 7.632906e-01 
+The current MH ratio is: 1.472800e-01
+The current MH ratio is: -3.623435e-01
+Finished 92000 iterations.
+Calculated 38756 accepts.
+Current value: -1.763600e+00 8.875213e-01 6.208661e-01 9.130810e-01 
+The current MH ratio is: -4.144906e+00
+The current MH ratio is: -3.321824e+00
+The current MH ratio is: -8.075136e-01
+Finished 92250 iterations.
+Calculated 38853 accepts.
+Current value: -2.133554e+00 9.267228e-01 7.053441e-01 6.869332e-01 
+The current MH ratio is: -2.959173e+00
+The current MH ratio is: -2.147112e+00
+Finished 92500 iterations.
+Calculated 38964 accepts.
+Current value: -1.599709e+00 8.237125e-01 7.284419e-01 6.758080e-01 
+The current MH ratio is: -5.271636e+00
+The current MH ratio is: -1.976428e+00
+The current MH ratio is: -3.398437e+00
+Finished 92750 iterations.
+Calculated 39070 accepts.
+Current value: -1.597596e+00 6.385663e-01 6.694398e-01 6.966571e-01 
+The current MH ratio is: -7.577780e-01
+The current MH ratio is: -3.007039e+00
+Finished 93000 iterations.
+Calculated 39181 accepts.
+Current value: -1.843256e+00 7.952112e-01 4.673545e-01 9.281857e-01 
+The current MH ratio is: -2.132259e+00
+The current MH ratio is: -8.596759e-01
+The current MH ratio is: -2.133848e+00
+Finished 93250 iterations.
+Calculated 39286 accepts.
+Current value: -1.150376e+00 8.069537e-01 4.994912e-01 8.369280e-01 
+The current MH ratio is: -2.150573e+00
+The current MH ratio is: -3.777355e+00
+Finished 93500 iterations.
+Calculated 39392 accepts.
+Current value: -1.448980e+00 7.119026e-01 7.028507e-01 6.143194e-01 
+The current MH ratio is: -1.626295e+00
+The current MH ratio is: -2.631737e-01
+The current MH ratio is: -1.427959e+00
+Finished 93750 iterations.
+Calculated 39479 accepts.
+Current value: -1.452356e+00 7.758044e-01 6.386325e-01 6.259069e-01 
+The current MH ratio is: -2.246589e-01
+The current MH ratio is: -1.337370e+00
+Finished 94000 iterations.
+Calculated 39590 accepts.
+Current value: -2.296495e+00 9.095588e-01 4.839175e-01 8.347091e-01 
+The current MH ratio is: -2.848788e+00
+The current MH ratio is: -1.957091e+00
+The current MH ratio is: -1.241537e-01
+Finished 94250 iterations.
+Calculated 39695 accepts.
+Current value: -1.319965e+00 7.969555e-01 4.473757e-01 9.174043e-01 
+The current MH ratio is: 1.461862e-01
+The current MH ratio is: -3.193657e+00
+Finished 94500 iterations.
+Calculated 39803 accepts.
+Current value: -2.004274e+00 7.829046e-01 5.100213e-01 8.034307e-01 
+The current MH ratio is: -3.141629e+00
+The current MH ratio is: -9.293476e-01
+The current MH ratio is: -1.142079e+00
+Finished 94750 iterations.
+Calculated 39901 accepts.
+Current value: -2.069989e+00 8.352680e-01 6.973839e-01 7.125768e-01 
+The current MH ratio is: -3.696853e-01
+The current MH ratio is: -2.646175e+00
+Finished 95000 iterations.
+Calculated 40009 accepts.
+Current value: -1.224365e+00 7.339919e-01 5.383747e-01 7.829097e-01 
+The current MH ratio is: 3.194348e-01
+The current MH ratio is: -2.637490e+00
+The current MH ratio is: -9.642475e-01
+Finished 95250 iterations.
+Calculated 40112 accepts.
+Current value: -1.852464e+00 8.276091e-01 6.587109e-01 6.001334e-01 
+The current MH ratio is: 1.423312e+00
+The current MH ratio is: 3.887297e-01
+Finished 95500 iterations.
+Calculated 40219 accepts.
+Current value: -2.409171e+00 9.407851e-01 5.391052e-01 6.888180e-01 
+The current MH ratio is: -3.720342e-01
+The current MH ratio is: 1.646059e+00
+The current MH ratio is: -1.007691e+00
+Finished 95750 iterations.
+Calculated 40320 accepts.
+Current value: -1.763669e+00 6.959516e-01 6.803656e-01 8.103379e-01 
+The current MH ratio is: -4.907663e+00
+The current MH ratio is: 8.331015e-01
+Finished 96000 iterations.
+Calculated 40427 accepts.
+Current value: -1.569773e+00 5.415958e-01 7.925735e-01 8.098244e-01 
+The current MH ratio is: -2.687746e+00
+The current MH ratio is: -1.054049e+00
+The current MH ratio is: -2.030872e+00
+Finished 96250 iterations.
+Calculated 40534 accepts.
+Current value: -1.809440e+00 7.619640e-01 7.214243e-01 7.506165e-01 
+The current MH ratio is: -2.441189e-01
+The current MH ratio is: 2.714390e-01
+Finished 96500 iterations.
+Calculated 40628 accepts.
+Current value: -1.898090e+00 7.691463e-01 6.474040e-01 7.256811e-01 
+The current MH ratio is: -3.050569e+00
+The current MH ratio is: -4.631733e-01
+The current MH ratio is: 1.803776e+00
+Finished 96750 iterations.
+Calculated 40719 accepts.
+Current value: -2.117727e+00 1.063457e+00 4.913661e-01 8.028552e-01 
+The current MH ratio is: -2.989130e+00
+The current MH ratio is: -3.091022e-01
+Finished 97000 iterations.
+Calculated 40826 accepts.
+Current value: -2.153967e+00 9.383804e-01 4.219691e-01 8.326192e-01 
+The current MH ratio is: 1.117933e+00
+The current MH ratio is: -6.007584e+00
+The current MH ratio is: 1.049781e+00
+Finished 97250 iterations.
+Calculated 40939 accepts.
+Current value: -1.699982e+00 9.349990e-01 3.151216e-01 1.001629e+00 
+The current MH ratio is: -1.903919e+00
+The current MH ratio is: -1.531280e+00
+Finished 97500 iterations.
+Calculated 41041 accepts.
+Current value: -1.149675e+00 7.393086e-01 6.399571e-01 5.924755e-01 
+The current MH ratio is: -2.206965e+00
+The current MH ratio is: -2.273008e+00
+The current MH ratio is: -1.302996e-01
+Finished 97750 iterations.
+Calculated 41147 accepts.
+Current value: -2.009933e+00 7.108980e-01 7.873474e-01 8.660663e-01 
+The current MH ratio is: -4.181840e-01
+The current MH ratio is: -1.203302e+00
+Finished 98000 iterations.
+Calculated 41255 accepts.
+Current value: -1.870589e+00 7.368035e-01 6.684991e-01 8.267583e-01 
+The current MH ratio is: -1.161637e+00
+The current MH ratio is: -6.061121e+00
+The current MH ratio is: -4.324132e+00
+Finished 98250 iterations.
+Calculated 41359 accepts.
+Current value: -1.663202e+00 9.936467e-01 6.243298e-01 8.870048e-01 
+The current MH ratio is: -5.361301e+00
+The current MH ratio is: -3.203316e+00
+Finished 98500 iterations.
+Calculated 41473 accepts.
+Current value: -1.780980e+00 7.028087e-01 8.074416e-01 6.175162e-01 
+The current MH ratio is: -2.758868e+00
+The current MH ratio is: -2.979060e+00
+The current MH ratio is: 2.169866e-01
+Finished 98750 iterations.
+Calculated 41597 accepts.
+Current value: -1.292487e+00 6.360441e-01 8.128305e-01 7.124484e-01 
+The current MH ratio is: 1.424118e+00
+The current MH ratio is: -2.289325e+00
+Finished 99000 iterations.
+Calculated 41704 accepts.
+Current value: -1.478805e+00 7.566334e-01 6.348412e-01 8.436161e-01 
+The current MH ratio is: -3.435901e-01
+The current MH ratio is: -1.625573e+00
+The current MH ratio is: -2.138262e+00
+Finished 99250 iterations.
+Calculated 41816 accepts.
+Current value: -2.067320e+00 7.207768e-01 6.168536e-01 7.097519e-01 
+The current MH ratio is: -1.343243e+00
+The current MH ratio is: -1.143488e+00
+Finished 99500 iterations.
+Calculated 41925 accepts.
+Current value: -1.740415e+00 7.542042e-01 5.743506e-01 7.101195e-01 
+The current MH ratio is: -3.280489e+00
+The current MH ratio is: -2.290970e+00
+The current MH ratio is: 2.239906e-01
+Finished 99750 iterations.
+Calculated 42039 accepts.
+Current value: -1.511555e+00 7.644783e-01 6.096425e-01 8.762252e-01 
+The current MH ratio is: -2.248788e+00
+The current MH ratio is: -9.735326e-01
+Finished 100000 iterations.
+Calculated 42148 accepts.
+Current value: -1.515991e+00 8.341029e-01 4.782958e-01 9.181310e-01 
+The current MH ratio is: 6.880211e-01
+The current MH ratio is: -1.851719e+00
+The current MH ratio is: 3.866542e-01
+Finished 100250 iterations.
+Calculated 42256 accepts.
+Current value: -1.247641e+00 8.009997e-01 5.185512e-01 8.016573e-01 
+The current MH ratio is: -7.169690e-01
+The current MH ratio is: 1.020911e+00
+Finished 100500 iterations.
+Calculated 42350 accepts.
+Current value: -1.414941e+00 6.952316e-01 8.073870e-01 7.506160e-01 
+The current MH ratio is: -7.439211e-02
+The current MH ratio is: 1.934085e+00
+The current MH ratio is: -1.305273e+00
+Finished 100750 iterations.
+Calculated 42474 accepts.
+Current value: -2.058377e+00 7.736931e-01 6.489526e-01 6.793853e-01 
+The current MH ratio is: -2.415904e+00
+The current MH ratio is: -5.943745e-01
+Finished 101000 iterations.
+Calculated 42580 accepts.
+Current value: -1.547419e+00 6.286627e-01 6.381591e-01 5.904740e-01 
+The current MH ratio is: -1.599315e+00
+The current MH ratio is: -2.055790e+00
+The current MH ratio is: -2.382604e+00
+Finished 101250 iterations.
+Calculated 42690 accepts.
+Current value: -1.632716e+00 7.803070e-01 4.930220e-01 8.011594e-01 
+The current MH ratio is: -9.142216e-01
+The current MH ratio is: -3.155373e+00
+Finished 101500 iterations.
+Calculated 42778 accepts.
+Current value: -2.044753e+00 7.649318e-01 5.396427e-01 9.133085e-01 
+The current MH ratio is: -1.593412e+00
+The current MH ratio is: -1.460426e+00
+The current MH ratio is: -3.285300e-01
+Finished 101750 iterations.
+Calculated 42878 accepts.
+Current value: -1.344105e+00 7.288923e-01 7.822772e-01 7.036547e-01 
+The current MH ratio is: 2.823084e-01
+The current MH ratio is: -8.903515e+00
+Finished 102000 iterations.
+Calculated 42989 accepts.
+Current value: -1.250464e+00 7.894707e-01 5.480351e-01 7.879042e-01 
+The current MH ratio is: -5.757368e-01
+The current MH ratio is: -1.220358e+00
+The current MH ratio is: -6.852749e-01
+Finished 102250 iterations.
+Calculated 43105 accepts.
+Current value: -1.136696e+00 6.979762e-01 5.697609e-01 7.106094e-01 
+The current MH ratio is: -1.818299e+00
+The current MH ratio is: -2.217990e+00
+Finished 102500 iterations.
+Calculated 43211 accepts.
+Current value: -1.997874e+00 8.086277e-01 6.052038e-01 8.378672e-01 
+The current MH ratio is: -2.187841e-01
+The current MH ratio is: -1.978958e+00
+The current MH ratio is: -8.596874e-01
+Finished 102750 iterations.
+Calculated 43310 accepts.
+Current value: -1.317869e+00 7.465409e-01 5.827138e-01 5.133664e-01 
+The current MH ratio is: 1.038859e+00
+The current MH ratio is: -1.454975e+00
+Finished 103000 iterations.
+Calculated 43407 accepts.
+Current value: -2.165652e+00 8.592007e-01 5.984893e-01 8.256557e-01 
+The current MH ratio is: -8.721626e-01
+The current MH ratio is: 1.928601e+00
+The current MH ratio is: -2.200097e+00
+Finished 103250 iterations.
+Calculated 43513 accepts.
+Current value: -1.777450e+00 7.209677e-01 7.236904e-01 6.169770e-01 
+The current MH ratio is: 8.294155e-01
+The current MH ratio is: -8.689182e-01
+Finished 103500 iterations.
+Calculated 43621 accepts.
+Current value: -2.597839e+00 8.263088e-01 6.548878e-01 8.124414e-01 
+The current MH ratio is: -3.217961e+00
+The current MH ratio is: -3.052141e+00
+The current MH ratio is: -1.494204e+00
+Finished 103750 iterations.
+Calculated 43730 accepts.
+Current value: -2.219572e+00 9.670417e-01 5.899856e-01 8.629507e-01 
+The current MH ratio is: 5.612660e-01
+The current MH ratio is: 8.101461e-01
+Finished 104000 iterations.
+Calculated 43836 accepts.
+Current value: -2.110231e+00 8.855455e-01 4.317934e-01 7.873329e-01 
+The current MH ratio is: -7.516118e-01
+The current MH ratio is: -4.883945e-01
+The current MH ratio is: -1.059864e+00
+Finished 104250 iterations.
+Calculated 43941 accepts.
+Current value: -1.642113e+00 6.413314e-01 6.643379e-01 7.301001e-01 
+The current MH ratio is: -3.278339e+00
+The current MH ratio is: 4.513900e-01
+Finished 104500 iterations.
+Calculated 44046 accepts.
+Current value: -1.424869e+00 6.066652e-01 7.531465e-01 8.345996e-01 
+The current MH ratio is: -4.473866e-01
+The current MH ratio is: 2.867122e-01
+The current MH ratio is: 1.215223e+00
+Finished 104750 iterations.
+Calculated 44140 accepts.
+Current value: -1.312330e+00 7.694341e-01 5.593100e-01 5.700418e-01 
+The current MH ratio is: -7.339575e-01
+The current MH ratio is: -1.574457e+00
+Finished 105000 iterations.
+Calculated 44252 accepts.
+Current value: -1.692231e+00 7.970628e-01 4.814170e-01 7.671882e-01 
+The current MH ratio is: 1.165767e+00
+The current MH ratio is: -2.233317e+00
+The current MH ratio is: -2.743792e+00
+Finished 105250 iterations.
+Calculated 44354 accepts.
+Current value: -1.349523e+00 6.459916e-01 6.003555e-01 8.481395e-01 
+The current MH ratio is: -1.415042e+00
+The current MH ratio is: -4.556539e-01
+Finished 105500 iterations.
+Calculated 44470 accepts.
+Current value: -1.440244e+00 7.359362e-01 6.059320e-01 7.811753e-01 
+The current MH ratio is: -2.289263e+00
+The current MH ratio is: -2.671828e+00
+The current MH ratio is: -8.688296e-01
+Finished 105750 iterations.
+Calculated 44585 accepts.
+Current value: -2.009193e+00 8.282823e-01 5.538488e-01 6.927054e-01 
+The current MH ratio is: -4.581639e+00
+The current MH ratio is: -9.973591e-01
+Finished 106000 iterations.
+Calculated 44693 accepts.
+Current value: -1.339511e+00 6.912078e-01 7.269515e-01 6.999060e-01 
+The current MH ratio is: -2.143722e-01
+The current MH ratio is: -3.794213e+00
+The current MH ratio is: -6.724633e+00
+Finished 106250 iterations.
+Calculated 44798 accepts.
+Current value: -1.507663e+00 8.617110e-01 5.578026e-01 6.489640e-01 
+The current MH ratio is: -1.798601e+00
+The current MH ratio is: 1.052380e-01
+Finished 106500 iterations.
+Calculated 44909 accepts.
+Current value: -1.623787e+00 6.481933e-01 7.357321e-01 6.588554e-01 
+The current MH ratio is: -6.411391e-01
+The current MH ratio is: -1.557512e+00
+The current MH ratio is: 1.235365e-01
+Finished 106750 iterations.
+Calculated 44995 accepts.
+Current value: -2.132001e+00 9.361781e-01 5.187467e-01 7.366320e-01 
+The current MH ratio is: -2.552979e+00
+The current MH ratio is: -4.165140e+00
+Finished 107000 iterations.
+Calculated 45091 accepts.
+Current value: -1.709279e+00 8.538558e-01 5.089825e-01 9.584680e-01 
+The current MH ratio is: -1.626741e+00
+The current MH ratio is: -9.933408e-01
+The current MH ratio is: -2.761133e+00
+Finished 107250 iterations.
+Calculated 45200 accepts.
+Current value: -1.840505e+00 6.371295e-01 7.498087e-01 8.113115e-01 
+The current MH ratio is: -2.825699e+00
+The current MH ratio is: -1.530905e+00
+Finished 107500 iterations.
+Calculated 45302 accepts.
+Current value: -1.869240e+00 8.541093e-01 5.776453e-01 8.628260e-01 
+The current MH ratio is: -1.015220e+00
+The current MH ratio is: -3.538055e+00
+The current MH ratio is: -4.329558e+00
+Finished 107750 iterations.
+Calculated 45404 accepts.
+Current value: -1.461870e+00 8.185438e-01 3.980159e-01 8.822407e-01 
+The current MH ratio is: -2.258975e+00
+The current MH ratio is: 1.683114e+00
+Finished 108000 iterations.
+Calculated 45498 accepts.
+Current value: -1.859226e+00 1.009823e+00 3.732636e-01 8.957037e-01 
+The current MH ratio is: -9.701149e-01
+The current MH ratio is: -2.328126e+00
+The current MH ratio is: 2.323194e-02
+Finished 108250 iterations.
+Calculated 45597 accepts.
+Current value: -1.587216e+00 6.446422e-01 3.721502e-01 8.592363e-01 
+The current MH ratio is: -1.610265e+00
+The current MH ratio is: 1.283382e+00
+Finished 108500 iterations.
+Calculated 45702 accepts.
+Current value: -1.757057e+00 7.766829e-01 5.966253e-01 1.016264e+00 
+The current MH ratio is: -6.714372e+00
+The current MH ratio is: -4.534410e+00
+The current MH ratio is: -6.967319e-02
+Finished 108750 iterations.
+Calculated 45821 accepts.
+Current value: -2.115573e+00 7.967551e-01 7.502819e-01 5.706838e-01 
+The current MH ratio is: -1.422589e+00
+The current MH ratio is: -3.253899e+00
+Finished 109000 iterations.
+Calculated 45916 accepts.
+Current value: -1.382841e+00 7.532244e-01 7.197174e-01 7.440198e-01 
+The current MH ratio is: -3.488187e+00
+The current MH ratio is: 8.409221e-01
+The current MH ratio is: 3.211417e-01
+Finished 109250 iterations.
+Calculated 46026 accepts.
+Current value: -1.108097e+00 6.135984e-01 5.725793e-01 8.295618e-01 
+The current MH ratio is: -1.672217e+00
+The current MH ratio is: 9.930292e-01
+Finished 109500 iterations.
+Calculated 46134 accepts.
+Current value: -1.915498e+00 8.069560e-01 7.539386e-01 7.750197e-01 
+The current MH ratio is: -1.996311e+00
+The current MH ratio is: -4.753728e-01
+The current MH ratio is: -2.007626e+00
+Finished 109750 iterations.
+Calculated 46243 accepts.
+Current value: -1.365254e+00 6.142190e-01 6.659665e-01 8.495716e-01 
+The current MH ratio is: -1.179090e+00
+The current MH ratio is: -2.761402e+00
+Finished 110000 iterations.
+Calculated 46362 accepts.
+Current value: -1.668020e+00 7.368940e-01 5.981505e-01 7.417281e-01 
+The current MH ratio is: 1.140066e+00
+The current MH ratio is: -6.259423e+00
+The current MH ratio is: 1.262743e+00
+Finished 110250 iterations.
+Calculated 46482 accepts.
+Current value: -1.372131e+00 7.986517e-01 6.631469e-01 7.647699e-01 
+The current MH ratio is: 1.185794e+00
+The current MH ratio is: -1.684648e+00
+Finished 110500 iterations.
+Calculated 46605 accepts.
+Current value: -1.408432e+00 8.830009e-01 5.539790e-01 8.211664e-01 
+The current MH ratio is: -2.928692e-01
+The current MH ratio is: 2.430963e+00
+The current MH ratio is: -2.018405e+00
+Finished 110750 iterations.
+Calculated 46702 accepts.
+Current value: -1.366749e+00 5.311557e-01 7.617274e-01 7.688018e-01 
+The current MH ratio is: -5.132102e+00
+The current MH ratio is: -1.415209e+00
+Finished 111000 iterations.
+Calculated 46813 accepts.
+Current value: -1.734807e+00 5.044137e-01 7.778355e-01 5.549996e-01 
+The current MH ratio is: -1.451126e+00
+The current MH ratio is: 1.592291e+00
+The current MH ratio is: 3.446342e-01
+Finished 111250 iterations.
+Calculated 46920 accepts.
+Current value: -1.456135e+00 7.948496e-01 4.933408e-01 7.913880e-01 
+The current MH ratio is: -4.343108e+00
+The current MH ratio is: -1.228664e+00
+Finished 111500 iterations.
+Calculated 47021 accepts.
+Current value: -1.727952e+00 8.685649e-01 5.061596e-01 7.778706e-01 
+The current MH ratio is: -2.482673e+00
+The current MH ratio is: 1.004753e+00
+The current MH ratio is: -3.523259e-01
+Finished 111750 iterations.
+Calculated 47149 accepts.
+Current value: -1.992215e+00 7.990796e-01 4.030781e-01 1.035932e+00 
+The current MH ratio is: 2.506468e+00
+The current MH ratio is: -3.152156e+00
+Finished 112000 iterations.
+Calculated 47249 accepts.
+Current value: -1.677933e+00 6.779561e-01 4.050501e-01 9.778236e-01 
+The current MH ratio is: 2.758757e-01
+The current MH ratio is: -3.003967e+00
+The current MH ratio is: 7.783834e-01
+Finished 112250 iterations.
+Calculated 47365 accepts.
+Current value: -2.279476e+00 8.473466e-01 6.414538e-01 8.677764e-01 
+The current MH ratio is: 1.126775e+00
+The current MH ratio is: -2.351838e+00
+Finished 112500 iterations.
+Calculated 47461 accepts.
+Current value: -1.952462e+00 9.021735e-01 5.506186e-01 8.308922e-01 
+The current MH ratio is: -2.365863e+00
+The current MH ratio is: -2.852692e-01
+The current MH ratio is: -2.586894e+00
+Finished 112750 iterations.
+Calculated 47573 accepts.
+Current value: -1.307073e+00 4.862268e-01 7.367399e-01 8.521881e-01 
+The current MH ratio is: -4.858075e+00
+The current MH ratio is: -7.708064e-01
+Finished 113000 iterations.
+Calculated 47673 accepts.
+Current value: -1.572096e+00 6.311087e-01 3.704821e-01 9.934353e-01 
+The current MH ratio is: -8.272812e+00
+The current MH ratio is: -7.793343e-01
+The current MH ratio is: -7.509804e-02
+Finished 113250 iterations.
+Calculated 47781 accepts.
+Current value: -1.743209e+00 8.318957e-01 5.973881e-01 5.623461e-01 
+The current MH ratio is: -1.545481e+00
+The current MH ratio is: -1.100754e+00
+Finished 113500 iterations.
+Calculated 47877 accepts.
+Current value: -1.759448e+00 6.519224e-01 4.913879e-01 6.536803e-01 
+The current MH ratio is: -2.745511e+00
+The current MH ratio is: 3.640791e-01
+The current MH ratio is: 3.270782e-01
+Finished 113750 iterations.
+Calculated 47971 accepts.
+Current value: -1.496748e+00 7.386554e-01 8.322856e-01 4.890697e-01 
+The current MH ratio is: -4.316893e-01
+The current MH ratio is: -3.437570e-01
+Finished 114000 iterations.
+Calculated 48074 accepts.
+Current value: -1.812070e+00 7.679358e-01 5.310632e-01 7.832532e-01 
+The current MH ratio is: -7.659715e-01
+The current MH ratio is: -1.128563e+00
+The current MH ratio is: 4.492137e-01
+Finished 114250 iterations.
+Calculated 48173 accepts.
+Current value: -1.789727e+00 8.398830e-01 3.165623e-01 9.083481e-01 
+The current MH ratio is: -2.291693e+00
+The current MH ratio is: -9.601846e-02
+Finished 114500 iterations.
+Calculated 48262 accepts.
+Current value: -2.299484e+00 8.103036e-01 4.523660e-01 8.975097e-01 
+The current MH ratio is: -1.738114e+00
+The current MH ratio is: -1.426854e-01
+The current MH ratio is: 4.460412e-01
+Finished 114750 iterations.
+Calculated 48373 accepts.
+Current value: -1.635550e+00 6.352926e-01 5.331239e-01 8.201954e-01 
+The current MH ratio is: -5.751795e-01
+The current MH ratio is: -1.368959e+00
+Finished 115000 iterations.
+Calculated 48485 accepts.
+Current value: -1.637218e+00 7.842090e-01 4.349182e-01 8.739097e-01 
+The current MH ratio is: -1.179817e+00
+The current MH ratio is: -1.314221e+00
+The current MH ratio is: -7.426266e-01
+Finished 115250 iterations.
+Calculated 48592 accepts.
+Current value: -1.447756e+00 7.982035e-01 5.578390e-01 8.824293e-01 
+The current MH ratio is: -1.986344e-01
+The current MH ratio is: -4.046586e-01
+Finished 115500 iterations.
+Calculated 48715 accepts.
+Current value: -1.484504e+00 7.151238e-01 5.996781e-01 7.895965e-01 
+The current MH ratio is: -1.463372e+00
+The current MH ratio is: -8.449680e-01
+The current MH ratio is: -1.937310e+00
+Finished 115750 iterations.
+Calculated 48821 accepts.
+Current value: -1.624004e+00 7.486108e-01 7.044706e-01 9.066354e-01 
+The current MH ratio is: -1.340794e+00
+The current MH ratio is: -3.086208e+00
+Finished 116000 iterations.
+Calculated 48924 accepts.
+Current value: -1.487049e+00 1.034162e+00 3.115909e-01 9.223864e-01 
+The current MH ratio is: -1.645469e+00
+The current MH ratio is: -7.413297e-01
+The current MH ratio is: -6.454166e+00
+Finished 116250 iterations.
+Calculated 49040 accepts.
+Current value: -1.320037e+00 6.526465e-01 4.452436e-01 1.095601e+00 
+The current MH ratio is: -6.253280e-01
+The current MH ratio is: 2.770301e-01
+Finished 116500 iterations.
+Calculated 49156 accepts.
+Current value: -1.609903e+00 6.686354e-01 7.123398e-01 8.690052e-01 
+The current MH ratio is: -4.637441e-01
+The current MH ratio is: -2.856517e+00
+The current MH ratio is: -6.494414e-01
+Finished 116750 iterations.
+Calculated 49270 accepts.
+Current value: -1.727386e+00 8.384978e-01 4.475211e-01 8.697809e-01 
+The current MH ratio is: -1.674665e-01
+The current MH ratio is: -7.605562e-01
+Finished 117000 iterations.
+Calculated 49373 accepts.
+Current value: -1.571052e+00 9.494629e-01 6.355528e-01 8.199930e-01 
+The current MH ratio is: -4.178535e+00
+The current MH ratio is: -2.386894e+00
+The current MH ratio is: -3.955588e+00
+Finished 117250 iterations.
+Calculated 49468 accepts.
+Current value: -1.179158e+00 6.788744e-01 5.969139e-01 7.279884e-01 
+The current MH ratio is: 4.076807e-01
+The current MH ratio is: 4.215470e-02
+Finished 117500 iterations.
+Calculated 49552 accepts.
+Current value: -1.848697e+00 7.345027e-01 8.021540e-01 6.970945e-01 
+The current MH ratio is: -1.538421e+00
+The current MH ratio is: 2.516564e-01
+The current MH ratio is: 7.988079e-02
+Finished 117750 iterations.
+Calculated 49653 accepts.
+Current value: -1.521106e+00 8.099142e-01 5.337374e-01 9.030221e-01 
+The current MH ratio is: -1.242860e+00
+The current MH ratio is: 7.095703e-02
+Finished 118000 iterations.
+Calculated 49760 accepts.
+Current value: -1.608048e+00 8.046713e-01 5.376226e-01 9.152213e-01 
+The current MH ratio is: -2.868464e+00
+The current MH ratio is: -1.192730e+00
+The current MH ratio is: -1.362183e+00
+Finished 118250 iterations.
+Calculated 49853 accepts.
+Current value: -1.482188e+00 7.159418e-01 7.927446e-01 6.793626e-01 
+The current MH ratio is: -1.832392e+00
+The current MH ratio is: -2.876243e+00
+Finished 118500 iterations.
+Calculated 49958 accepts.
+Current value: -1.725606e+00 7.229282e-01 6.116758e-01 6.626448e-01 
+The current MH ratio is: -1.008162e+00
+The current MH ratio is: 4.857736e-01
+The current MH ratio is: -1.242289e+00
+Finished 118750 iterations.
+Calculated 50064 accepts.
+Current value: -2.627678e+00 9.202903e-01 8.035239e-01 5.324606e-01 
+The current MH ratio is: -1.653280e+00
+The current MH ratio is: 1.474710e+00
+Finished 119000 iterations.
+Calculated 50163 accepts.
+Current value: -1.143055e+00 6.628104e-01 8.214415e-01 6.423328e-01 
+The current MH ratio is: -3.202310e-02
+The current MH ratio is: -2.173838e+00
+The current MH ratio is: -5.781571e+00
+Finished 119250 iterations.
+Calculated 50274 accepts.
+Current value: -9.646066e-01 6.475583e-01 5.733996e-01 9.220065e-01 
+The current MH ratio is: -1.186027e+00
+The current MH ratio is: -1.226039e+00
+Finished 119500 iterations.
+Calculated 50375 accepts.
+Current value: -1.838623e+00 7.705203e-01 7.504046e-01 5.847013e-01 
+The current MH ratio is: -1.980854e+00
+The current MH ratio is: -1.437742e+00
+The current MH ratio is: 8.563726e-01
+Finished 119750 iterations.
+Calculated 50473 accepts.
+Current value: -1.650514e+00 8.514517e-01 5.039572e-01 8.035144e-01 
+The current MH ratio is: -8.490042e-01
+The current MH ratio is: -5.810826e+00
+Finished 120000 iterations.
+Calculated 50584 accepts.
+Current value: -1.839498e+00 6.875714e-01 5.830760e-01 8.672814e-01 
+The current MH ratio is: -2.247035e+00
+The current MH ratio is: -3.867875e-01
+The current MH ratio is: -2.509347e+00
+Finished 120250 iterations.
+Calculated 50682 accepts.
+Current value: -1.381979e+00 7.328622e-01 3.082083e-01 9.433589e-01 
+The current MH ratio is: -1.982356e+00
+The current MH ratio is: -1.680472e+00
+Finished 120500 iterations.
+Calculated 50794 accepts.
+Current value: -1.180424e+00 7.240797e-01 6.766090e-01 5.466870e-01 
+The current MH ratio is: -5.122297e+00
+The current MH ratio is: -2.186896e+00
+The current MH ratio is: -2.002015e-02
+Finished 120750 iterations.
+Calculated 50897 accepts.
+Current value: -2.112782e+00 8.336410e-01 4.794041e-01 6.443521e-01 
+The current MH ratio is: -2.089773e+00
+The current MH ratio is: -9.912663e-01
+Finished 121000 iterations.
+Calculated 51003 accepts.
+Current value: -1.680723e+00 7.560312e-01 6.196255e-01 7.616009e-01 
+The current MH ratio is: -9.756356e-01
+The current MH ratio is: 2.719210e-02
+The current MH ratio is: -5.350008e-01
+Finished 121250 iterations.
+Calculated 51116 accepts.
+Current value: -1.386008e+00 5.990509e-01 7.014458e-01 8.848022e-01 
+The current MH ratio is: 2.361019e-01
+The current MH ratio is: -9.468643e-01
+Finished 121500 iterations.
+Calculated 51233 accepts.
+Current value: -1.794214e+00 7.545830e-01 8.452975e-01 6.472441e-01 
+The current MH ratio is: -2.232944e+00
+The current MH ratio is: 4.657427e-01
+The current MH ratio is: -1.669293e+00
+Finished 121750 iterations.
+Calculated 51339 accepts.
+Current value: -2.128152e+00 7.294524e-01 5.900082e-01 1.000148e+00 
+The current MH ratio is: -4.205995e-01
+The current MH ratio is: -7.010369e-01
+Finished 122000 iterations.
+Calculated 51441 accepts.
+Current value: -2.001338e+00 7.486750e-01 6.582318e-01 8.724981e-01 
+The current MH ratio is: -8.086080e-02
+The current MH ratio is: -1.340510e+00
+The current MH ratio is: 6.365971e-01
+Finished 122250 iterations.
+Calculated 51541 accepts.
+Current value: -1.362414e+00 8.763613e-01 5.640185e-01 5.191386e-01 
+The current MH ratio is: 8.034001e-02
+The current MH ratio is: 4.710057e-01
+Finished 122500 iterations.
+Calculated 51651 accepts.
+Current value: -1.974805e+00 7.848081e-01 6.538277e-01 7.269084e-01 
+The current MH ratio is: -2.505603e+00
+The current MH ratio is: -4.265008e-01
+The current MH ratio is: 2.110331e-01
+Finished 122750 iterations.
+Calculated 51750 accepts.
+Current value: -1.545766e+00 5.409317e-01 9.052573e-01 6.076378e-01 
+The current MH ratio is: -1.762724e+00
+The current MH ratio is: -3.504669e+00
+Finished 123000 iterations.
+Calculated 51847 accepts.
+Current value: -1.710961e+00 8.116353e-01 7.732147e-01 6.194216e-01 
+The current MH ratio is: -2.009879e-01
+The current MH ratio is: -1.823156e+00
+The current MH ratio is: -4.027094e+00
+Finished 123250 iterations.
+Calculated 51944 accepts.
+Current value: -2.127938e+00 8.721372e-01 6.149893e-01 7.035826e-01 
+The current MH ratio is: 2.072182e-01
+The current MH ratio is: -3.138188e+00
+Finished 123500 iterations.
+Calculated 52038 accepts.
+Current value: -1.911920e+00 9.484168e-01 4.608051e-01 6.716510e-01 
+The current MH ratio is: 7.479947e-01
+The current MH ratio is: -2.865716e+00
+The current MH ratio is: -8.804545e-01
+Finished 123750 iterations.
+Calculated 52130 accepts.
+Current value: -1.210619e+00 3.560643e-01 6.601696e-01 7.591403e-01 
+The current MH ratio is: -2.126526e+00
+The current MH ratio is: -5.404124e+00
+Finished 124000 iterations.
+Calculated 52235 accepts.
+Current value: -1.777521e+00 9.601930e-01 7.799574e-01 4.114364e-01 
+The current MH ratio is: 2.467751e+00
+The current MH ratio is: 1.455645e+00
+The current MH ratio is: 5.667088e-01
+Finished 124250 iterations.
+Calculated 52356 accepts.
+Current value: -2.541244e+00 7.420370e-01 9.187031e-01 5.998114e-01 
+The current MH ratio is: 2.514557e+00
+The current MH ratio is: -1.658214e+00
+Finished 124500 iterations.
+Calculated 52461 accepts.
+Current value: -1.817143e+00 8.090805e-01 6.567356e-01 6.936980e-01 
+The current MH ratio is: -3.447150e+00
+The current MH ratio is: -1.382196e-01
+The current MH ratio is: -4.016531e+00
+Finished 124750 iterations.
+Calculated 52573 accepts.
+Current value: -1.583390e+00 7.487819e-01 6.733678e-01 6.859438e-01 
+The current MH ratio is: 3.437689e-01
+The current MH ratio is: -5.567706e+00
+Finished 125000 iterations.
+Calculated 52679 accepts.
+Current value: -2.220914e+00 6.418404e-01 6.286018e-01 8.367343e-01 
+The current MH ratio is: -2.460139e+00
+The current MH ratio is: -9.909192e-01
+The current MH ratio is: -1.019495e+00
+Finished 125250 iterations.
+Calculated 52777 accepts.
+Current value: -1.910214e+00 8.502691e-01 5.821065e-01 7.730307e-01 
+The current MH ratio is: -2.066091e+00
+The current MH ratio is: -1.031847e-01
+Finished 125500 iterations.
+Calculated 52886 accepts.
+Current value: -1.741670e+00 7.548470e-01 7.899716e-01 5.957482e-01 
+The current MH ratio is: -3.807295e-01
+The current MH ratio is: 8.715605e-01
+The current MH ratio is: 8.867261e-01
+Finished 125750 iterations.
+Calculated 52972 accepts.
+Current value: -1.486033e+00 7.473067e-01 6.133148e-01 6.389725e-01 
+The current MH ratio is: 9.288285e-02
+The current MH ratio is: -4.706998e+00
+Finished 126000 iterations.
+Calculated 53079 accepts.
+Current value: -1.785488e+00 7.866791e-01 5.448574e-01 8.939047e-01 
+The current MH ratio is: -1.777477e+00
+The current MH ratio is: -2.740521e+00
+The current MH ratio is: -1.300949e+00
+Finished 126250 iterations.
+Calculated 53167 accepts.
+Current value: -1.944714e+00 6.958991e-01 5.944270e-01 8.385966e-01 
+The current MH ratio is: -1.046269e+00
+The current MH ratio is: -7.597400e-01
+Finished 126500 iterations.
+Calculated 53270 accepts.
+Current value: -1.652196e+00 6.336135e-01 7.256975e-01 6.083887e-01 
+The current MH ratio is: -1.165155e+00
+The current MH ratio is: -6.621682e-01
+The current MH ratio is: 3.778202e-02
+Finished 126750 iterations.
+Calculated 53370 accepts.
+Current value: -2.165979e+00 6.691697e-01 7.010322e-01 9.187597e-01 
+The current MH ratio is: -2.134713e+00
+The current MH ratio is: -4.996202e-01
+Finished 127000 iterations.
+Calculated 53464 accepts.
+Current value: -1.979523e+00 6.434435e-01 6.877268e-01 6.170164e-01 
+The current MH ratio is: -1.072256e+00
+The current MH ratio is: -4.417515e-01
+The current MH ratio is: -1.957817e+00
+Finished 127250 iterations.
+Calculated 53569 accepts.
+Current value: -2.078460e+00 8.690939e-01 5.059166e-01 9.226883e-01 
+The current MH ratio is: -1.387333e+00
+The current MH ratio is: -1.869077e+00
+Finished 127500 iterations.
+Calculated 53659 accepts.
+Current value: -1.736845e+00 8.266929e-01 5.313102e-01 7.758159e-01 
+The current MH ratio is: -7.179466e-02
+The current MH ratio is: -9.321149e-01
+The current MH ratio is: -8.790102e-02
+Finished 127750 iterations.
+Calculated 53780 accepts.
+Current value: -2.234749e+00 8.768422e-01 5.969514e-01 8.808666e-01 
+The current MH ratio is: -2.848373e+00
+The current MH ratio is: -2.276015e+00
+Finished 128000 iterations.
+Calculated 53886 accepts.
+Current value: -1.932470e+00 6.259371e-01 6.879681e-01 7.963844e-01 
+The current MH ratio is: -8.962040e-01
+The current MH ratio is: -8.501873e+00
+The current MH ratio is: 1.287448e+00
+Finished 128250 iterations.
+Calculated 53982 accepts.
+Current value: -1.493961e+00 6.728377e-01 6.057003e-01 7.550139e-01 
+The current MH ratio is: -7.383654e-01
+The current MH ratio is: 1.521320e-01
+Finished 128500 iterations.
+Calculated 54079 accepts.
+Current value: -1.530373e+00 7.911753e-01 5.791810e-01 6.450472e-01 
+The current MH ratio is: -1.124007e+00
+The current MH ratio is: 1.726054e+00
+The current MH ratio is: -1.344173e+00
+Finished 128750 iterations.
+Calculated 54201 accepts.
+Current value: -1.847187e+00 9.334160e-01 5.533862e-01 7.255976e-01 
+The current MH ratio is: -1.386747e+00
+The current MH ratio is: -1.901189e-01
+Finished 129000 iterations.
+Calculated 54304 accepts.
+Current value: -1.254441e+00 6.405378e-01 4.802784e-01 7.419426e-01 
+The current MH ratio is: -1.452688e+00
+The current MH ratio is: -2.492681e+00
+The current MH ratio is: -1.450207e+00
+Finished 129250 iterations.
+Calculated 54408 accepts.
+Current value: -1.731355e+00 8.482647e-01 5.746797e-01 8.082741e-01 
+The current MH ratio is: 1.542251e-01
+The current MH ratio is: 7.353851e-01
+Finished 129500 iterations.
+Calculated 54505 accepts.
+Current value: -1.489074e+00 6.200439e-01 5.582313e-01 8.217144e-01 
+The current MH ratio is: -1.153962e+00
+The current MH ratio is: -4.498527e-02
+The current MH ratio is: 8.353895e-02
+Finished 129750 iterations.
+Calculated 54598 accepts.
+Current value: -1.657892e+00 4.871696e-01 6.177438e-01 6.623106e-01 
+The current MH ratio is: -6.888151e-02
+The current MH ratio is: -1.810504e+00
+Finished 130000 iterations.
+Calculated 54713 accepts.
+Current value: -1.520478e+00 8.001994e-01 6.041924e-01 5.442396e-01 
+The current MH ratio is: -8.428276e-01
+The current MH ratio is: -1.166832e+00
+The current MH ratio is: -2.802519e+00
+Finished 130250 iterations.
+Calculated 54801 accepts.
+Current value: -2.028373e+00 8.958788e-01 5.034288e-01 8.208063e-01 
+The current MH ratio is: -5.468644e+00
+The current MH ratio is: 4.107005e-01
+Finished 130500 iterations.
+Calculated 54904 accepts.
+Current value: -1.626444e+00 7.716959e-01 6.835128e-01 7.064889e-01 
+The current MH ratio is: 2.982698e-02
+The current MH ratio is: 9.825310e-01
+The current MH ratio is: 3.532060e-01
+Finished 130750 iterations.
+Calculated 55020 accepts.
+Current value: -1.791525e+00 8.284821e-01 6.097762e-01 6.288577e-01 
+The current MH ratio is: -1.226224e+00
+The current MH ratio is: 9.306096e-01
+Finished 131000 iterations.
+Calculated 55143 accepts.
+Current value: -1.860380e+00 7.343880e-01 6.290591e-01 6.029331e-01 
+The current MH ratio is: -2.175440e+00
+The current MH ratio is: 2.276572e-01
+The current MH ratio is: -7.147550e-01
+Finished 131250 iterations.
+Calculated 55243 accepts.
+Current value: -1.667026e+00 9.107975e-01 5.863354e-01 6.061072e-01 
+The current MH ratio is: 7.154072e-01
+The current MH ratio is: -2.049799e+00
+Finished 131500 iterations.
+Calculated 55350 accepts.
+Current value: -1.447164e+00 6.667031e-01 3.802500e-01 1.059185e+00 
+The current MH ratio is: -2.206410e+00
+The current MH ratio is: -1.677935e+00
+The current MH ratio is: -1.992916e+00
+Finished 131750 iterations.
+Calculated 55440 accepts.
+Current value: -1.085478e+00 3.582341e-01 8.089119e-01 9.130692e-01 
+The current MH ratio is: -2.122191e+00
+The current MH ratio is: -2.275618e+00
+Finished 132000 iterations.
+Calculated 55558 accepts.
+Current value: -1.994593e+00 5.466441e-01 6.358145e-01 7.070303e-01 
+The current MH ratio is: -4.608750e-01
+The current MH ratio is: 1.286943e+00
+The current MH ratio is: -3.156864e+00
+Finished 132250 iterations.
+Calculated 55656 accepts.
+Current value: -1.903001e+00 8.442789e-01 6.281649e-01 6.904136e-01 
+The current MH ratio is: 3.024235e-01
+The current MH ratio is: -4.490215e+00
+Finished 132500 iterations.
+Calculated 55758 accepts.
+Current value: -1.845597e+00 8.674961e-01 6.312469e-01 6.827340e-01 
+The current MH ratio is: -1.748025e+00
+The current MH ratio is: -4.872393e-01
+The current MH ratio is: -8.472392e-01
+Finished 132750 iterations.
+Calculated 55853 accepts.
+Current value: -1.310110e+00 6.174373e-01 6.225513e-01 8.910369e-01 
+The current MH ratio is: -1.673718e+00
+The current MH ratio is: -3.023881e+00
+Finished 133000 iterations.
+Calculated 55960 accepts.
+Current value: -1.600616e+00 7.404812e-01 7.489096e-01 7.335368e-01 
+The current MH ratio is: -2.021398e+00
+The current MH ratio is: -1.970245e+00
+The current MH ratio is: -1.735186e+00
+Finished 133250 iterations.
+Calculated 56069 accepts.
+Current value: -2.279408e+00 7.963494e-01 5.556994e-01 8.043682e-01 
+The current MH ratio is: 1.289222e+00
+The current MH ratio is: -1.537207e+00
+Finished 133500 iterations.
+Calculated 56184 accepts.
+Current value: -2.014334e+00 8.518710e-01 7.258734e-01 8.942621e-01 
+The current MH ratio is: 1.025522e+00
+The current MH ratio is: -8.378797e-01
+The current MH ratio is: 9.208798e-02
+Finished 133750 iterations.
+Calculated 56306 accepts.
+Current value: -1.210459e+00 7.995368e-01 4.442829e-01 9.383239e-01 
+The current MH ratio is: 1.076737e-01
+The current MH ratio is: -9.036414e-01
+Finished 134000 iterations.
+Calculated 56408 accepts.
+Current value: -1.482102e+00 7.806875e-01 4.565474e-01 8.407388e-01 
+The current MH ratio is: -2.760758e+00
+The current MH ratio is: 9.361346e-01
+The current MH ratio is: -5.605984e-01
+Finished 134250 iterations.
+Calculated 56511 accepts.
+Current value: -1.969152e+00 7.429695e-01 5.601402e-01 9.460826e-01 
+The current MH ratio is: 1.034843e+00
+The current MH ratio is: -8.834166e+00
+Finished 134500 iterations.
+Calculated 56620 accepts.
+Current value: -1.866862e+00 8.808495e-01 4.920326e-01 8.433473e-01 
+The current MH ratio is: -1.455644e-01
+The current MH ratio is: 3.783211e-01
+The current MH ratio is: -1.441811e+00
+Finished 134750 iterations.
+Calculated 56729 accepts.
+Current value: -2.337687e+00 8.594138e-01 6.189648e-01 8.894451e-01 
+The current MH ratio is: -1.138538e+00
+The current MH ratio is: -1.681614e+00
+Finished 135000 iterations.
+Calculated 56827 accepts.
+Current value: -1.839049e+00 8.458336e-01 5.269565e-01 6.766491e-01 
+The current MH ratio is: -1.415961e+00
+The current MH ratio is: -3.546881e+00
+The current MH ratio is: -1.461316e+00
+Finished 135250 iterations.
+Calculated 56938 accepts.
+Current value: -1.778009e+00 9.743916e-01 3.608554e-01 8.237294e-01 
+The current MH ratio is: -5.281724e+00
+The current MH ratio is: -2.295494e+00
+Finished 135500 iterations.
+Calculated 57029 accepts.
+Current value: -1.825362e+00 7.400376e-01 6.137890e-01 7.977801e-01 
+The current MH ratio is: 1.845677e-01
+The current MH ratio is: -1.826509e+00
+The current MH ratio is: -1.488449e+00
+Finished 135750 iterations.
+Calculated 57136 accepts.
+Current value: -1.740385e+00 7.861562e-01 5.198580e-01 8.284429e-01 
+The current MH ratio is: -4.630530e+00
+The current MH ratio is: -2.304170e+00
+Finished 136000 iterations.
+Calculated 57239 accepts.
+Current value: -1.759808e+00 8.245468e-01 4.435375e-01 7.591104e-01 
+The current MH ratio is: 4.489847e+00
+The current MH ratio is: -9.933103e-01
+The current MH ratio is: -1.275223e+00
+Finished 136250 iterations.
+Calculated 57349 accepts.
+Current value: -1.888104e+00 7.395195e-01 6.508215e-01 9.674119e-01 
+The current MH ratio is: -2.189203e+00
+The current MH ratio is: -2.385885e+00
+Finished 136500 iterations.
+Calculated 57439 accepts.
+Current value: -1.686270e+00 6.318245e-01 4.934705e-01 1.007572e+00 
+The current MH ratio is: -1.920016e-01
+The current MH ratio is: -3.477774e+00
+The current MH ratio is: -1.013678e+00
+Finished 136750 iterations.
+Calculated 57532 accepts.
+Current value: -1.768614e+00 7.318985e-01 5.984224e-01 7.606533e-01 
+The current MH ratio is: -1.388296e+00
+The current MH ratio is: -6.716692e+00
+Finished 137000 iterations.
+Calculated 57619 accepts.
+Current value: -1.539467e+00 6.282139e-01 6.179788e-01 8.132864e-01 
+The current MH ratio is: -2.171162e+00
+The current MH ratio is: -6.029435e-01
+The current MH ratio is: 4.349751e-01
+Finished 137250 iterations.
+Calculated 57720 accepts.
+Current value: -9.571655e-01 5.551289e-01 5.451947e-01 6.990262e-01 
+The current MH ratio is: 1.216476e-01
+The current MH ratio is: 2.586905e+00
+Finished 137500 iterations.
+Calculated 57812 accepts.
+Current value: -1.883541e+00 9.262877e-01 5.407468e-01 8.407212e-01 
+The current MH ratio is: -3.377685e-01
+The current MH ratio is: -1.670083e+00
+The current MH ratio is: -5.810496e+00
+Finished 137750 iterations.
+Calculated 57904 accepts.
+Current value: -1.402942e+00 7.155998e-01 6.230252e-01 8.154414e-01 
+The current MH ratio is: -3.128308e+00
+The current MH ratio is: -1.225889e-01
+Finished 138000 iterations.
+Calculated 58013 accepts.
+Current value: -1.856409e+00 6.642776e-01 8.428333e-01 7.474456e-01 
+The current MH ratio is: -3.393298e+00
+The current MH ratio is: -4.455974e+00
+The current MH ratio is: -1.366605e+00
+Finished 138250 iterations.
+Calculated 58121 accepts.
+Current value: -1.994479e+00 8.002839e-01 5.192292e-01 8.977056e-01 
+The current MH ratio is: -3.672841e+00
+The current MH ratio is: -1.213461e+00
+Finished 138500 iterations.
+Calculated 58226 accepts.
+Current value: -9.182218e-01 4.912380e-01 5.780866e-01 7.926288e-01 
+The current MH ratio is: 1.536179e+00
+The current MH ratio is: -3.160151e+00
+The current MH ratio is: -7.023413e-01
+Finished 138750 iterations.
+Calculated 58345 accepts.
+Current value: -1.730631e+00 5.928056e-01 6.712363e-01 6.967401e-01 
+The current MH ratio is: 9.324152e-01
+The current MH ratio is: -2.765270e+00
+Finished 139000 iterations.
+Calculated 58459 accepts.
+Current value: -2.037870e+00 8.009033e-01 4.639617e-01 9.521148e-01 
+The current MH ratio is: -1.941013e+00
+The current MH ratio is: -1.865438e+00
+The current MH ratio is: -1.101126e+00
+Finished 139250 iterations.
+Calculated 58561 accepts.
+Current value: -1.260944e+00 6.264143e-01 6.790714e-01 4.195882e-01 
+The current MH ratio is: 1.854291e+00
+The current MH ratio is: 4.955063e-01
+Finished 139500 iterations.
+Calculated 58663 accepts.
+Current value: -1.848497e+00 7.670553e-01 5.855305e-01 6.305388e-01 
+The current MH ratio is: -7.016219e+00
+The current MH ratio is: 1.719008e+00
+The current MH ratio is: -7.171905e-01
+Finished 139750 iterations.
+Calculated 58770 accepts.
+Current value: -1.549751e+00 8.162749e-01 7.187706e-01 4.756917e-01 
+The current MH ratio is: 3.680414e-01
+The current MH ratio is: -2.588631e+00
+Finished 140000 iterations.
+Calculated 58886 accepts.
+Current value: -2.120782e+00 8.172242e-01 5.960981e-01 8.015392e-01 
+The current MH ratio is: -2.668195e+00
+The current MH ratio is: -6.727171e+00
+The current MH ratio is: -2.394873e-01
+Finished 140250 iterations.
+Calculated 58993 accepts.
+Current value: -2.166606e+00 7.947672e-01 6.774600e-01 8.005002e-01 
+The current MH ratio is: -5.154225e-01
+The current MH ratio is: 2.423400e+00
+Finished 140500 iterations.
+Calculated 59088 accepts.
+Current value: -1.808671e+00 7.150229e-01 5.424493e-01 8.027552e-01 
+The current MH ratio is: -6.254862e+00
+The current MH ratio is: 3.165123e-01
+The current MH ratio is: -1.669202e+00
+Finished 140750 iterations.
+Calculated 59209 accepts.
+Current value: -1.610025e+00 7.348401e-01 5.520247e-01 5.921841e-01 
+The current MH ratio is: -4.221972e-01
+The current MH ratio is: -1.295142e-01
+Finished 141000 iterations.
+Calculated 59326 accepts.
+Current value: -2.302644e+00 1.077139e+00 3.550533e-01 8.530877e-01 
+The current MH ratio is: -5.653042e-01
+The current MH ratio is: -3.796739e+00
+The current MH ratio is: -1.585813e+00
+Finished 141250 iterations.
+Calculated 59445 accepts.
+Current value: -1.683511e+00 6.988400e-01 5.803890e-01 7.832843e-01 
+The current MH ratio is: -2.546809e+00
+The current MH ratio is: -1.467332e+00
+Finished 141500 iterations.
+Calculated 59560 accepts.
+Current value: -1.997732e+00 7.860905e-01 5.229969e-01 7.537706e-01 
+The current MH ratio is: -3.163541e+00
+The current MH ratio is: -1.101051e+00
+The current MH ratio is: -1.318022e+00
+Finished 141750 iterations.
+Calculated 59648 accepts.
+Current value: -1.686025e+00 7.467041e-01 6.933538e-01 7.553417e-01 
+The current MH ratio is: -5.949553e+00
+The current MH ratio is: -1.046000e+00
+Finished 142000 iterations.
+Calculated 59755 accepts.
+Current value: -1.076042e+00 3.657368e-01 7.381036e-01 6.354165e-01 
+The current MH ratio is: 3.127030e-01
+The current MH ratio is: -8.265868e-01
+The current MH ratio is: -1.548536e+00
+Finished 142250 iterations.
+Calculated 59862 accepts.
+Current value: -1.497867e+00 8.149127e-01 3.439339e-01 8.819590e-01 
+The current MH ratio is: -2.789904e-01
+The current MH ratio is: -4.163215e+00
+Finished 142500 iterations.
+Calculated 59959 accepts.
+Current value: -1.860078e+00 6.264968e-01 6.208830e-01 7.980611e-01 
+The current MH ratio is: -1.103515e+00
+The current MH ratio is: -1.978236e+00
+The current MH ratio is: -2.518135e+00
+Finished 142750 iterations.
+Calculated 60067 accepts.
+Current value: -1.784026e+00 7.581193e-01 6.780351e-01 7.823162e-01 
+The current MH ratio is: -6.890600e-01
+The current MH ratio is: 3.280982e-01
+Finished 143000 iterations.
+Calculated 60170 accepts.
+Current value: -1.666679e+00 7.510874e-01 4.057656e-01 9.016579e-01 
+The current MH ratio is: 3.305966e-02
+The current MH ratio is: -5.360201e+00
+The current MH ratio is: -2.085441e+00
+Finished 143250 iterations.
+Calculated 60262 accepts.
+Current value: -1.299299e+00 5.731271e-01 4.932877e-01 7.290884e-01 
+The current MH ratio is: -1.805362e+00
+The current MH ratio is: 1.544283e+00
+Finished 143500 iterations.
+Calculated 60368 accepts.
+Current value: -1.606018e+00 7.063236e-01 6.890428e-01 5.890417e-01 
+The current MH ratio is: -1.410882e+00
+The current MH ratio is: -3.316901e+00
+The current MH ratio is: -3.878781e-01
+Finished 143750 iterations.
+Calculated 60461 accepts.
+Current value: -2.352115e+00 6.339211e-01 7.659250e-01 6.550017e-01 
+The current MH ratio is: 2.684065e-01
+The current MH ratio is: -3.144593e+00
+Finished 144000 iterations.
+Calculated 60575 accepts.
+Current value: -1.816322e+00 9.822543e-01 5.200264e-01 8.812098e-01 
+The current MH ratio is: 1.811597e+00
+The current MH ratio is: -2.041672e+00
+The current MH ratio is: -3.930312e+00
+Finished 144250 iterations.
+Calculated 60673 accepts.
+Current value: -1.319140e+00 8.235700e-01 4.982616e-01 7.172359e-01 
+The current MH ratio is: -2.333739e+00
+The current MH ratio is: -1.435034e+00
+Finished 144500 iterations.
+Calculated 60782 accepts.
+Current value: -2.384816e+00 8.782183e-01 5.999921e-01 7.867556e-01 
+The current MH ratio is: -2.917602e+00
+The current MH ratio is: -3.922205e+00
+The current MH ratio is: -2.890944e+00
+Finished 144750 iterations.
+Calculated 60892 accepts.
+Current value: -2.239358e+00 1.080468e+00 5.280434e-01 6.223326e-01 
+The current MH ratio is: -3.307953e+00
+The current MH ratio is: -3.833407e+00
+Finished 145000 iterations.
+Calculated 60991 accepts.
+Current value: -1.727211e+00 6.915433e-01 4.210757e-01 8.045369e-01 
+The current MH ratio is: -4.981083e+00
+The current MH ratio is: 1.748184e+00
+The current MH ratio is: -2.067713e+00
+Finished 145250 iterations.
+Calculated 61109 accepts.
+Current value: -2.151898e+00 7.959582e-01 7.187161e-01 7.347467e-01 
+The current MH ratio is: -8.709035e-01
+The current MH ratio is: -1.219359e+00
+Finished 145500 iterations.
+Calculated 61191 accepts.
+Current value: -1.671686e+00 9.523753e-01 4.446135e-01 8.520015e-01 
+The current MH ratio is: 7.780000e-01
+The current MH ratio is: -1.194416e+00
+The current MH ratio is: 6.256139e-01
+Finished 145750 iterations.
+Calculated 61291 accepts.
+Current value: -1.453798e+00 7.815820e-01 7.410614e-01 5.762091e-01 
+The current MH ratio is: 1.526267e+00
+The current MH ratio is: -8.345695e-01
+Finished 146000 iterations.
+Calculated 61398 accepts.
+Current value: -1.759072e+00 6.793495e-01 5.491199e-01 8.090324e-01 
+The current MH ratio is: -1.721726e+00
+The current MH ratio is: -9.632282e-01
+The current MH ratio is: -5.225921e+00
+Finished 146250 iterations.
+Calculated 61504 accepts.
+Current value: -1.064749e+00 4.806135e-01 9.780974e-01 5.768959e-01 
+The current MH ratio is: 4.137242e-01
+The current MH ratio is: -2.178286e+00
+Finished 146500 iterations.
+Calculated 61596 accepts.
+Current value: -1.644632e+00 6.591302e-01 7.302393e-01 6.807552e-01 
+The current MH ratio is: -4.264749e-01
+The current MH ratio is: 9.054300e-01
+The current MH ratio is: -2.183571e+00
+Finished 146750 iterations.
+Calculated 61695 accepts.
+Current value: -1.392548e+00 8.555399e-01 5.549903e-01 6.325854e-01 
+The current MH ratio is: -4.159530e+00
+The current MH ratio is: 3.328150e-01
+Finished 147000 iterations.
+Calculated 61781 accepts.
+Current value: -1.407949e+00 7.054093e-01 6.522377e-01 7.729196e-01 
+The current MH ratio is: 1.281846e+00
+The current MH ratio is: 2.884513e+00
+The current MH ratio is: -1.613968e+00
+Finished 147250 iterations.
+Calculated 61870 accepts.
+Current value: -2.023570e+00 7.503702e-01 7.126134e-01 6.929723e-01 
+The current MH ratio is: 1.451216e-02
+The current MH ratio is: -1.123366e+00
+Finished 147500 iterations.
+Calculated 61956 accepts.
+Current value: -1.832363e+00 8.579498e-01 5.882215e-01 6.606281e-01 
+The current MH ratio is: 3.589178e-01
+The current MH ratio is: -1.903091e+00
+The current MH ratio is: -2.040392e+00
+Finished 147750 iterations.
+Calculated 62052 accepts.
+Current value: -1.414775e+00 5.312556e-01 5.700848e-01 1.064113e+00 
+The current MH ratio is: -5.244032e+00
+The current MH ratio is: -2.768404e-01
+Finished 148000 iterations.
+Calculated 62151 accepts.
+Current value: -1.940899e+00 7.645787e-01 5.170160e-01 8.159595e-01 
+The current MH ratio is: -1.422951e+00
+The current MH ratio is: -1.444219e+00
+The current MH ratio is: 3.815028e-01
+Finished 148250 iterations.
+Calculated 62233 accepts.
+Current value: -1.707421e+00 8.589669e-01 6.344004e-01 6.192230e-01 
+The current MH ratio is: -1.291103e+00
+The current MH ratio is: -4.043169e+00
+Finished 148500 iterations.
+Calculated 62345 accepts.
+Current value: -1.150388e+00 6.177469e-01 5.450677e-01 8.231666e-01 
+The current MH ratio is: -5.560196e+00
+The current MH ratio is: -1.874594e+00
+The current MH ratio is: -7.699669e+00
+Finished 148750 iterations.
+Calculated 62447 accepts.
+Current value: -1.697448e+00 6.808009e-01 7.143874e-01 8.610618e-01 
+The current MH ratio is: -1.503518e+00
+The current MH ratio is: -7.326328e-02
+Finished 149000 iterations.
+Calculated 62571 accepts.
+Current value: -1.630126e+00 8.367754e-01 5.060897e-01 7.862747e-01 
+The current MH ratio is: -2.203139e+00
+The current MH ratio is: -2.540086e+00
+The current MH ratio is: -1.741780e+00
+Finished 149250 iterations.
+Calculated 62669 accepts.
+Current value: -1.864117e+00 8.142238e-01 5.193088e-01 1.064928e+00 
+The current MH ratio is: -1.009396e+00
+The current MH ratio is: -4.082668e-01
+Finished 149500 iterations.
+Calculated 62769 accepts.
+Current value: -1.568790e+00 7.078893e-01 5.854118e-01 9.061688e-01 
+The current MH ratio is: -3.393934e+00
+The current MH ratio is: -1.598579e+00
+The current MH ratio is: -9.570111e-01
+Finished 149750 iterations.
+Calculated 62866 accepts.
+Current value: -1.377033e+00 6.486568e-01 7.221732e-01 6.952162e-01 
+The current MH ratio is: -2.424675e+00
+The current MH ratio is: -5.345967e-01
+Finished 150000 iterations.
+Calculated 62971 accepts.
+Current value: -1.825246e+00 9.119881e-01 6.330741e-01 7.303999e-01 
+The current MH ratio is: -5.409522e+00
+
+ans =
+
+    0.4198
+
+
+ans =
+
+       62971
+
+
+my_plot = 
+
+  FunctionLine with properties:
+
+     Function: [1×1 symfun]
+       XRange: [0 1]
+        Color: [0 0.4470 0.7410]
+    LineStyle: '-'
+    LineWidth: 0.5000
+
+  Use GET to show all properties
+
+{Error using matlab.graphics.function.FunctionLine/set
+Invalid parameter/value pair arguments.
+
+Error in matlab.graphics.function.FunctionLine
+
+Error in fplot>singleFplot (line 226)
+        hObj =
+        matlab.graphics.function.FunctionLine(fn{1},extraOpts{:},args{:});
+
+Error in fplot>@(f)singleFplot(cax,{f},limits,extraOpts,args) (line 185)
+        hObj = cellfun(@(f)
+        singleFplot(cax,{f},limits,extraOpts,args),fn{1},'UniformOutput',false);
+        
+Error in fplot>vectorizeFplot (line 185)
+        hObj = cellfun(@(f)
+        singleFplot(cax,{f},limits,extraOpts,args),fn{1},'UniformOutput',false);
+        
+Error in fplot (line 156)
+    hObj = vectorizeFplot(cax,fn,limits,extraOpts,args);
+
+Error in CMH_logsplines (line 218)
+plot1 = fplot(func1, [0,1], 'LineWidth',2, 'LineStyle', "--", "Color", 'r');
+} 

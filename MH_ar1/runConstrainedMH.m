@@ -32,6 +32,9 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
         formatSpec = 'MH ratio is: %d.';
         str = sprintf(formatSpec,MH_ratio);
         disp(str);
+        if isinf(MH_ratio)
+            disp("hey");
+        end
         
         unif_value = log(rand);
         

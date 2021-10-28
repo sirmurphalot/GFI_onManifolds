@@ -2,7 +2,7 @@ function [y, prob, Tx, flag] = findProposal(curr_location, proposalScale, consFu
 % Author: Alexander Murph
     Qx = dConsFunc(curr_location);
     [Q,R] = qr(Qx);
-    x = (diag(R)==0)';
+    x = (R==0)';
     Tx = Q(:,x);
     [~,d] = size(Tx);
     center = zeros(d,1);
