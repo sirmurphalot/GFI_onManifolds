@@ -17,10 +17,11 @@ function [nll,dnll] = negLog_fiducial_likelihood(knots,thetas,data)
         [Jac, dJac] = Jacobian(knots,thetas,data);
         nll = nll - Jac;
         dnll = zeros(size(thetas));
-        for k = 1:n
-            for i=1:length(thetas)
-                dnll(i) = -get_bspline_value(data(k),knots,i)-dJac(i);
+        for i=1:length(thetas)
+            for k = 1:n
+                dnll(i) = dnll(i) - get_bspline_value(data(k),knots,i);
             end
+            dnll(i) = dnll(i) - dJac(i);
         end
     end
 %     dnll = dnll';

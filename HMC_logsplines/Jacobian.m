@@ -52,7 +52,7 @@ function [J,dJ] = Jacobian(knots,thetas,data)
     
     % Now, calculate the regular projection matrix:
     full_mat = jac_mat;
-    P_mat= eye(d) - (expectation_values'*expectation_values)./(expectation_norm);
+    P_mat= eye(d) - ((expectation_values')*expectation_values)./(expectation_norm);
     % Perform a singular value decomposition on P_mat
     try
         [U,~,~]=svds(P_mat,d-1); 
@@ -62,7 +62,7 @@ function [J,dJ] = Jacobian(knots,thetas,data)
     % Use these columns of U to calculate our projected Jacobian matrix
     J_mat = full_mat*U;
     % Use this to calculate the Jacobian.
-    JacValue = 0.5*log(det((J_mat.')*J_mat));
+    JacValue = 0.5*log(det((J_mat')*J_mat));
     J = JacValue;
     
     dJ=zeros(1,d);

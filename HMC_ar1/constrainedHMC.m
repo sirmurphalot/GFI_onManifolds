@@ -73,8 +73,6 @@ function [q0, qs, stats] = constrainedHMC(q0,nllFunc,conFunc,Mfunc,N,L,h,opts)
     disp(str);
             
     for j = 1:N
-        disp("-----");
-        disp(int2str(j));
         disp(int2str(sum(stats.accepted)))
         if mod( j , 1000 ) == 0
             formatSpec = 'Finished %d iterations.';

@@ -3,7 +3,7 @@ function c = logspline_constraint(parameters)
     
     [d,~] = size(Lambda);
     U_mat = (eye(d)-A)/(eye(d)+A);
-    cov_mat = U_mat*(Lambda.^2)*(U_mat');
+    cov_mat = (U_mat')*(Lambda.^2)*U_mat;
     
     first_constraint_num = (d-1)*(d)/2;
     second_constraint_num = d-2;

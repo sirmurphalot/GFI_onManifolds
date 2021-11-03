@@ -9,11 +9,13 @@ function ll = ll_density(parameters, data_values)
     for i=1:n
         % Typical normal density assuming data is iid (w/in groups,
         % just independent between groups).
-        logDens=logDens-(0.5*d)*log(2*pi)+(0.5)*sum(log(eig(precisionMatrix)))-...
-            (0.5)*(data_values(i,:)')'*precisionMatrix*(data_values(i,:)'); 
+        logDens=logDens-(d/2)*log(2*pi)+(1/2)*log(det(precisionMatrix))-...
+            (1/2)*(data_values(i,:)')'*precisionMatrix*(data_values(i,:)'); 
     end
-   
-   jac = logJacobian(parameters, data_values);
+    
+    
+    jac = Jacobian(parameters, data_values);
+    
    ll = logDens+jac;
 end
 
