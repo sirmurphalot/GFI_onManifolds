@@ -5,15 +5,18 @@ function q = collapseParameters(A,Lambda)
     d=dim(1);
     q=zeros(d*(d+1)/2,1);
     
-    % The first d parameters in q are the diagonal elements of the Lambda
-    % matrix.  The next (d(d-1)/2) elements are from the lower triangle
-    % of the matrix A.
-    q(1:d,:)=diag(Lambda);
+    % The first d(d-1)/2 parameters are of the A elements, read BY COLUMN
+    % on the upper triangle.
     counter=1;
-    for i=2:d
-       for j=1:(i-1)
-           q(d+counter)=A(i,j);
+    for i=1:(d-1)
+       for j=(i+1):d
+           q(counter)=A(i,j);
            counter=counter+1;
        end
     end
+    
+    % The last d parameters in q are the diagonal elements of the Lambda
+    % matrix.  
+    q(counter:end)=diag(Lambda);
+    
 end

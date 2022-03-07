@@ -7,16 +7,17 @@ function [A,Lambda] = uncollapseParameters(q)
     dim=size(q);
     x=dim(1);
     d=(1/2)*(-1+sqrt(1+8*x));
+    
     % Next, fill in A and Lambda in reverse of what is done in 
     % collapseParameters.m
     A=zeros(d,d);
-    Lambda=diag(q(1:d));
     counter=1;
-    for i=2:d
-       for j=1:(i-1)
-           A(i,j)=q(d+counter);
-           A(j,i)=-q(d+counter);
+    for i=1:(d-1)
+       for j=(i+1):d
+           A(i,j)=q(counter);
+           A(j,i)=-q(counter);
            counter=counter+1;
        end
     end
+    Lambda=diag(q(counter:end));
 end

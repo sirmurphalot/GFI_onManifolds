@@ -9,31 +9,33 @@ function J = logJacobian(parameters, data_values)
     IpAinv = inv(IpA);
     
     % Jacobian calculation values from Murph et al
-    %%% I'll assume that rows are observations and cols are timepoints
-    [n_obs, n_time] = size(data_values);
-    J_mat = zeros(n_obs*n_time, (d-1)*d/2 + d);
-    for row=1:n_obs
-        count = 0;
-        lower_index = ((row-1)*n_time+1);
-        upper_index = row*n_time;
-        % Calculate A partials
-        for i=1:(d-1)
-            for j=(i+1):d
-                Jij = zeros(d,d);
-                Jij(i,j) = 1;
-                count = count + 1;
-                J_mat(lower_index:upper_index,count)=2*IpAinv*...
-                    (-Jij+Jij)*IpAinv*(data_values(row,:)');
-            end
-        end
-        % Calculate Lambda partials
-        for i=1:d
-            Jii = zeros(d,d);
-            Jii(i,i) = 1;
+    %%% I'll assume that cols are timepoints
+    n_time = length(data_values);
+    
+    %%% The following excludes mu -- I'm setting it equal to zero.
+    J_mat = zeros(n_time, (d-1)*d/2 + d);
+    count = 0;
+    lower_index = 1;
+    upper_index = n_time;
+    
+    % Calculate A partials
+    % The A partials are calculated BY ROW.
+    for i=1:(d-1)
+        for j=(i+1):d
+            Jij = zeros(d,d);
+            Jij(i,j) = 1;
             count = count + 1;
-            J_mat(lower_index:upper_index,count)=(Lambda(i,i).^(-1))*(IpA')*...
-                IpAinv*Jii*(((IpA')*IpAinv)')*(data_values(row,:)');
+            J_mat(1:n_time,count)=2*(IpAinv)*...
+                (-Jij+Jij')*(IpAinv')*(data_values');
         end
+    end
+    % Calculate Lambda partials
+    for i=1:d
+        Jii = zeros(d,d);
+        Jii(i,i) = 1;
+        count = count + 1;
+        J_mat(1:n_time,count)=(Lambda(i,i).^(-1))*(IpA')*...
+            (IpAinv)*Jii*((IpAinv')*IpA)*(data_values');
     end
     
     % Calculation of P matrix derivative values

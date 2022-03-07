@@ -32,8 +32,8 @@ options = optimoptions('fsolve','Display','none','TolFun', 1e-10);
 flag=11;
 solve_this = @(a) (constraintFunc(a));
 % initial = [-2, log(2), log(2.7), log(1.8), log(1.3), log(0.7), log(0.4), -2];
-initial = [-2.5, log(1.6),log(2.3), log(2.4),...
-    log(1.6), log(0.7), log(0.6), log(0.5), -2.5];
+initial = [-1, log(2.6),log(1.3), log(2.4),...
+    log(1.6), log(0.7), log(0.6), log(0.5), -1];
 % initial = [-5, log(0.1), log(0.4), log(1.6), log(1.5), log(2.3), log(1.5), log(2.4), log(2.1),...
 %     log(1.2), log(1.25), log(1.3), log(0.6), log(0.7),...
 %     log(0.5), log(0.4), log(0.3), ...
@@ -72,14 +72,16 @@ conFunc = constraintFunc;
 
 % Set parameters (that I don't quite understand)
 nRuns = 1+10;
-Nscale = 75000;
+Nscale = 20000;
 runTime = 15; % Time per run in seconds
 nTrials = 100;
 doPrint = false;
 
 samplers = struct([]);
 
-h = 5e-5;
+h = 5e-3
+
+
 M = 1;
 L = 5;
 hmcOpts = struct('intMethod',0,'doPrint',doPrint,'printMod',10);
@@ -106,11 +108,10 @@ for i = 1:numel(samplers)
 end
 mean(samplerStats{1,1}.accepted)
 Qs = samplerQs{1,1};
-save("HMC_logsplineDraws_other.mat",'Qs');
+save("HMC_logsplineDraws_nexttry.mat",'Qs');
 %%
-Qs = load("HMC_logsplineDraws_other.mat").Qs;
-
-samples = Qs;
+Qs = load("HMC_logsplineDraws_nexttry.mat");
+samples = Qs.Qs;
 mean_value = mean(samples')';
 mean_diff = samples - mean_value;
 [~,num_cols] = size(mean_diff);
@@ -161,8 +162,8 @@ func2(x) = piecewise((knots(2) < x)&(x <= knots(3)),exp(chosen_theta(2)*(x-knots
 
 % double(int(func1, 0, 1))
 % double(int(f, 0, 1))
-%%
-samples = matfile("HMC_logsplineDraws_other.mat");
+
+samples = matfile("HMC_logsplineDraws_nexttry.mat");
 samples = samples.Qs;
 mean_value = mean(samples')';
 mean_diff = samples - mean_value;
@@ -341,4 +342,4 @@ legend([plot1, plot3, plot2],'Upper 95% of Parameters','Estimated Logspline', 'L
 % legend(["this", "that", "these"])
 hold off
 
-saveas(gcf,'UppersLowersMiddle.png')
+saveas(gcf,'UppersLowersMiddle_nexttry.png')
