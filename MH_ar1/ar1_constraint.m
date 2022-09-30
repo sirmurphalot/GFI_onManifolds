@@ -32,7 +32,7 @@ function c = ar1_constraint(parameters)
         % They are put SECOND in constraint vector.
         if(j~=(d-1))
             count2 = count2 + 1;
-            c(count2) = cov_mat(1,j+1)/cov_mat(1,j) - cov_mat(1,j+2)/cov_mat(1,j+1);
+            c(count2) = cov_mat(1,j+1).^2 - cov_mat(1,j+2)*cov_mat(1,j);
         end
     end
 end

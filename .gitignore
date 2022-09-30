@@ -3,14 +3,25 @@
 .Rapp.history
 
 # Data Files
-HMC_logsplines/CIs_analysis/CI_outputs/*
-MH_ar1_array/LowerRhoCIs/*
-MH_ar1_array/LowerSdCIs/*
-MH_ar1_array/UpperRhoCIs/*
-MH_ar1_array/UpperSdCIs/*
-MH_ar1_array/Rlogfiles/*
-MH_ar1_array/SLURMOUT/*
-MH_logsplines/CIs_analysis/CI_outputs/*
+HMC_logsplines/HMC_logsplines_instance/CIs_analysis/CI_outputs/*
+HMC_logsplines/HMC_logsplines_instance/SLURMOUT/*
+MH_ar1/fixed_rho_outputs/*
+MH_ar1/fixed_sigma_outputs/*
+MH_ar1/fixed_sd_outputs/*
+MH_ar1/UpperSdCIs/*
+MH_ar1/LowerRhoCIs/*
+MH_ar1/LowerSdCIs/*
+MH_ar1/UpperRhoCIs/*
+MH_ar1/UpperSdCIs/*
+MH_ar1/Rlogfiles/*
+MH_ar1/SLURMOUT/*
+MH_logsplines/MH_logsplines_array/Rlogfiles/*
+MH_logsplines/MH_logsplines_array/SLURMOUT/*
+MH_logsplines/MH_logsplines_array/CI_outputs/*
+HMC_logsplines/HMC_logsplines_array/logfiles/*
+HMC_logsplines/HMC_logsplines_array/SLURMOUT/*
+HMC_logsplines/HMC_logsplines_array/CI_outputs/*
+MH_logsplines/MH_logsplines_instance/CIs_analysis/CI_outputs/*
 
 # Session Data files
 .RData

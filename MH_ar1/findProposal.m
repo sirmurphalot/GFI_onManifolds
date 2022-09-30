@@ -1,114 +1,100 @@
 function [y, logdens, Nx, flag] = findProposal(curr_location, proposalScale, consFunc, dConsFunc)
     dc = dConsFunc(curr_location);
     [~,d] = size(dc);
-    P = eye(d) - ((dc')/(dc*(dc')))*dc;
-    [Q,R,~] = svd(P);
-    
+%   P = eye(d) - ((dc')/(dc*(dc')))*dc;
+%   [Q,R] = eig(P);
+%   [Q1,R,~] = svds(P,2);
+%   [Q,R,~] = svd(P);
+    [Q,~] = qr(dc');
+
     % All singular values should be zeros or ones, since P is a projection 
     % matrix.  This corrects for numerical issues here.
-    x = (diag(R.^2)>=1e-4)';
     
     % Tx are the vectors orthogonal to the null space of G.  The vectors
     % that move OFF OF the tangent plane.
-    Nx = Q(:,~x);
+    %Nx = Q(:,~x);
+    Nx = Q(:,1:(end-2));
+    
     % Qx are the vectors parallel to the null space of G.  These vectors do
     % NOT move off of the tangent plane.
-    Tx = Q(:,x);
+    Tx = Q(:,(end-1):end);
     
     [~,d] = size(Tx);
     center = zeros(d,1);
-    scale = eye(d);
+    scale = eye(d); 
+ 
+    % I need to estimate the tangent vectors in the rho and sigma directions.
+    % This is going to be dcurr_location/drho, dcurr_location/dsigma.
+    delta = 1e-6;
+    [curr_rho, curr_sigma] = AandLambdaToRhoandSigma(curr_location);
+    dim=size(curr_location);
     
+    [dA_dRho, dA_dSigma] = deriveParameterization(curr_rho, curr_sigma, curr_location);
+    x=dim(1);
+    n_timepoints = (1/2)*(-1+sqrt(1+8*x));
+
+%     %temp_changeRho = RhoandSigmaToAandLambda(curr_rho+delta,curr_sigma,n_timepoints);
+%     %A_changeRho = collapseParameters(temp_changeRho(1),temp_changeRho(2));
+%     %temp_changeSigma = RhoandSigmaToAandLambda(curr_rho,curr_sigma+delta, n_timepoints);
+%     %A_changeSigma = collapseParameters(temp_changeSigma(1),temp_changeSigma(2));
+%   
+% %     A_new = curr_location + (1-2.*rand([x,1]))*delta;
+%     A_new = curr_location + (ones([x,1]))*delta;
+%     [rho_new,sigma_new] = AandLambdaToRhoandSigma(A_new);
+%  
+  
+%     dA_dSigma = dA_dSigma - ((dA_dSigma')*dA_dRho)./((dA_dRho')*dA_dRho).*dA_dRho;
+% 
+%     % Normalize these vectors.
+    dA_dRho   = dA_dRho./(sqrt((dA_dRho')*dA_dRho));
+    dA_dSigma = dA_dSigma./(sqrt((dA_dSigma')*dA_dSigma));
+    dA_dRho   = dA_dRho - ((dA_dRho')*dA_dSigma)./((dA_dSigma')*dA_dSigma).*dA_dSigma;
+%     dA_dSigma = dA_dSigma - ((dA_dSigma')*dA_dRho)./((dA_dRho')*dA_dRho).*dA_dRho;
+    dA_dRho   = Tx*Tx'*(dA_dRho);
+    dA_dSigma = Tx*Tx'*(dA_dSigma); 
+     
+
+    % Find the projections of each of these vectors onto the Tx space
+    Tx_1 = Tx(:,1)./((Tx(:,1)')*Tx(:,1));
+    Tx_2 = Tx(:,2)./((Tx(:,2)')*Tx(:,2));
+    c11  = (dA_dRho)'*Tx_1;
+    c12  = (dA_dRho)'*Tx_2;
+    c21  = (dA_dSigma)'*Tx_1;
+    c22  = (dA_dSigma)'*Tx_2;
+
+    C_mat = [c11,c12;c21,c22];
+%     scale(1,1) = 1;
+    scale = real((C_mat')*scale*C_mat);% inv()
+   % scale = eye(2);
+    if(isnan(scale(1,1)))
+        disp("hey!");
+        flag = 0;
+        logdens = 0;
+        y = 0;
+        return;
+    end
+
     % Draw from a Cauchy distribution.
-    pd = makedist('tLocationScale','mu',0,'sigma',proposalScale,'nu',1);
-    v_temp = random(pd,1,d);
-%     v_temp = mvnrnd(center, proposalScale*scale, 1);
+%     pd = makedist('tLocationScale','mu',0,'sigma',proposalScale,'nu',1);
+%     v_temp = random(pd,1,d);
+    v_temp = mvnrnd(center, proposalScale*scale, 1);
     
     % v should be a vector that moves ALONG the tangent plane.  Thus, we
     % make it a multiple of the vectors from Qx.
     v = Tx*v_temp';
-    logdens = sum(log(pdf(pd,v_temp)));
-%     logprob = sum(log(mvnpdf(v_temp, center', proposalScale*scale)));
+%     logdens = sum(log(pdf(pd,v_temp)));
+    dd = 2;
+%     logdens = real(-(0.5*dd)*log(2*pi)-(0.5)*sum(log(eig(proposalScale*scale)))-(0.5)*((v_temp - center')/(proposalScale*scale))*(v_temp' - center));
+     logdens = real(-(0.5*dd)*log(2*pi)-(0.5)*log(det(proposalScale*scale))-(0.5)*((v_temp - center')/(proposalScale*scale))*(v_temp' - center));
+%      logdens = sum(log(mvnpdf(v_temp, center', proposalScale*scale)));
     
     % We now have a vector that is along the tangent plane.  We project it
     % downward using the vectors that go in the orthogonal directions.
+%     [a,flag] = projectOntoConstraint(curr_location+v, Nx, consFunc, []);
+%     
+%     y = curr_location + v + Nx*a;
+
+    [a,flag] = projectOntoConstraint(curr_location+v, dc', consFunc, []);
     
-    
-    
-    % I'm trying to parameterized the projection process. 12/8/2021
-    % I'll numerically solve for the values sd2, rho.  First, I'll set up
-    % the parameters for the solver in matlab.
-    [A, Lambda] = uncollapseParameters(curr_location);
-    [n,~] = size(Lambda);
-    solve_this = @(x)(parameterized_AR1_projection(x(1),x(2),Tx,curr_location,v,n));
-    options = optimoptions('fsolve','Display','none','TolFun', ...
-        1e-5, 'MaxFunctionEvaluations', 1e4, 'MaxIterations', 1e4);
-    flag=1;
-
-    % Next, I'll use the current location as the starting value for the
-    % algorithm.
-    U = (eye(n) - A)/(eye(n) + A);
-    sigma = U*(Lambda.^2)*(U');
-    rho = sigma(1,2)/sigma(1,1);
-    s2s = sigma(1,1)*(1 - (sigma(1,2)/sigma(1,1)).^2);
-    initial = [rho, s2s];
-
-    % Now, I solve.
-    [y,fval] = fsolve(solve_this, initial, options);
-
-    if sum(fval)>1
-%         flag = 0;
-    end
-
-    % With a solution, I can solve back for my covariance matrix, and in
-    % turn get the proposed parameter vector.
-    rho = y(1);
-    sd2 = y(2);
-    covariance_matrix = zeros(n, n);
-    for i=1:n
-        for j=1:n
-            covariance_matrix(i,j) = rho^(abs(i-j));
-        end
-    end
-    covariance_matrix = covariance_matrix.*((sd2)/(1-rho.^2));
-    [U, Lambda2] = eig(covariance_matrix);
-    Lambda = diag(diag(Lambda2.^(0.5)));
-
-    %%% This is aligning the values from the sd2,rho.
-    [Lambda_sorted, sorted_indices] = sort(diag(Lambda));
-    U_sorted = U(:,sorted_indices);
-
-    %%% This is aligning the values for the current location.
-    [A_x, Lambda_x] = uncollapseParameters(curr_location);
-    [~, sorted_indices_x] = sort(diag(Lambda_x));
-    Ux = (eye(n) - A_x)/(eye(n) + A_x);
-    Ux_sorted = Ux(:,sorted_indices_x);
-%     Ax_sorted = (eye(n)+Ux_sorted)/(eye(n)-Ux_sorted);
-%     curr_location_sorted = collapseParameters(Ax_sorted, diag(sorted_Lambda_x));
-
-    %%% Now we determine a signature matrix for the sd2,rho value based on
-    %%% its correlation with the eigenvecters for the current location.
-%     [~,n_vectors] = size(Ux_sorted);
-%     signature_matrix = zeros(n_vectors,1);
-%     for k = 1:n_vectors
-%         temp_sign = sign(corr(U_sorted(:,k), Ux_sorted(:,k)));
-%         signature_matrix(k) = 1*temp_sign;
-%     end
-%     signature_matrix = diag(signature_matrix);
-% 
-%     U_final = U_sorted * signature_matrix;
-
-    % I need to make sure that the eigenvalues are still all not negative
-    % 1.
-    U_final = U_sorted;
-    E = eig(U_final);
-
-    if ~(sum(abs(real(E)+1)<1e-5)==0)
-        flag = 0;
-    end
-
-    % If they aren't, then I finish up :)
-    I = eye(n);
-    A = (I-U_final)/(I+U_final);
-    y = collapseParameters(A,diag(Lambda_sorted));
+    y = curr_location + v + dc'*a;
 end

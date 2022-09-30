@@ -9,17 +9,26 @@ acmurph@unc.edu.
 Overview
 ========
 
-Code implementations of the models discussed in *Generalized Fiducial Inverence on Differentiable Manifolds* by A. Murph, J. Hannig, and J. Williams.
+Code implementations of the models discussed in *Generalized Fiducial Inference on Differentiable Manifolds* by A. C. Murph, J. Hannig, and J. Williams.
 
-
-This repository is organized into four different directories; two using [Brubaker et al's Constrained Hamiltonian Monte Carlo](http://www.cs.toronto.edu/~mbrubake/projects/cmcmc/) method and two using [Zappa et al's Constrained Metropolis-Hastings](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.21783) algorithm.
-Each directory contains a Matlab notebook that walks through the examples step-by-step.  This will hopefully help any potential user looking for mastery.
-
-Packages Required
-============
+This repository is organized according to the three difference experiments and the two different MCMC algorithms; the first algorithm considered (HMC) is [Brubaker et al's Constrained Hamiltonian Monte Carlo](http://www.cs.toronto.edu/~mbrubake/projects/cmcmc/) method and the second algorithm considered (MH) is [Zappa et al's Constrained Metropolis-Hastings](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.21783) algorithm.  The three problems considered are: inference for data from a multivariate normal density with the mean parameters on a sphere, a linear logspline density estimation problem, and a reimagined approach to the AR(1) mode
 
 Coming soon.
 
-Citation
+Reference
 ============
-Coming soon.
+<a id="1">[1]</a> 
+Murph, A. C., Hannig, J., Williams, J. P.  Generalized Fiducial Inference on Differentiable Manifolds
+
+Citations
+============
+<a id="1">[2]</a> 
+Brubaker, M. A., Salzmann, M. and Urtasun, R. (2012) A Family of MCMC Methods on Implicitly Defined
+Manifolds. In Proceedings of the Fifteenth International Conference on Artificial Intelligence and Statistics, vol. 22, 161–172.
+<a id="1">[3]</a> 
+Zappa, E., Holmes-Cerfon, M. and Goodman, J. (2018) Monte Carlo on Manifolds: Sampling Densities and Integrating Functions. Communications on Pure and Applied Mathematics, 71, 2609–2647.
+
+
+`R` Packages Required
+============
+`ggplot2`, `reshape`

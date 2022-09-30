@@ -10,34 +10,42 @@ function J = logJacobian(parameters, data_values)
     
     % Jacobian calculation values from Murph et al
     %%% I'll assume that cols are timepoints
-    n_time = length(data_values);
+    [n_obs,n_time] = size(data_values);
     
     %%% The following excludes mu -- I'm setting it equal to zero.
-    J_mat = zeros(n_time, (d-1)*d/2 + d);
+    J_mat = zeros(n_time*n_obs, (d-1)*d/2 + d);
     count = 0;
     lower_index = 1;
     upper_index = n_time;
     
     % Calculate A partials
     % The A partials are calculated BY ROW.
-    for i=1:(d-1)
-        for j=(i+1):d
-            Jij = zeros(d,d);
-            Jij(i,j) = 1;
-            count = count + 1;
-            J_mat(1:n_time,count)=2*(IpAinv)*...
-                (-Jij+Jij')*(IpAinv')*(data_values');
+    obs_count = 0;
+    for n = 1:n_obs
+        curr_obs = data_values(n,:);
+        count = 0;
+        for i=1:(d-1)
+            for j=(i+1):d
+                Jij = zeros(d,d);
+                    Jij(i,j) = 1;
+                    count = count + 1;
+                zz = (1:n_time)+(obs_count*n_time);
+                J_mat(zz,count)=2*(IpAinv)*...
+                        (-Jij+Jij')*(IpAinv')*(curr_obs');
+            end
         end
+
+        % Calculate Lambda partials
+        for i=1:d
+            Jii = zeros(d,d);
+            Jii(i,i) = 1;
+            count = count + 1;
+            zz = (1:n_time)+(obs_count*n_time);
+            J_mat(zz,count)=(Lambda(i,i).^(-1))*(IpA')*...
+                            (IpAinv)*Jii*(IpA*(IpAinv'))*(curr_obs');
+        end
+        obs_count = obs_count + 1;
     end
-    % Calculate Lambda partials
-    for i=1:d
-        Jii = zeros(d,d);
-        Jii(i,i) = 1;
-        count = count + 1;
-        J_mat(1:n_time,count)=(Lambda(i,i).^(-1))*(IpA')*...
-            (IpAinv)*Jii*((IpAinv')*IpA)*(data_values');
-    end
-    
     % Calculation of P matrix derivative values
     dc = dar1_constraint(parameters);
     

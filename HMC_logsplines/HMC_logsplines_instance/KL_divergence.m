@@ -1,0 +1,31 @@
+function kl = KL_divergence(thetas)
+%     [d1,d2] = size(thetas);
+    knots = [-0.1:0.15:1.1];
+    orig_knots = knots;
+    knots(end-1) = 1;
+    knots(2) = 0;
+    orig_knots = knots;
+    chosen_theta = thetas;
+
+    lower = 0;
+    peak = 0.2;
+    upper = 1;
+    
+    syms tri(x)
+    tri(x) = piecewise( (lower <= x)&(x < peak),2*(x-lower)/((upper-lower)*(peak-lower)), ...
+        (x == peak), 2/(upper-lower),...
+        (peak < x)&(x <= upper),2*(upper-x)/((upper-lower)*(upper-peak)) );
+    
+    syms func2(x)
+    func2(x) =  piecewise((knots(2) < x)&(x <= knots(3)),exp(chosen_theta(2)*(x-knots(2))/(knots(3)-knots(2)) + chosen_theta(1)*(knots(3)-x)/(knots(3)-knots(2))), ...
+        (knots(3) < x)&(x <= knots(4)),exp(chosen_theta(3)*(x-knots(3))/(knots(4)-knots(3)) + chosen_theta(2)*(knots(4)-x)/(knots(4)-knots(3))), ...
+        (knots(4) < x)&(x <= knots(5)),exp(chosen_theta(4)*(x-knots(4))/(knots(5)-knots(4)) + chosen_theta(3)*(knots(5)-x)/(knots(5)-knots(4))), ...
+        (knots(5) < x)&(x <= knots(6)),exp(chosen_theta(5)*(x-knots(5))/(knots(6)-knots(5)) + chosen_theta(4)*(knots(6)-x)/(knots(6)-knots(5))), ...
+        (knots(6) < x)&(x <= knots(7)),exp(chosen_theta(6)*(x-knots(6))/(knots(7)-knots(6)) + chosen_theta(5)*(knots(7)-x)/(knots(7)-knots(6))), ...
+        (knots(7) < x)&(x <= knots(8)),exp(chosen_theta(7)*(x-knots(7))/(knots(8)-knots(7)) + chosen_theta(6)*(knots(8)-x)/(knots(8)-knots(7))));%, ...
+%         (knots(8) < x)&(x <= knots(9)),exp(chosen_theta(8)*(x-knots(8))/(knots(9)-knots(8)) + chosen_theta(7)*(knots(9)-x)/(knots(9)-knots(8))));%, ...
+%         (knots(9) < x)&(x <= knots(10)),exp(chosen_theta(9)*(x-knots(9))/(knots(10)-knots(9)) + chosen_theta(8)*(knots(10)-x)/(knots(10)-knots(9))));
+
+    fun = @(i) ( double(tri(i)) * log(double(tri(i)) / double(func2(i))) );
+    kl = abs(integral(fun, 0.01, 0.99));
+end
