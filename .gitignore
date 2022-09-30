@@ -1,6 +1,7 @@
 # History files
 .Rhistory
 .Rapp.history
+.DS_Store
 
 # Data Files
 HMC_logsplines/HMC_logsplines_instance/CIs_analysis/CI_outputs/*
