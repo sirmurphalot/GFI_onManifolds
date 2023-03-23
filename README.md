@@ -1,7 +1,6 @@
-[![arXiv](https://img.shields.io/badge/arXiv-2209.15473-GREEN.svg)](https://arxiv.org/abs/2209.15473)
-
 Generalized Fiducial Inference on Differentiable Manifolds
 ========
+[![arXiv](https://img.shields.io/badge/arXiv-2209.15473-GREEN.svg)](https://arxiv.org/abs/2209.15473)
 
 **author**: `Alexander Murph`
 
