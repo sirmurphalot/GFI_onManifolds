@@ -19,14 +19,6 @@ for(name in list.files(path = "../fixed_sd_outputs/")){
   full_data = rbind(full_data, temp_row)
 }
 
-# for(name in list.files(path = "../fixed_sigma_outputs/")[-1]){
-#   temp_data = read.csv(paste("../fixed_sigma_outputs/",name, sep =""))
-#   # temp_row = data.frame(value = temp_data[1,2], description = "Lower Sigma CI")
-#   # full_data = rbind(full_data, temp_row)
-#   temp_row = data.frame(value = temp_data[1,2], description = "Upper Sigma CI")
-#   full_data = rbind(full_data, temp_row)
-# }
-
 full_data = full_data[-1,]
 
 ggplot(full_data, aes(x=value,linetype=description)) + stat_ecdf() + 

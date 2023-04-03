@@ -9,10 +9,6 @@ function c = ar1_constraint(parameters)
     second_constraint_num = d-2;
     c = zeros(first_constraint_num + second_constraint_num,1);
     
-%     disp("The rho val is currently:");
-%     x = cov_mat(2,1)/cov_mat(1,1);
-%     disp(x);
-    
     count1 = 0;
     count2 = first_constraint_num;
     for j=1:(d-1)

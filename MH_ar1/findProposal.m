@@ -97,4 +97,15 @@ function [y, logdens, Nx, flag] = findProposal(curr_location, proposalScale, con
     [a,flag] = projectOntoConstraint(curr_location+v, dc', consFunc, []);
     
     y = curr_location + v + dc'*a;
+    
+    [tempA,tempL] = uncollapseParameters(y);
+    temptempL = diag(tempL)
+    if ~isequal(sort(diag(tempL)), diag(tempL)) && (flag)
+         disp("check the proposal value");
+         U = (eye(n_timepoints) - tempA)/(eye(n_timepoints) + tempA);
+         sigma = U*(tempL.^2)*(U');
+         [r,s] = AandLambdaToRhoandSigma(y)
+         ar1_constraint(y)
+    end
+        
 end

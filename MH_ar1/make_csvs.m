@@ -6,7 +6,6 @@ my_file_name_data = strcat("data_logs/sample_data_", env_id, ".mat");
 
 samples = load(my_file_name_data);
 samples = table(samples.samples);
-mean(samples{:,2:end},2)
 %% Use the samples to calculate values for rho and sigma2:
 my_file_name = strcat("full_data_csvs/data_from_arraynumber_", env_id, ".csv")
 writetable(samples, my_file_name);

@@ -1,5 +1,5 @@
-env_id = getenv(char("SLURM_ARRAY_TASK_ID"))
-%env_id = '2'
+%env_id = getenv(char("SLURM_ARRAY_TASK_ID"))
+env_id = '181'
 rng(str2num(env_id))
 
 n_timepoints = 10;
@@ -161,44 +161,6 @@ original_sign = sign(det(U));
      end
  end
 
-% if(found_starting_point)
-%     disp("OH MY GOODNESS IT FOUND ONE YAY!");
-%     my_file_name_data = strcat("working_A_mats/temp_vector_", env_id, ".mat");
-% 
-% 
-% 	save(my_file_name_data,'temp_vector');
-% end
-
-
-% A = [];
-% b = [];
-% Aeq = [];
-% beq = [];
-% lb = zeros([1,d]);
-% ub = ones([1,d]);
-% f = @(a)(minimizeHiddenFunction(a, skew_symmetric_matrix));
-% fun = @(a)(-find_hidden_entry(a, skew_symmetric_matrix));
-% intcon = 1:d;
-% initial = zeros([1,d]);
-%i = floor(2^d/4+3^(floor(d/2)));
-%initial = de2bi(i,d);
-
-%options = optimoptions('ga','ConstraintTolerance',1e-30, 'FunctionTolerance', 1e-30, 'FunctionTolerance', 1e-20,...
-%                        'MaxGenerations', 1e5, 'MaxStallGenerations', 1e5);
-
-%my_const = @(a)(optim_constraint(a));
-                     
-%x = ga(fun,d,A,b,Aeq,beq,lb,ub,my_const,intcon,options);
-
-
-%disp("hey");
-%temp_signs = x;
-%temp_signs = 1 - 2*temp_signs(1:d);
-%tempUhat = tempUhat*diag(temp_signs);
-
-% new_hidden_value = find_hidden_entry(temp_signs, skew_symmetric_matrix);
-
-
 disp("creating A matrix");
 A = (eye(n_timepoints)-tempUhat)/(eye(n_timepoints)+tempUhat);
 
@@ -307,7 +269,7 @@ disp("made U matrix.");
 num_iters = 500000;
 burn_in = 1;
 % paper used 2e-3 as of Sep 7th
-proposal_scale = 0.07
+proposal_scale = 1000
 
 ll_function = @(x) ll_density(x, data_matrix);
 constraintFunc = @(x) (ar1_constraint(x));
@@ -315,6 +277,15 @@ dConstraintFunc = @(x) (dar1_constraint(x));
 disp("Entering the MCMC Algorithm.")
 warning('off');
 disp("starting the MCMC sampling.")
+
+initial_guess = [0.4668,-0.1751,0.0536,-0.7292,0.0743,-0.6558,1.0640,...
+    0.0954,-0.0867,-0.0139,0.6861,0.0394,0.3653,0.0401,-0.1263,0.4519,...
+    -0.5866,0.3959,-0.0051,0.5044,0.0138,-0.0894,0.5396,-0.7055,-0.1383,...
+   -0.0550,0.4521,-0.6111,-0.0475,0.0442,-0.3401,-0.0225,-0.0322,0.3792,...
+   -0.4343,0.0569,-0.9662,-0.0407,0.0078,0.0269,-0.1343,-0.2229,-0.2447,...
+   -0.6676,0.0357,0.7901,0.8118,0.8494,0.9055,0.9833,1.0868,1.2187,...
+    1.3758,1.5409,1.6750]';
+    
 [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
     proposal_scale, initial_guess, ll_function, ...
     constraintFunc, dConstraintFunc);
@@ -322,7 +293,6 @@ mean(accepts)
 
 
 my_file_name_data = strcat("data_logs/sample_data_", env_id, ".mat");
-
 
 save(my_file_name_data,'samples');
 %samples = load(my_file_name_data);

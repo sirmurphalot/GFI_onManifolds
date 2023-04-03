@@ -22,15 +22,23 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
         if mod(iter, 4)==0
             formatSpec = 'Acceptance rate (so far): %d.\n \n';
             str = sprintf(formatSpec,sum(accepts)/iter);
-            disp(str); pause(0.1);
+            disp(str); %pause(0.1);
         end
         % Calculate a proposal distribution by moving along the tangent
         % plane.
+        disp("check the proposal value");
+        n_timepoints = 10;
+        > [tempA,tempL] = uncollapseParameters(samples(:,1));
+        U = (eye(n_timepoints) - tempA)/(eye(n_timepoints) + tempA);
+        sigma = U*(tempL.^2)*(U');
+        [r,s] = AandLambdaToRhoandSigma(samples(:,1))
+        ar1_constraint(y)
         [proposal, logdens_forward, ~, flag]=findProposal(samples(:,iter),...
             proposal_scale, constraintFunc, dConstraintFunc);
         % If this simulation moves off the manifold, automatically reject.
+        
         if flag == 0
-	    fprintf(1,'\b\b\b%3.0i',iter);
+            fprintf(1,'\b\b\b%3.0i',iter);
             samples(:,iter+1)=samples(:,iter);
             continue
         end
@@ -51,26 +59,6 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
 	% Put in a catch that makes sure that my proposal does not move off
 	% of the hypercube.
 	a_elements = proposal(1:(xx-dd));
-       
-%    if sum( a_elements<-1 | a_elements>1)>0
-%	    disp("walked off the hypercube, reflecting back");
-%        for a_element_index=1:length(a_elements)
-%            a_value_temp = a_elements(a_element_index);
-%            if a_value_temp < -1
-%                a_elements(a_element_index) = 2 + a_value_temp;
-%            elseif a_value_temp > 1
-%                a_elements(a_element_index) = a_value_temp - 2;
-%            end
-%        end	
-%    end
-%    
-%	if( sum( a_elements<-1 | a_elements>1)>0 )
-%		disp("even after reflecting, we are still off of the cube.  Rejecting");
-%		samples(:,iter+1)=samples(:,iter);
-%            	continue
-%	else
-%		proposal(1:(xx-dd)) = a_elements;
-%	end
 
 	% Print out rho (debug) and make sure it is a valid rho.
 	disp("sampled rho is");
@@ -86,17 +74,6 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
             disp(r);
             disp("current rho is");
             disp(curr_r);
-% % %             disp("(proposal) rho is waaaaaaaaay off");
-%             disp("likelihood of proposal value");
-%             disp(ll_function(proposal));
-%             disp("proposal prob reverse");
-%             disp(logdens_reverse);
-%             disp("likelihood of current value");
-%             disp(ll_function(samples(:,iter)));
-%             disp("proposal prob forward");
-%             disp(logdens_forward);
-%             disp("total mh ratio:");
-%             disp(MH_ratio);
         end
         
         [r,~] = AandLambdaToRhoandSigma(samples(:,iter));
@@ -110,6 +87,12 @@ function [samples, accepts] = runConstrainedMH(num_iters, burn_in, ...
         end
  
         % Accept or reject.
+        
+        disp("check the proposal value");
+        
+        %[~,L] = uncollapseParameters(samples(:,iter))
+        
+
         unif_value = log(rand);
         if unif_value <= MH_ratio
             samples(:,iter+1)=proposal;
