@@ -1,5 +1,6 @@
 Generalized Fiducial Inference on Differentiable Manifolds
 ========
+[![arXiv](https://img.shields.io/badge/arXiv-2209.15473-GREEN.svg)](https://arxiv.org/abs/2209.15473)
 
 **author**: `Alexander Murph`
 
@@ -9,7 +10,7 @@ acmurph@unc.edu.
 Overview
 ----
 
-Code implementations of the models discussed in *Generalized Fiducial Inference on Differentiable Manifolds* by A. C. Murph, J. Hannig, and J. Williams.
+Code implementations of the models discussed in *Generalized Fiducial Inference on Differentiable Manifolds* by A. C. Murph, J. Hannig, and J. Williams.  Manuscript on [arXiv](https://arxiv.org/abs/2209.15473).
 
 This repository is organized according to the three difference experiments that use three different MCMC algorithms.  The first algorithm considered (HMC) is [Brubaker et al's Constrained Hamiltonian Monte Carlo](http://www.cs.toronto.edu/~mbrubake/projects/cmcmc/) method and the second algorithm considered (MH) is [Zappa et al's Constrained Metropolis-Hastings](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.21783) algorithm.  The three problems considered are: inference for data from a multivariate normal density with the mean parameters on a sphere, a linear logspline density estimation problem, and a reimagined approach to the AR(1) mode
 
